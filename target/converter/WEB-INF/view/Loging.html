@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="../css/login.css" th:href="@{/css/login.css}">
+        <link type="text/css" rel="stylesheet" href="../css/field.css" th:href="@{/css/field.css}">
+        <link type="text/css" rel="stylesheet" href="../css/button.css" th:href="@{/css/button.css}">
+        <link type="text/css" rel="stylesheet" href="../css/footer.css" th:href="@{/css/footer.css}">
+        <link type="text/css" rel="stylesheet" href="../css/header.css" th:href="@{/css/header.css}">
+        <link type="text/css" rel="stylesheet" href="../css/main.css" th:href="@{/css/main.css}">
+        <link rel="shortcut icon" href="icon/Ch.ico" type="image/x-icon">
+        <title>Login</title>
+    </head>
+
+    <body class="grid-box">
+
+            <div class="headers" th:insert="~{Header.html :: header}"></div>
+
+            <div class="left"></div>
+
+            <div class="middle">
+                <form>
+                    <h2>Please sign in</h2>
+                    <div class="lev25-log">
+                        <label for="email">Emal</label>
+                        <input class="field-log" type="email" id="email" placeholder="Your email..">
+                    </div>
+                    <div class="lev25-log">
+                        <label for="password">Password</label>
+                        <input class="field-log" type="password" id="password" placeholder="Your password..">
+                    </div>
+                    <button class="btn-positive" type="submit" id="Login">Login</button>
+                    <input class="btn-positive" type="button" id="Registration" value="Registration" onClick='location.href="http://localhost:8080/converter/Registration"'>
+                </form>
+            </div>
+
+            <div class="right"></div>
+
+            <div class="footer" th:insert="~{Footer.html :: footer}"></div>
+    </body>
+</html>

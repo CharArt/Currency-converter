@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" href="../css/registration.css" th:href="@{/css/registration.css}">
+        <link type="text/css" rel="stylesheet" href="../css/field.css" th:href="@{/css/field.css}">
+        <link type="text/css" rel="stylesheet" href="../css/button.css" th:href="@{/css/button.css}">
+        <link type="text/css" rel="stylesheet" href="../css/footer.css" th:href="@{/css/footer.css}">
+        <link type="text/css" rel="stylesheet" href="../css/header.css" th:href="@{/css/header.css}">
+        <link type="text/css" rel="stylesheet" href="../css/main.css" th:href="@{/css/main.css}">
+        <link type="text/css" rel="stylesheet" href="../css/error.css" th:href="@{/css/error.css}">
+        <link rel="shortcut icon" href="icon/Ch.ico" type="image/x-icon">
+        <title>Registration</title>
+
+    </head>
+
+    <body class="grid-box">
+
+        <div class="headers" th:insert="~{Header.html :: header}"></div>
+
+                <div class="left"></div>
+
+                <div class="middle">
+                    <h2>Your details:</h2>
+                    <form class="form-grid-container" action="#" th:action="@{/Registration}" th:object="${user}" method="post">
+                        <div class="text-layer">
+                            <label for="Login">Login:</label>
+                            <p class="errors" th:if="${#fields.hasErrors('user_login')}" th:errors="*{user_login}">ERROR!</p>
+                            <label for="firstName">First name:</label>
+                            <label for="lastName">Last name:</label>
+                            <label for="patronymic">Patronymic:</label>
+                            <label for="dateOfBirth">Date of birth:</label>
+                            <label for="email">Emal:</label>
+                            <p class="errors" th:if="${#fields.hasErrors('user_email')}" th:errors="*{user_email}">ERROR!</p>
+                            <label for="password">Password:</label>
+                        </div>
+
+                        <div class="field-layer">
+                            <input class="field-reg" type="text" id="Login" th:field="*{user_login}" placeholder="Your login.." required>
+
+                            <input class="field-reg" type="text" id="firstName" th:field="*{user_name}" placeholder="Your first name.." required>
+
+                            <input class="field-reg" type="text" id="lastName" th:field="*{user_surname}" placeholder="Your last name.." required>
+
+                            <input class="field-reg" type="text" id="patronymic" th:field="*{user_patronymic}" placeholder="Your patronymic.." required>
+
+                            <input class="date-reg" type="date" id="dateOfBirth" th:field="*{user_of_birth}" required>
+
+                            <input class="field-reg" type="email" id="email" th:field="*{user_email}" placeholder="Your emal.." required>
+
+                            <input class="field-reg" type="password" id="password" th:field="*{user_password}" placeholder="Your password.." required>
+                        </div>
+
+                        <div class="button-layer">
+                            <button class="btn-reg" type="submit" id="Registration">Registration</button>
+                            <input class="btn-reg" type="button" id="Back" value="Back" onClick='location.href="http://localhost:8080/converter/"'>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="right"></div>
+
+        <div class="footer" th:insert="~{Footer.html :: footer}"></div>
+    </body>
+</html>

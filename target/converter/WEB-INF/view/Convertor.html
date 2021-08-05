@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="../css/convertor.css" th:href="@{/css/convertor.css}">
+        <link type="text/css" rel="stylesheet" href="../css/field.css" th:href="@{/css/field.css}">
+        <link type="text/css" rel="stylesheet" href="../css/button.css" th:href="@{/css/button.css}">
+        <link type="text/css" rel="stylesheet" href="../css/footer.css" th:href="@{/css/footer.css}">
+        <link type="text/css" rel="stylesheet" href="../css/header.css" th:href="@{/css/header.css}">
+        <link type="text/css" rel="stylesheet" href="../css/main.css" th:href="@{/css/main.css}">
+        <link rel="shortcut icon" href="icon/Ch.ico" type="image/x-icon">
+        <title>Convertor</title>
+    </head>
+
+    <body class="grid-box">
+
+    <div class="headers" th:insert="~{Header.html :: header}"></div>
+
+        <div class="left">
+            <div class="box1-left">
+                <select name="test" class="select-left">
+                    <option value="росийский рубль">росийский рубль</option>
+                    <option value="евро">евро</option>
+                    <option value="доллар США">доллар США</option>
+                    <option value="Фунт стерлингов">Фунт стерлингов</option>
+                </select>
+
+                <input list="abbreviations-left" id="abb-left" name="abb" class="datalist-left"/>
+                <datalist id="abbreviations-left">
+                    <option value="RUB">
+                    <option value="EUR">
+                    <option value="USD">
+                    <option value="GBP">
+                </datalist>
+                <input class="input-left"/>
+            </div>
+        </div>
+
+        <div class="middle"></div>
+
+        <div class="right">
+            <div class="box1-right">
+                <select name="test" class="select-right">
+                    <option value="росийский рубль">росийский рубль</option>
+                    <option value="евро">евро</option>
+                    <option value="доллар США">доллар США</option>
+                    <option value="Фунт стерлингов">Фунт стерлингов</option>
+                </select>
+
+                <input list="abbreviations-right" id="abb-right" name="abb" class="datalist-right"/>
+                <datalist id="abbreviations-right">
+                    <option value="RUB">
+                    <option value="EUR">
+                    <option value="USD">
+                    <option value="GBP">
+                </datalist>
+                <input class="input-right"/>
+            </div>
+        </div>
+
+        <div class="footer" th:insert="~{Footer.html :: footer}"></div>
+    </body>
+</html>

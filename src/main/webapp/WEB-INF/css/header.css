@@ -1,0 +1,13 @@
+ .headers{
+ 	grid-area:headers;
+ }
+
+  .container{
+    height:100%;
+   	display:flex;
+  	flex-direction:row;
+  	align-items:center;
+  }
+  .container> button:nth-child(4){
+  	margin-left:auto;
+  }

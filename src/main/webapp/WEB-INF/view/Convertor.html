@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="../css/convertor.css" th:href="@{/css/convertor.css}">
+        <link type="text/css" rel="stylesheet" href="../css/field.css" th:href="@{/css/field.css}">
+        <link type="text/css" rel="stylesheet" href="../css/button.css" th:href="@{/css/button.css}">
+        <link type="text/css" rel="stylesheet" href="../css/footer.css" th:href="@{/css/footer.css}">
+        <link type="text/css" rel="stylesheet" href="../css/header.css" th:href="@{/css/header.css}">
+        <link type="text/css" rel="stylesheet" href="../css/main.css" th:href="@{/css/main.css}">
+        <link rel="shortcut icon" href="icon/Ch.ico" type="image/x-icon">
+        <title>Convertor</title>
+    </head>
+
+    <body class="grid-box">
+
+        <div class="headers" th:insert="~{Header.html :: header}"></div>
+
+        <div class="left"></div>
+
+
+            <div class="middle">
+                <form class="form-grid-container" th:action="@{/History}" method="post">
+                    <div class="box1">
+                        <input class="field-search" id="time" type="date" th:field="${valCursForm1.LocalDateTime}">
+                        <input list="abbreviations-left" id="abb-left" name="Valute1" class="box1" th:value="${valCursForm1.currency_name}"/>
+                        <datalist id="abbreviations-left" >
+                            <option th:each="h:${valCursList}" th:value="${h.currency_name}" th:text="${h.currency_name}"></option>
+                        </datalist>
+                        <input class="input-box1"/>
+                    </div>
+
+                    <div class="box2">
+                        <input list="abbreviations-box2" id="abb-middle" name="Valute2" class="datalist-box2" th:value="${valCursForm2.currency_name}"/>
+                        <datalist id="abbreviations-box2">
+                            <option th:each="h:${valCursList}" th:value="${h.currency_name}" th:text="${h.currency_name}"></option>
+                        </datalist>
+                        <input class="input-box2"/>
+                    </div>
+                </form>
+            </div>
+
+        <div class="right"> </div>
+
+        <div class="footer" th:insert="~{Footer.html :: footer}"></div>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org">
+<meta charset="utf-8"/>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTP-8"/>
+        <link type="text/css" rel="stylesheet" href="../css/history.css" th:href="@{/css/history.css}">
+        <link type="text/css" rel="stylesheet" href="../css/field.css" th:href="@{/css/field.css}">
+        <link type="text/css" rel="stylesheet" href="../css/button.css" th:href="@{/css/button.css}">
+        <link type="text/css" rel="stylesheet" href="../css/footer.css" th:href="@{/css/footer.css}">
+        <link type="text/css" rel="stylesheet" href="../css/header.css" th:href="@{/css/header.css}">
+        <link type="text/css" rel="stylesheet" href="../css/main.css" th:href="@{/css/main.css}">
+        <link rel="shortcut icon" href="icon/Ch.ico" type="image/x-icon">
+        <title>History</title>
+    </head>
+
+    <body class="grid-box">
+        <div class="headers" th:insert="~{Header.html :: header}"></div>
+        <div class="left"></div>
+
+        <div class="middle">
+            <form action="#" th:object="${history}" th:action="@{/History}" method="post">
+                <table class="table">
+                    <thead class="table">
+                        <tr>
+                            <th>User:</th>
+                            <th>Currency from name:
+                                <input class="field-search" type="text" th:field="*{currencyNameFrom}">
+                            </th>
+                            <th>Currency value from:
+                                <input class="field-search" type="text" th:field="*{currencyValueFrom}">
+                            </th>
+                            <th>Currency value to:
+                                <input class="field-search" type="text" th:field="*{currencyValueTo}">
+                            </th>
+                            <th>Currency to name:
+                                <input class="field-search" type="text" th:field="*{currencyNameTo}">
+                            </th>
+                            <th>Date of currency entry:
+                                <input class="field-search" type="date" th:field="*{date_valcurs}">
+                            </th>
+                            <th>Conversion date:
+                                <input class="field-search" type="date" th:field="*{date_conversion}">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="h:${historyViewList}">
+                            <td th:text="${h.userName}"></td>
+                            <td th:text="${h.currencyNameFrom}"></td>
+                            <td th:text="${h.currencyValueFrom}"></td>
+                            <td th:text="${h.currencyValueTo}"></td>
+                            <td th:text="${h.currencyNameTo}"></td>
+                            <td th:text="${h.date_valcurs}"></td>
+                            <td th:text="${h.date_conversion}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <button class="btn-find" type="submit">Find</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="right"></div>
+        <div class="footer" th:insert="~{Footer.html :: footer}"></div>
+    </body>
+</html>

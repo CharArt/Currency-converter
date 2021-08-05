@@ -1,0 +1,45 @@
+.grid-box{
+	grid-template-columns:5% 90% 5%;
+	grid-template-rows:10% 80% 10%;
+}
+.form-grid-container{
+	height:100%;
+	display:grid;
+}
+
+.table {
+	width: 100%;
+	border: none;
+}
+th {
+	text-align: left;
+	padding: 10px 5px;
+	background: #D2691E;
+	font-size: 12px;
+	color: black;
+	border: none;
+}
+ 
+th:first-child {
+	border-radius: 20px 0 0 20px;
+}
+th:last-child {
+	border-radius: 0 20px 20px 0;
+}
+tr:nth-child(even) {
+	background: #FFD700;
+	color: black;
+}
+td {
+	text-align: center;
+	padding: 10px 15px;
+	font-size: 14px;
+	vertical-align: top;
+	border: none;
+}
+td:first-child {
+	border-radius: 20px 0 0 20px;
+}
+td:last-child {
+	border-radius: 0 20px 20px 0;
+}

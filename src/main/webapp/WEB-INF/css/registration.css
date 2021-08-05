@@ -1,0 +1,42 @@
+.grid-box{
+	grid-template-columns:10% 80% 10%;
+	grid-template-rows:10% 80% 10%;
+}
+.middle{
+	font-family:Calibri, fantasy;
+	font-size:30px;
+}
+
+.footer{
+	font-size:25px;
+}
+
+.form-grid-container{
+	height:100%;
+	display:grid;
+	grid-template-columns:35% 65%;
+	grid-template-rows:80% 20%
+}
+.text-layer{
+	/*border:solid aqua;*/
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+	text-align:right;
+}
+.field-layer{
+	/*border:solid black;*/
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+}
+
+.button-layer{
+	/*border:solid orange;*/
+	grid-column-start:1;
+	grid-column-end:3;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+}
