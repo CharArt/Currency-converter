@@ -22,7 +22,6 @@ import java.util.List;
 @Service
 public class ParcerServiceImplement implements ParcerService {
 
-
     @Override
     public List<CursDynamic> getCursDynamicList() {
         DailyInfo service = new DailyInfo();
@@ -95,8 +94,11 @@ public class ParcerServiceImplement implements ParcerService {
             }
             cursDynamic.setvCharCode(vcharCodeStringShort);
 //-------------------------------------------------------------------------------------------------------------------------------------
-            cursDynamicList.add(i, cursDynamic);
+            if (CursDynamic.equalsCursDynamicWithoutNull(cursDynamic)) {
+                cursDynamicList.add(cursDynamic);
+            }
         }
+        cursDynamicList.forEach(cursDynamic -> System.out.println(cursDynamic.getvCode()));
         return cursDynamicList;
     }
 
@@ -154,13 +156,54 @@ public class ParcerServiceImplement implements ParcerService {
     }
 
     @Override
-    public boolean equalsCursDynamicWithoutNull(CursDynamic cursDynamic) {
-        return cursDynamic.getvCode().equals("Null") &&
-                cursDynamic.getvName().equals("Null") &&
-                cursDynamic.getvEngName().equals("Null") &&
-                cursDynamic.getvNom().equals("Null") &&
-                cursDynamic.getvNumCode().equals("Null") &&
-                cursDynamic.getvCharCode().equals("Null");
+    public List<ValuteCursOnDate> getValuteCursOnDate(LocalDateTime localDateTime) throws DatatypeConfigurationException {
+        DailyInfo service = new DailyInfo();
+        DailyInfoSoap port = service.getDailyInfoSoap();
+
+        List<ValuteCursOnDate> valuteCursOnDateList = new ArrayList<>();
+
+        GregorianCalendar date = new GregorianCalendar(localDateTime.getYear(), localDateTime.getMonthValue(), localDateTime.getDayOfMonth());
+        XMLGregorianCalendar xmlDate = DatatypeFactory.newInstance().newXMLGregorianCalendar(date);
+
+        GetCursOnDateResponse.GetCursOnDateResult result = port.getCursOnDate(xmlDate);
+        Element element = (Element) result.getAny();
+        NodeList list = element.getElementsByTagName("ValuteCursOnDate");
+
+        for (int i = 0; i < list.getLength(); i++) {
+            ValuteCursOnDate valuteCursOnDate = new ValuteCursOnDate();
+            Node nodeValute = list.item(i);
+            Element elementValute = (Element) nodeValute;
+//-------------------------------------------------------------------------------------------------------------------------------------
+            Node vNameNode = elementValute.getElementsByTagName("Vname").item(0);
+            String vName = vNameNode.getTextContent();
+            String vNameShort = vName.trim();
+            valuteCursOnDate.setName(vNameShort);
+//-------------------------------------------------------------------------------------------------------------------------------------
+            Node vNomNode = elementValute.getElementsByTagName("Vnom").item(0);
+            String vNom = vNomNode.getTextContent();
+            String vNomShort = vNom.trim();
+            valuteCursOnDate.setNom(vNomShort);
+//-------------------------------------------------------------------------------------------------------------------------------------
+            Node vCursNode = elementValute.getElementsByTagName("Vcurs").item(0);
+            String vCurs = vCursNode.getTextContent();
+            String vCursShort = vCurs.trim();
+            valuteCursOnDate.setCurs(vCursShort);
+//-------------------------------------------------------------------------------------------------------------------------------------
+            Node vCodeNode = elementValute.getElementsByTagName("Vcode").item(0);
+            String vCode = vCodeNode.getTextContent();
+            String vCodeShort = vCode.trim();
+            valuteCursOnDate.setCode(vCodeShort);
+//-------------------------------------------------------------------------------------------------------------------------------------
+            Node vchCodeNode = elementValute.getElementsByTagName("VchCode").item(0);
+            String vChCode = vchCodeNode.getTextContent();
+            String vChCodeShort = vChCode.trim();
+            valuteCursOnDate.setChCode(vChCodeShort);
+//-------------------------------------------------------------------------------------------------------------------------------------
+            valuteCursOnDate.setDate(localDateTime);
+//-------------------------------------------------------------------------------------------------------------------------------------
+            valuteCursOnDateList.add(valuteCursOnDate);
+        }
+        return valuteCursOnDateList;
     }
 
     @Override

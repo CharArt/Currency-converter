@@ -13,7 +13,7 @@ public interface ParcerService {
 
     List<ValuteCursOnDate> getValuteCursOnDateList(List<LocalDateTime> listDate) throws DatatypeConfigurationException;
 
-    boolean equalsCursDynamicWithoutNull(CursDynamic cursDynamic) throws DatatypeConfigurationException;
+    List<ValuteCursOnDate> getValuteCursOnDate(LocalDateTime localDateTime) throws DatatypeConfigurationException;
 
     boolean equalsValuteCursOnDateWithoutNull (ValuteCursOnDate valuteCursOnDate)throws DatatypeConfigurationException;
 }

@@ -67,12 +67,30 @@ public class CursDynamic implements Serializable {
         this.vCharCode = vCharCode;
     }
 
-    public boolean equals(CursDynamic cursDynamic) {
-        return this.vCode.equals(cursDynamic.getvCode()) &&
-                this.vName.equals(cursDynamic.getvName()) &&
-                this.vEngName.equals(cursDynamic.getvEngName()) &&
-                this.vNom.equals(cursDynamic.getvCommonCode()) &&
-                this.vNumCode.equals(cursDynamic.getvNumCode()) &&
-                this.vCharCode.equals(cursDynamic.getvCharCode());
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        CursDynamic o = (CursDynamic) obj;
+        return this.vCode.equals(o.getvCode()) &&
+                this.vName.equals(o.getvName()) &&
+                this.vEngName.equals(o.getvEngName()) &&
+                this.vNom.equals(o.getvCommonCode()) &&
+                this.vNumCode.equals(o.getvNumCode()) &&
+                this.vCharCode.equals(o.getvCharCode());
     }
+
+    public static boolean equalsCursDynamicWithoutNull(CursDynamic cursDynamic) {
+        return  !cursDynamic.getvCode().equals("Null") &&
+                !cursDynamic.getvName().equals("Null") &&
+                !cursDynamic.getvEngName().equals("Null") &&
+                !cursDynamic.getvNom().equals("Null") &&
+                !cursDynamic.getvNumCode().equals("Null") &&
+                !cursDynamic.getvCharCode().equals("Null");
+    }
+
 }

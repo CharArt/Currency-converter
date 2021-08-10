@@ -54,7 +54,7 @@ public class ValCurs implements Serializable {
     @Column(name = "currency_date")
     private LocalDateTime currency_date;
 
-    @OneToMany
+    @ManyToMany
     @JoinColumn(name = "write_id")
     private List<History> currentHistory;
 
@@ -129,4 +129,6 @@ public class ValCurs implements Serializable {
     public void setCurrentHistory(List<History> currentHistory) {
         this.currentHistory = currentHistory;
     }
+
+
 }

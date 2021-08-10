@@ -1,50 +1,55 @@
 package com.ccon.chap.controller;
 
+import com.ccon.chap.dto.view.ValCursView;
+import com.ccon.chap.entity.User;
 import com.ccon.chap.entity.ValCurs;
-import com.ccon.chap.service.datetime.CustomDateTimeService;
-import com.ccon.chap.service.parcer.ParcerService;
+import com.ccon.chap.service.conversion.ConverterService;
+import com.ccon.chap.service.user.UserService;
 import com.ccon.chap.service.valcurs.ValCursService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.validation.Valid;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 @Controller
 public class ConvertorController {
-    private CustomDateTimeService customDateTimeService;
     private ValCursService valCursService;
-    private ParcerService parcerService;
+    private ConverterService converterService;
+    private UserService userService;
 
     @Autowired
-    public ConvertorController(CustomDateTimeService customDateTimeService, ValCursService valCursService, ParcerService parcerService) {
-        this.customDateTimeService = customDateTimeService;
+    public ConvertorController(ValCursService valCursService, ConverterService converterService, UserService userService) {
         this.valCursService = valCursService;
-        this.parcerService = parcerService;
+        this.converterService = converterService;
+        this.userService = userService;
     }
 
     @GetMapping("/Convertor")
     public String FrontPage(ModelMap modelMap) {
-        List<ValCurs> valCursList = valCursService.findValCursByDate(LocalDateTime.of(2002,05,02,0,0));
+        List<ValCurs> valCursList = valCursService.findValCursByDate(LocalDateTime.of(2002, 05, 02, 0, 0));
         modelMap.addAttribute("valCursList", valCursList);
-        ValCurs valCursForm = new ValCurs();
-        modelMap.addAttribute("valCursForm1",valCursForm);
-        modelMap.addAttribute("valCursForm2",valCursForm);
+        ValCursView valCursView = new ValCursView();
+        modelMap.addAttribute("valCursView", valCursView);
         return "Convertor";
     }
 
     @PostMapping("/Convertor")
-    public String ValCursWork (@ModelAttribute("valCursForm1")@Valid ValCurs valCurs1, @ModelAttribute("valCursForm2")@Valid ValCurs valCurs2,ModelMap modelMap, BindingResult bindingResult){
-        List<ValCurs> valCursList = valCursService.findValCursByDate(valCurs1.getCurrency_date());
-            for(ValCurs valCurs3 : valCursList){
-                if(valCurs3)
-            }
+    public String ValCursWork(@ModelAttribute("valCursView") ValCursView valCursView, ModelMap modelMap) {
+        User user = userService.findByUserId(2L);
+        LocalDate localDate = LocalDate.parse(new SimpleDateFormat("yyyy-MM-dd").format(valCursView.getTimeSearch()));
+        LocalTime localTime = LocalTime.of(11, 11);
+        LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);
+        List<ValCurs> valCursList = valCursService.findValCursByDate(localDateTime);
+        modelMap.addAttribute("valCursView", converterService.conversion(valCursList, valCursView, user));
+        modelMap.addAttribute("valCursList", valCursList);
         return "Convertor";
     }
 }

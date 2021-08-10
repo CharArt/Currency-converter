@@ -48,7 +48,7 @@ public class UserServiceImplementTest {
 
     @Test
     void findByUserIdTest() {
-        assertEquals(1, userService.findByUserId(1L).getUser_id());
+        assertEquals(2, userService.findByUserId(2L).getUser_id());
     }
 
     @Test

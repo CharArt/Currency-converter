@@ -18,8 +18,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
 @SqlGroup({@Sql("/sql/cleaning-data-base.sql"), @Sql("/sql/create-all-table.sql")})
@@ -46,14 +45,6 @@ public class ParcerServiceTest {
         List<CursDynamic> cursDynamicList = parcerService.getCursDynamicList();
         for (int i = 1; i < cursDynamicList.size(); i++) {
             assertFalse(cursDynamicList.get(i).equals(cursDynamicList.get(i - 1)));
-        }
-    }
-
-    @Test
-    void getCursDynamicListTestUniquWithoutNull() throws DatatypeConfigurationException {
-        List<CursDynamic> cursDynamicList = parcerService.getCursDynamicList();
-        for (int i = 1; i < cursDynamicList.size(); i++) {
-            assertFalse(parcerService.equalsCursDynamicWithoutNull(cursDynamicList.get(i)));
         }
     }
 
@@ -85,6 +76,14 @@ public class ParcerServiceTest {
         List<ValuteCursOnDate> valuteCursOnDateList = parcerService.getValuteCursOnDateList(localDateTimes);
         for (int i = 1; i < valuteCursOnDateList.size(); i++) {
             assertFalse(valuteCursOnDateList.get(i).equals(valuteCursOnDateList.get(i - 1)));
+        }
+    }
+
+    @Test
+    void getValuteCursOnDateTest () throws DatatypeConfigurationException {
+        List<ValuteCursOnDate> valuteCursOnDateList = parcerService.getValuteCursOnDate(LocalDateTime.now());
+        for (int i = 1; i < valuteCursOnDateList.size(); i++) {
+            assertEquals(valuteCursOnDateList.get(i).getDate().toLocalDate(), LocalDateTime.now().toLocalDate());
         }
     }
 }

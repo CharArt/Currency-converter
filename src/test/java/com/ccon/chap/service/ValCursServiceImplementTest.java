@@ -92,7 +92,7 @@ public class ValCursServiceImplementTest {
         LocalDateTime localDateTime = LocalDateTime.ofInstant(calendar.toInstant(), ZoneId.systemDefault());
         short numcode = 999;
 
-        ValCurs newv = new ValCurs("R99999", numcode, "AAA", 1, "Артёмий", "100,0100", localDateTime);
+        ValCurs newv = new ValCurs("R99999", numcode, "AAA", 1, "Артёмий", "100.0100", localDateTime);
         valCursService.createdNewValCurs(newv);
 
         assertEquals(52, valCursService.findAll().size());
@@ -106,7 +106,7 @@ public class ValCursServiceImplementTest {
         newValCurs.setCurrency_charcode(valCursService.findValCursByWriteId(5L).getCurrency_charcode());
         newValCurs.setCurrency_nominal(valCursService.findValCursByWriteId(5L).getCurrency_nominal());
         newValCurs.setCurrency_name(valCursService.findValCursByWriteId(5L).getCurrency_name());
-        newValCurs.setCurrency_value(valCursService.findValCursByWriteId(5L).getCurrency_value());
+        newValCurs.setCurrency_value(valCursService.findValCursByWriteId(5L).getCurrency_value().replace(",", "."));
         newValCurs.setCurrency_date(valCursService.findValCursByWriteId(5L).getCurrency_date());
         valCursService.UpdateValCurs(1L, newValCurs);
         assertEquals("Доллар США", valCursService.findValCursByWriteId(1L).getCurrency_name());
@@ -115,5 +115,14 @@ public class ValCursServiceImplementTest {
     @Test
     void getLastEntryTest() {
         assertEquals(51L, valCursService.getLastEntry().getWrite_id());
+    }
+
+    @Test
+    void DataEntryForspecifiedDateTest() {
+        valCursService.DataEntryForspecifiedDate(LocalDateTime.now());
+        List<ValCurs> valCursList = valCursService.findValCursByDate(LocalDateTime.now());
+        for (ValCurs valCurs : valCursList) {
+            assertEquals(valCurs.getCurrency_date().toLocalDate(), LocalDateTime.now().toLocalDate());
+        }
     }
 }

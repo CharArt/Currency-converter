@@ -82,6 +82,31 @@ public class ValCursServiceImplement implements ValCursService {
     }
 
     @Override
+    public void DataEntryForspecifiedDate(LocalDateTime enteringDate) {
+        try {
+            List<CursDynamic> cursDynamicList = parcerService.getCursDynamicList();
+            List<ValuteCursOnDate> valuteCursOnDateList = parcerService.getValuteCursOnDate(enteringDate);
+            for (ValuteCursOnDate valuteCursOnDate : valuteCursOnDateList) {
+                ValCurs valCurs = new ValCurs();
+                valCurs.setCurrency_numcode(Short.parseShort(valuteCursOnDate.getCode()));
+                valCurs.setCurrency_charcode(valuteCursOnDate.getChCode());
+                valCurs.setCurrency_nominal(Integer.parseInt(valuteCursOnDate.getNom()));
+                valCurs.setCurrency_name(valuteCursOnDate.getName());
+                valCurs.setCurrency_value(valuteCursOnDate.getCurs().replace(",", "."));
+                valCurs.setCurrency_date(valuteCursOnDate.getDate());
+                for (CursDynamic cursDynamic : cursDynamicList) {
+                    if (valCurs.getCurrency_numcode() == Short.parseShort(cursDynamic.getvNumCode())) {
+                        valCurs.setCurrency_id(cursDynamic.getvCode());
+                    }
+                }
+                repository.save(valCurs);
+            }
+        } catch (DatatypeConfigurationException exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    @Override
     public void FillingInDatabaseValCura() {
         try {
             List<LocalDateTime> listLoscalDateTime = customDateTimeService.getListOfDates(LocalDateTime.of(1993, 1, 6, 0, 0));
@@ -93,7 +118,7 @@ public class ValCursServiceImplement implements ValCursService {
                 valCurs.setCurrency_charcode(valuteCursOnDate.getChCode());
                 valCurs.setCurrency_nominal(Integer.parseInt(valuteCursOnDate.getNom()));
                 valCurs.setCurrency_name(valuteCursOnDate.getName());
-                valCurs.setCurrency_value(valuteCursOnDate.getCurs());
+                valCurs.setCurrency_value(valuteCursOnDate.getCurs().replace(",", "."));
                 valCurs.setCurrency_date(valuteCursOnDate.getDate());
                 for (CursDynamic cursDynamic : cursDynamicList) {
                     if (valCurs.getCurrency_numcode() == Short.parseShort(cursDynamic.getvNumCode())) {
@@ -119,7 +144,7 @@ public class ValCursServiceImplement implements ValCursService {
                 valCurs.setCurrency_charcode(valuteCursOnDate.getChCode());
                 valCurs.setCurrency_nominal(Integer.parseInt(valuteCursOnDate.getNom()));
                 valCurs.setCurrency_name(valuteCursOnDate.getName());
-                valCurs.setCurrency_value(valuteCursOnDate.getCurs());
+                valCurs.setCurrency_value(valuteCursOnDate.getCurs().replace(",", "."));
                 valCurs.setCurrency_date(valuteCursOnDate.getDate());
                 for (CursDynamic cursDynamic : cursDynamicList) {
                     if (valCurs.getCurrency_numcode() == Short.parseShort(cursDynamic.getvNumCode())) {

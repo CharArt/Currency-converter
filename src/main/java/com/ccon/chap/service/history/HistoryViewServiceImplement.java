@@ -1,9 +1,10 @@
 package com.ccon.chap.service.history;
 
-import com.ccon.chap.dto.HistoryView;
+import com.ccon.chap.dto.view.HistoryView;
 import com.ccon.chap.entity.History;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.util.List;
 
 @Service
@@ -19,8 +20,8 @@ public class HistoryViewServiceImplement implements HistroyViewService {
             newHistoryView.setCurrencyValueFrom(historyList.get(i).getWriteInId().getCurrency_value());
             newHistoryView.setCurrencyValueTo(historyList.get(i).getWriteOfId().getCurrency_value());
             newHistoryView.setCurrencyNameTo(historyList.get(i).getWriteOfId().getCurrency_name());
-            newHistoryView.setDate_valcurs(historyList.get(i).getDate_valcurs());
-            newHistoryView.setDate_conversion(historyList.get(i).getDate_conversion());
+            newHistoryView.setDate_valcurs(Date.valueOf(historyList.get(i).getDate_valcurs().toLocalDate()));
+            newHistoryView.setDate_conversion(Date.valueOf(historyList.get(i).getDate_conversion().toLocalDate()));
             historyViewList.add(newHistoryView);
         }
         return historyViewList;

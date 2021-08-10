@@ -1,6 +1,8 @@
-package com.ccon.chap.dto;
+package com.ccon.chap.dto.view;
 
-import java.time.LocalDateTime;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
 
 public class HistoryView {
     private Long request_id;
@@ -9,8 +11,11 @@ public class HistoryView {
     private String currencyValueFrom;
     private String currencyValueTo;
     private String currencyNameTo;
-    private LocalDateTime date_valcurs;
-    private LocalDateTime date_conversion;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date date_valcurs;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date date_conversion;
 
     public Long getRequest_id() {
         return request_id;
@@ -60,19 +65,19 @@ public class HistoryView {
         this.currencyNameTo = currencyNameTo;
     }
 
-    public LocalDateTime getDate_valcurs() {
+    public Date getDate_valcurs() {
         return date_valcurs;
     }
 
-    public void setDate_valcurs(LocalDateTime date_valcurs) {
+    public void setDate_valcurs(Date date_valcurs) {
         this.date_valcurs = date_valcurs;
     }
 
-    public LocalDateTime getDate_conversion() {
+    public Date getDate_conversion() {
         return date_conversion;
     }
 
-    public void setDate_conversion(LocalDateTime date_conversion) {
+    public void setDate_conversion(Date date_conversion) {
         this.date_conversion = date_conversion;
     }
 }

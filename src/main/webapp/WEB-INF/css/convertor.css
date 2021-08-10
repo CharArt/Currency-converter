@@ -22,7 +22,7 @@
 	display:grid;
 	grid-gap: 10px;
     grid-template-columns: 95%;
-    grid-template-rows: 5% 5% 5%;
+    grid-template-rows: 5% 5% 5% 5%;
     text-align:center;
     justify-content:center;
     align-content:center;
@@ -46,11 +46,12 @@
 	grid-row-start: 3;
 	grid-row-end: 4;
 }
+
 .box2{
 	display:grid;
 	grid-gap: 10px;
 	grid-template-columns: 95%;
-    grid-template-rows: 5% 5% 5%;
+    grid-template-rows: 5% 5% 5% 5%;
     text-align:center;
     justify-content:center;
     align-content:center;

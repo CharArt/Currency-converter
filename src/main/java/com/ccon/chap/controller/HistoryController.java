@@ -1,6 +1,6 @@
 package com.ccon.chap.controller;
 
-import com.ccon.chap.dto.HistoryView;
+import com.ccon.chap.dto.view.HistoryView;
 import com.ccon.chap.entity.History;
 import com.ccon.chap.service.history.HistoryService;
 import com.ccon.chap.service.history.HistoryViewServiceImplement;
@@ -42,7 +42,7 @@ public class HistoryController {
         List<History> historyList = historyService.findHistoryByUserId(2L);
         List<HistoryView> historyViewList = new ArrayList<HistoryView>(historyList.size());
         historyViewList = historyViewServiceImplement.setListViewFromHistory(historyViewList, historyList);
-        if (historyView.getCurrencyNameFrom().isEmpty() && historyView.getCurrencyValueFrom().isEmpty() && historyView.getCurrencyValueTo().isEmpty() && historyView.getCurrencyNameTo().isEmpty() && null == historyView.getDate_valcurs() && null == historyView.getDate_conversion()) {
+        if (historyView.getCurrencyNameFrom().isEmpty() && historyView.getCurrencyValueFrom().isEmpty() && historyView.getCurrencyValueTo().isEmpty() && historyView.getCurrencyNameTo().isEmpty() && null != historyView.getDate_valcurs() && null != historyView.getDate_conversion()) {
             model.addAttribute("historyViewList", historyViewList);
             return "History";
         }
@@ -59,10 +59,10 @@ public class HistoryController {
             historyViewList = historyViewList.stream().filter(historyView1 -> !historyView1.getCurrencyNameTo().isEmpty() && historyView1.getCurrencyNameTo().equals(historyView.getCurrencyNameTo())).collect(Collectors.toList());
         }
         if (null != historyView.getDate_valcurs()) {
-            historyViewList = historyViewList.stream().filter(historyView1 -> historyView1.getDate_valcurs() != null && historyView1.getDate_valcurs().equals(historyView.getDate_valcurs())).collect(Collectors.toList());
+            historyViewList = historyViewList.stream().filter(historyView1 -> null != historyView1.getDate_valcurs() && historyView1.getDate_valcurs().equals(historyView.getDate_valcurs())).collect(Collectors.toList());
         }
         if (null != historyView.getDate_conversion()) {
-            historyViewList = historyViewList.stream().filter(historyView1 -> historyView1.getDate_conversion() != null && historyView1.getDate_conversion().equals(historyView.getDate_conversion())).collect(Collectors.toList());
+            historyViewList = historyViewList.stream().filter(historyView1 -> null != historyView1.getDate_conversion() && historyView1.getDate_conversion().equals(historyView.getDate_conversion())).collect(Collectors.toList());
         }
         model.addAttribute("historyViewList", historyViewList);
         return "History";

@@ -26,6 +26,8 @@ public interface ValCursService {
 
     void UpdateValCurs(Long writeId, ValCurs newValCurs);
 
+    void DataEntryForspecifiedDate (LocalDateTime enteringDate);
+
     void FillingInDatabaseValCura ();
 
     void UpdateDatabaseValCura ();

@@ -23,11 +23,11 @@ public class History implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long request_id;
 
-    @ManyToOne
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "write_of_id", insertable = false, updatable = false)
     private ValCurs writeOfId;
 
-    @ManyToOne
+    @ManyToMany
     @JoinColumn(name = "write_in_id", insertable = false, updatable = false)
     private ValCurs writeInId;
 
