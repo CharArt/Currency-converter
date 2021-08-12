@@ -56,7 +56,7 @@ public class HistoryServiceImplementTest {
     void findHistoryByWriteOfIdTest() {
         List<History> stories = historyService.findHistoryByWriteOfId(5L);
         for (History h : stories) {
-            assertEquals(5, h.getWriteOfId().getWrite_id());
+            assertEquals(5, h.getWritOfId().getWrite_id());
         }
     }
 
@@ -82,18 +82,18 @@ public class HistoryServiceImplementTest {
         LocalDateTime localDateTime = LocalDateTime.ofInstant(calendar.toInstant(), ZoneId.systemDefault());
         List<History> stories = historyService.findHistoryByDateConversion(localDateTime);
         for (History h : stories) {
-            assertEquals(localDateTime.format(TIME_FORMATTER), h.getDate_conversion().format(TIME_FORMATTER));
+            assertEquals(localDateTime.format(TIME_FORMATTER), h.getDateConversion().format(TIME_FORMATTER));
         }
     }
 
     @Test
     void createdNewHistoryTest() {
-        ValCurs of = valCursService.findValCursByWriteId(3L);
-        ValCurs in = valCursService.findValCursByWriteId(6L);
+        ValCurs valCursOf = valCursService.findValCursByWriteId(3L);
+        ValCurs valCursIn = valCursService.findValCursByWriteId(6L);
         User user = userService.findByUserId(1L);
         LocalDateTime now = LocalDateTime.now();
 
-        History history = new History(of, in, user, of.getCurrency_date(), now);
+        History history = new History(valCursOf.getCurrency_date(), LocalDateTime.now(), valCursOf, valCursIn, user);
         historyService.saveHistory(history);
 
         assertEquals(31, historyService.findAll().size());

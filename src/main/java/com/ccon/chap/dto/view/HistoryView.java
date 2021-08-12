@@ -5,24 +5,20 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 
 public class HistoryView {
-    private Long request_id;
+
     private String userName;
-    private String currencyNameFrom;
-    private String currencyValueFrom;
-    private String currencyValueTo;
-    private String currencyNameTo;
+    private String currencyOfName;
+    private String currencyOfValue;
+    private String currencyInValue;
+    private String currencyInName;
+
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date_valcurs;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date_conversion;
 
-    public Long getRequest_id() {
-        return request_id;
-    }
-
-    public void setRequest_id(Long request_id) {
-        this.request_id = request_id;
+    public HistoryView() {
     }
 
     public String getUserName() {
@@ -33,36 +29,36 @@ public class HistoryView {
         this.userName = userName;
     }
 
-    public String getCurrencyNameFrom() {
-        return currencyNameFrom;
+    public String getCurrencyOfName() {
+        return currencyOfName;
     }
 
-    public void setCurrencyNameFrom(String currencyNameFrom) {
-        this.currencyNameFrom = currencyNameFrom;
+    public void setCurrencyOfName(String currencyOfName) {
+        this.currencyOfName = currencyOfName;
     }
 
-    public String getCurrencyValueFrom() {
-        return currencyValueFrom;
+    public String getCurrencyOfValue() {
+        return currencyOfValue;
     }
 
-    public void setCurrencyValueFrom(String currencyValueFrom) {
-        this.currencyValueFrom = currencyValueFrom;
+    public void setCurrencyOfValue(String currencyOfValue) {
+        this.currencyOfValue = currencyOfValue;
     }
 
-    public String getCurrencyValueTo() {
-        return currencyValueTo;
+    public String getCurrencyInValue() {
+        return currencyInValue;
     }
 
-    public void setCurrencyValueTo(String currencyValueTo) {
-        this.currencyValueTo = currencyValueTo;
+    public void setCurrencyInValue(String currencyInValue) {
+        this.currencyInValue = currencyInValue;
     }
 
-    public String getCurrencyNameTo() {
-        return currencyNameTo;
+    public String getCurrencyInName() {
+        return currencyInName;
     }
 
-    public void setCurrencyNameTo(String currencyNameTo) {
-        this.currencyNameTo = currencyNameTo;
+    public void setCurrencyInName(String currencyInName) {
+        this.currencyInName = currencyInName;
     }
 
     public Date getDate_valcurs() {

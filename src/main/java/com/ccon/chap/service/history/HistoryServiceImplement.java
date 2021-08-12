@@ -57,6 +57,6 @@ public class HistoryServiceImplement implements HistoryService {
 
     @Override
     public void deleteHistoryByRequestId(Long requestId) {
-        repository.deleteById(requestId);
+        repository.deleteHistoryById(requestId);
     }
 }

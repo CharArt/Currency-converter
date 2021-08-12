@@ -3,7 +3,7 @@ package com.ccon.chap.controller;
 import com.ccon.chap.dto.view.HistoryView;
 import com.ccon.chap.entity.History;
 import com.ccon.chap.service.history.HistoryService;
-import com.ccon.chap.service.history.HistoryViewServiceImplement;
+import com.ccon.chap.service.history.HistoryViewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,28 +11,29 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Controller
 public class HistoryController {
     private HistoryService historyService;
-    private HistoryViewServiceImplement historyViewServiceImplement;
+    private HistoryViewService historyViewService;
 
     @Autowired
-    public HistoryController(HistoryService historyService, HistoryViewServiceImplement historyViewServiceImplement) {
+    public HistoryController(HistoryService historyService, HistoryViewService historyViewService) {
         this.historyService = historyService;
-        this.historyViewServiceImplement = historyViewServiceImplement;
+        this.historyViewService = historyViewService;
     }
 
     @GetMapping("/History")
     public String getHistoryUser(Model model) {
         List<History> historyList = historyService.findHistoryByUserId(2L);
-        List<HistoryView> historyViewList = new ArrayList<HistoryView>(historyList.size());
-        historyViewList = historyViewServiceImplement.setListViewFromHistory(historyViewList, historyList);
+
+        List<HistoryView> historyViewList = historyViewService.setListViewFromHistory(historyList);
+
         model.addAttribute("historyViewList", historyViewList);
         HistoryView historyView = new HistoryView();
+
         model.addAttribute("history", historyView);
         return "History";
     }
@@ -40,23 +41,29 @@ public class HistoryController {
     @PostMapping("/History")
     public String getRequiredField(@ModelAttribute("history") HistoryView historyView, Model model) {
         List<History> historyList = historyService.findHistoryByUserId(2L);
-        List<HistoryView> historyViewList = new ArrayList<HistoryView>(historyList.size());
-        historyViewList = historyViewServiceImplement.setListViewFromHistory(historyViewList, historyList);
-        if (historyView.getCurrencyNameFrom().isEmpty() && historyView.getCurrencyValueFrom().isEmpty() && historyView.getCurrencyValueTo().isEmpty() && historyView.getCurrencyNameTo().isEmpty() && null != historyView.getDate_valcurs() && null != historyView.getDate_conversion()) {
+
+        List<HistoryView> historyViewList = historyViewService.setListViewFromHistory(historyList);
+
+        if (historyView.getCurrencyOfName().isEmpty() &&
+                historyView.getCurrencyOfValue().isEmpty() &&
+                historyView.getCurrencyInValue().isEmpty() &&
+                historyView.getCurrencyInName().isEmpty() &&
+                null != historyView.getDate_valcurs() &&
+                null != historyView.getDate_conversion()) {
             model.addAttribute("historyViewList", historyViewList);
             return "History";
         }
-        if (!historyView.getCurrencyNameFrom().isEmpty()) {
-            historyViewList = historyViewList.stream().filter(historyView1 -> !historyView1.getCurrencyNameFrom().isEmpty() && historyView1.getCurrencyNameFrom().equals(historyView.getCurrencyNameFrom())).collect(Collectors.toList());
+        if (!historyView.getCurrencyOfName().isEmpty()) {
+            historyViewList = historyViewList.stream().filter(historyView1 -> !historyView1.getCurrencyOfName().isEmpty() && historyView1.getCurrencyOfName().equals(historyView.getCurrencyOfName())).collect(Collectors.toList());
         }
-        if (!historyView.getCurrencyValueFrom().isEmpty()) {
-            historyViewList = historyViewList.stream().filter(historyView1 -> !historyView1.getCurrencyValueFrom().isEmpty() && historyView1.getCurrencyValueFrom().equals(historyView.getCurrencyValueFrom())).collect(Collectors.toList());
+        if (!historyView.getCurrencyOfValue().isEmpty()) {
+            historyViewList = historyViewList.stream().filter(historyView1 -> !historyView1.getCurrencyOfValue().isEmpty() && historyView1.getCurrencyOfValue().equals(historyView.getCurrencyOfValue())).collect(Collectors.toList());
         }
-        if (!historyView.getCurrencyValueTo().isEmpty()) {
-            historyViewList = historyViewList.stream().filter(historyView1 -> !historyView1.getCurrencyValueTo().isEmpty() && historyView1.getCurrencyValueTo().equals(historyView.getCurrencyValueTo())).collect(Collectors.toList());
+        if (!historyView.getCurrencyInValue().isEmpty()) {
+            historyViewList = historyViewList.stream().filter(historyView1 -> !historyView1.getCurrencyInValue().isEmpty() && historyView1.getCurrencyInValue().equals(historyView.getCurrencyInValue())).collect(Collectors.toList());
         }
-        if (!historyView.getCurrencyNameTo().isEmpty()) {
-            historyViewList = historyViewList.stream().filter(historyView1 -> !historyView1.getCurrencyNameTo().isEmpty() && historyView1.getCurrencyNameTo().equals(historyView.getCurrencyNameTo())).collect(Collectors.toList());
+        if (!historyView.getCurrencyInName().isEmpty()) {
+            historyViewList = historyViewList.stream().filter(historyView1 -> !historyView1.getCurrencyInName().isEmpty() && historyView1.getCurrencyInName().equals(historyView.getCurrencyInName())).collect(Collectors.toList());
         }
         if (null != historyView.getDate_valcurs()) {
             historyViewList = historyViewList.stream().filter(historyView1 -> null != historyView1.getDate_valcurs() && historyView1.getDate_valcurs().equals(historyView.getDate_valcurs())).collect(Collectors.toList());

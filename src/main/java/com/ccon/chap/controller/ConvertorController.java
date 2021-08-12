@@ -34,8 +34,9 @@ public class ConvertorController {
 
     @GetMapping("/Convertor")
     public String FrontPage(ModelMap modelMap) {
-        List<ValCurs> valCursList = valCursService.findValCursByDate(LocalDateTime.of(2002, 05, 02, 0, 0));
+        List<ValCurs> valCursList = valCursService.findValCursByDate(LocalDateTime.of(2002, 3, 2, 0, 0));
         modelMap.addAttribute("valCursList", valCursList);
+
         ValCursView valCursView = new ValCursView();
         modelMap.addAttribute("valCursView", valCursView);
         return "Convertor";
@@ -44,10 +45,13 @@ public class ConvertorController {
     @PostMapping("/Convertor")
     public String ValCursWork(@ModelAttribute("valCursView") ValCursView valCursView, ModelMap modelMap) {
         User user = userService.findByUserId(2L);
+
         LocalDate localDate = LocalDate.parse(new SimpleDateFormat("yyyy-MM-dd").format(valCursView.getTimeSearch()));
         LocalTime localTime = LocalTime.of(11, 11);
         LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);
+
         List<ValCurs> valCursList = valCursService.findValCursByDate(localDateTime);
+
         modelMap.addAttribute("valCursView", converterService.conversion(valCursList, valCursView, user));
         modelMap.addAttribute("valCursList", valCursList);
         return "Convertor";

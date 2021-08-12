@@ -22,7 +22,7 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long user_id;
 
-     @NotNull
+    @NotNull
     @Max(50)
     @Column(name = "user_login")
     private String user_login;
@@ -65,12 +65,11 @@ public class User implements Serializable {
     @Column(name = "user_is_active")
     private boolean user_is_active;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "role_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
     private List<Role> role;
 
-    @OneToMany
-    @JoinColumn(name = "user_id")
+    @OneToMany()
     private List<History> history;
 
     public User() {

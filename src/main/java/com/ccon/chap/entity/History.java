@@ -8,38 +8,39 @@ import java.time.LocalDateTime;
 @Table(name = "history")
 public class History implements Serializable {
 
-    public History(ValCurs writeOfId, ValCurs writeInId, User user, LocalDateTime date_valcurs, LocalDateTime date_conversion) {
-        this.writeOfId = writeOfId;
-        this.writeInId = writeInId;
-        this.user = user;
-        this.date_valcurs = date_valcurs;
-        this.date_conversion = date_conversion;
-    }
-
-    public History() {}
-
     @Id
     @Column(name = "request_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long request_id;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "write_of_id", insertable = false, updatable = false)
-    private ValCurs writeOfId;
-
-    @ManyToMany
-    @JoinColumn(name = "write_in_id", insertable = false, updatable = false)
-    private ValCurs writeInId;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id", insertable = false, updatable = false)
-    private User user;
-
     @Column(name = "date_valcurs")
-    private LocalDateTime date_valcurs;
+    private LocalDateTime dateValcurs;
 
     @Column(name = "date_conversion")
-    private LocalDateTime date_conversion;
+    private LocalDateTime dateConversion;
+
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @JoinColumn(name = "write_of_id")
+    private ValCurs writOfId;
+
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @JoinColumn(name = "write_in_id")
+    private ValCurs writeInId;
+
+    @ManyToOne(cascade =  CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    public History() {
+    }
+
+    public History(LocalDateTime dateValcurs, LocalDateTime dateConversion, ValCurs writOfId, ValCurs writeInId, User user) {
+        this.dateValcurs = dateValcurs;
+        this.dateConversion = dateConversion;
+        this.writOfId = writOfId;
+        this.writeInId = writeInId;
+        this.user = user;
+    }
 
     public Long getRequest_id() {
         return request_id;
@@ -49,12 +50,28 @@ public class History implements Serializable {
         this.request_id = request_id;
     }
 
-    public ValCurs getWriteOfId() {
-        return writeOfId;
+    public LocalDateTime getDateValcurs() {
+        return dateValcurs;
     }
 
-    public void setWriteOfId(ValCurs writeOfId) {
-        this.writeOfId = writeOfId;
+    public void setDateValcurs(LocalDateTime dateValcurs) {
+        this.dateValcurs = dateValcurs;
+    }
+
+    public LocalDateTime getDateConversion() {
+        return dateConversion;
+    }
+
+    public void setDateConversion(LocalDateTime dateConversion) {
+        this.dateConversion = dateConversion;
+    }
+
+    public ValCurs getWritOfId() {
+        return writOfId;
+    }
+
+    public void setWritOfId(ValCurs writOfId) {
+        this.writOfId = writOfId;
     }
 
     public ValCurs getWriteInId() {
@@ -71,21 +88,5 @@ public class History implements Serializable {
 
     public void setUser(User user) {
         this.user = user;
-    }
-
-    public LocalDateTime getDate_valcurs() {
-        return date_valcurs;
-    }
-
-    public void setDate_valcurs(LocalDateTime date_valcurs) {
-        this.date_valcurs = date_valcurs;
-    }
-
-    public LocalDateTime getDate_conversion() {
-        return date_conversion;
-    }
-
-    public void setDate_conversion(LocalDateTime date_conversion) {
-        this.date_conversion = date_conversion;
     }
 }
