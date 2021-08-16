@@ -121,4 +121,14 @@ public class ValCurs implements Serializable {
         this.currency_date = currency_date;
     }
 
+    public boolean isNull() {
+        return this.write_id == null &&
+                this.currency_id == null &&
+                this.currency_numcode == 0 &&
+                this.currency_charcode == null &&
+                this.currency_nominal == 0 &&
+                this.currency_name == null &&
+                this.currency_value == null &&
+                this.currency_date == null;
+    }
 }

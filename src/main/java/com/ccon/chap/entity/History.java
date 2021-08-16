@@ -13,12 +13,6 @@ public class History implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long request_id;
 
-    @Column(name = "date_valcurs")
-    private LocalDateTime dateValcurs;
-
-    @Column(name = "date_conversion")
-    private LocalDateTime dateConversion;
-
     @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "write_of_id")
     private ValCurs writOfId;
@@ -27,19 +21,33 @@ public class History implements Serializable {
     @JoinColumn(name = "write_in_id")
     private ValCurs writeInId;
 
-    @ManyToOne(cascade =  CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User user;
+
+    @Column(name = "question")
+    private float question;
+
+    @Column(name = "answer")
+    private float answer;
+
+    @Column(name = "date_valcurs")
+    private LocalDateTime dateValcurs;
+
+    @Column(name = "date_conversion")
+    private LocalDateTime dateConversion;
 
     public History() {
     }
 
-    public History(LocalDateTime dateValcurs, LocalDateTime dateConversion, ValCurs writOfId, ValCurs writeInId, User user) {
-        this.dateValcurs = dateValcurs;
-        this.dateConversion = dateConversion;
+    public History(ValCurs writOfId, ValCurs writeInId, User user, float question, float answer, LocalDateTime dateValcurs, LocalDateTime dateConversion) {
         this.writOfId = writOfId;
         this.writeInId = writeInId;
         this.user = user;
+        this.question = question;
+        this.answer = answer;
+        this.dateValcurs = dateValcurs;
+        this.dateConversion = dateConversion;
     }
 
     public Long getRequest_id() {
@@ -48,22 +56,6 @@ public class History implements Serializable {
 
     public void setRequest_id(Long request_id) {
         this.request_id = request_id;
-    }
-
-    public LocalDateTime getDateValcurs() {
-        return dateValcurs;
-    }
-
-    public void setDateValcurs(LocalDateTime dateValcurs) {
-        this.dateValcurs = dateValcurs;
-    }
-
-    public LocalDateTime getDateConversion() {
-        return dateConversion;
-    }
-
-    public void setDateConversion(LocalDateTime dateConversion) {
-        this.dateConversion = dateConversion;
     }
 
     public ValCurs getWritOfId() {
@@ -88,5 +80,37 @@ public class History implements Serializable {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public float getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(float question) {
+        this.question = question;
+    }
+
+    public float getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(float answer) {
+        this.answer = answer;
+    }
+
+    public LocalDateTime getDateValcurs() {
+        return dateValcurs;
+    }
+
+    public void setDateValcurs(LocalDateTime dateValcurs) {
+        this.dateValcurs = dateValcurs;
+    }
+
+    public LocalDateTime getDateConversion() {
+        return dateConversion;
+    }
+
+    public void setDateConversion(LocalDateTime dateConversion) {
+        this.dateConversion = dateConversion;
     }
 }

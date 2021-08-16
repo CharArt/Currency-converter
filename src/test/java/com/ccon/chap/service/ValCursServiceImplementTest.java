@@ -95,7 +95,7 @@ public class ValCursServiceImplementTest {
         ValCurs newv = new ValCurs("R99999", numcode, "AAA", 1, "Артёмий", "100.0100", localDateTime);
         valCursService.createdNewValCurs(newv);
 
-        assertEquals(52, valCursService.findAll().size());
+        assertEquals(53, valCursService.findAll().size());
     }
 
     @Test

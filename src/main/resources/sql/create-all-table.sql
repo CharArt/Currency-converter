@@ -38,10 +38,11 @@ CREATE TABLE history (
 	write_of_id BIGINT REFERENCES valcurs (write_id),
 	write_in_id BIGINT REFERENCES valcurs (write_id),
 	user_id BIGINT REFERENCES "user"(user_id) ON DELETE CASCADE,
+	question REAL,
+	answer  REAL,
 	date_valcurs DATE,
 	date_conversion TIMESTAMP WITH TIME ZONE NOT NULL
 );
-
 
 --Пользователи, тестовая таблица содержит 10 пользователей.
 --Users, the test table  contains 10 users.
@@ -197,42 +198,42 @@ values ('R01820', 392,'JPY', 100,'Japanese Yen', '24.3750', '2002-5-2'::date);		
 
 --История конвертации пользователей.
 --The story of the conversion to users
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (5, 	6, 1, '2002-3-2'::date,'2020-12-30 19:02:48'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (22, 23, 1, '2002-4-2'::date,'2020-12-30 19:05:55'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (39, 40, 1, '2002-5-2'::date,'2020-12-30 19:09:15'::timestamp);
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (5, 6, 1, 10, 50, '2002-3-2'::date,'2020-12-30 19:02:48'::timestamp);       --This is the history of a user id=1.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (22, 23, 1, 20, 100, '2002-4-2'::date,'2020-12-30 19:05:55'::timestamp);    --This is the history of a user id=1.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (39, 40, 1, 30, 150, '2002-5-2'::date,'2020-12-30 19:09:15'::timestamp);    --This is the history of a user id=1.
 
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (2, 	6, 2, '2002-3-2'::date,'2020-12-29 19:05:50'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (19, 23, 2, '2002-4-2'::date,'2020-12-29 19:08:54'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (36, 40, 2, '2002-5-2'::date,'2020-12-29 19:15:35'::timestamp);
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (2, 6, 2, 40, 200, '2002-3-2'::date,'2020-12-29 19:05:50'::timestamp);      --This is the history of a user id=2.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (19, 23, 2, 50, 250, '2002-4-2'::date,'2020-12-29 19:08:54'::timestamp);    --This is the history of a user id=2.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (36, 40, 2, 60, 300, '2002-5-2'::date,'2020-12-29 19:15:35'::timestamp);    --This is the history of a user id=2.
 
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (1, 	8, 3, '2002-3-2'::date,'2020-12-28 19:01:12'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (18, 28, 3, '2002-4-2'::date,'2020-12-28 19:07:25'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (35, 45, 3, '2002-5-2'::date,'2020-12-28 19:13:22'::timestamp);
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (1, 8, 3, 70, 350, '2002-3-2'::date,'2020-12-28 19:01:12'::timestamp);      --This is the history of a user id=3.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (18, 28, 3, 80, 400, '2002-4-2'::date,'2020-12-28 19:07:25'::timestamp);    --This is the history of a user id=3.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (35, 45, 3, 90, 450, '2002-5-2'::date,'2020-12-28 19:13:22'::timestamp);    --This is the history of a user id=3.
 
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (1, 	2, 4, '2002-3-2'::date,'2020-12-27 19:00:58'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (18, 19, 4, '2002-4-2'::date,'2020-12-27 19:02:35'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (35, 36, 4, '2002-5-2'::date,'2020-12-27 19:15:21'::timestamp);
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (1, 2, 4, 100, 500, '2002-3-2'::date,'2020-12-27 19:00:58'::timestamp);     --This is the history of a user id=4.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (18, 19, 4, 110, 550, '2002-4-2'::date,'2020-12-27 19:02:35'::timestamp);   --This is the history of a user id=4.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (35, 36, 4, 120, 600, '2002-5-2'::date,'2020-12-27 19:15:21'::timestamp);   --This is the history of a user id=4.
 
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (16, 17, 5, '2002-3-2'::date,'2020-12-26 19:03:08'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (33, 34, 5, '2002-4-2'::date,'2020-12-26 19:04:00'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (50, 51, 5, '2002-5-2'::date,'2020-12-26 19:11:20'::timestamp);
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (16, 17, 5, 130, 650, '2002-3-2'::date,'2020-12-26 19:03:08'::timestamp);   --This is the history of a user id=5.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (33, 34, 5, 140, 700, '2002-4-2'::date,'2020-12-26 19:04:00'::timestamp);   --This is the history of a user id=5.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (50, 51, 5, 150, 750, '2002-5-2'::date,'2020-12-26 19:11:20'::timestamp);   --This is the history of a user id=5.
 
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (3, 	1, 6, '2002-3-2'::date,'2020-12-25 18:59:55'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (20, 18, 6, '2002-4-2'::date,'2020-12-25 19:01:11'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (37, 35, 6, '2002-5-2'::date,'2020-12-25 19:09:18'::timestamp);
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (3, 1, 6,  160, 800, '2002-3-2'::date,'2020-12-25 18:59:55'::timestamp);    --This is the history of a user id=6.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (20, 18, 6, 170, 850, '2002-4-2'::date,'2020-12-25 19:01:11'::timestamp);   --This is the history of a user id=6.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (37, 35, 6, 180, 900, '2002-5-2'::date,'2020-12-25 19:09:18'::timestamp);   --This is the history of a user id=6.
 
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (7, 	8, 7, '2002-3-2'::date,'2020-12-24 19:35:30'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (24, 25, 7, '2002-4-2'::date,'2020-12-24 19:36:33'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (41, 42, 7, '2002-5-2'::date,'2020-12-24 19:37:10'::timestamp);
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (7, 8, 7, 190, 950, '2002-3-2'::date,'2020-12-24 19:35:30'::timestamp);     --This is the history of a user id=7.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (24, 25, 7, 200, 1000, '2002-4-2'::date,'2020-12-24 19:36:33'::timestamp);  --This is the history of a user id=7.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (41, 42, 7, 210, 1100, '2002-5-2'::date,'2020-12-24 19:37:10'::timestamp);  --This is the history of a user id=7.
 
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (6,  17, 8, '2002-3-2'::date,'2020-12-23 19:17:31'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (23, 34, 8, '2002-4-2'::date,'2020-12-23 19:18:35'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (40, 51, 8, '2002-5-2'::date,'2020-12-23 19:19:05'::timestamp);
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (6,  17, 8, 220, 1200, '2002-3-2'::date,'2020-12-23 19:17:31'::timestamp);  --This is the history of a user id=8.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (23, 34, 8, 230, 1300, '2002-4-2'::date,'2020-12-23 19:18:35'::timestamp);  --This is the history of a user id=8.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (40, 51, 8, 240, 1400, '2002-5-2'::date,'2020-12-23 19:19:05'::timestamp);  --This is the history of a user id=8.
 
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (17,  6, 9, '2002-3-2'::date,'2020-12-22 19:17:31'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (34, 23, 9, '2002-4-2'::date,'2020-12-22 19:18:35'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (51, 40, 9, '2002-5-2'::date,'2020-12-22 19:19:05'::timestamp);
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (17,  6, 9, 250, 1500,'2002-3-2'::date,'2020-12-22 19:17:31'::timestamp);   --This is the history of a user id=9.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (34, 23, 9, 260, 1600,'2002-4-2'::date,'2020-12-22 19:18:35'::timestamp);   --This is the history of a user id=9.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (51, 40, 9, 270, 1700, '2002-5-2'::date,'2020-12-22 19:19:05'::timestamp);  --This is the history of a user id=9.
 
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (3, 	1, 10, '2002-3-2'::date,'2020-12-21 19:25:41'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (19, 18, 10, '2002-4-2'::date,'2020-12-21 19:26:11'::timestamp);
-insert into history (write_of_id, write_in_id, user_id, date_valcurs, date_conversion) values (45, 35, 10, '2002-5-2'::date,'2020-12-21 19:27:45'::timestamp);
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (3, 1, 10, 280, 1800,'2002-3-2'::date,'2020-12-21 19:25:41'::timestamp);    --This is the history of a user id=10.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (19, 18, 10, 290, 1900, '2002-4-2'::date,'2020-12-21 19:26:11'::timestamp); --This is the history of a user id=10.
+insert into history (write_of_id, write_in_id, user_id, question, answer, date_valcurs, date_conversion) values (45, 35, 10, 300, 2000,'2002-5-2'::date,'2020-12-21 19:27:45'::timestamp);  --This is the history of a user id=10.

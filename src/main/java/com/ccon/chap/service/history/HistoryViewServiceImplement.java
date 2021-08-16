@@ -18,8 +18,8 @@ public class HistoryViewServiceImplement implements HistoryViewService {
             HistoryView newHistoryView = new HistoryView();
             newHistoryView.setUserName(history.getUser().getUser_name());
             newHistoryView.setCurrencyOfName(history.getWritOfId().getCurrency_name());
-            newHistoryView.setCurrencyOfValue(history.getWritOfId().getCurrency_value());
-            newHistoryView.setCurrencyInValue(history.getWriteInId().getCurrency_value());
+            newHistoryView.setCurrencyOfValue(String.valueOf(history.getQuestion()));
+            newHistoryView.setCurrencyInValue(String.valueOf(history.getAnswer()));
             newHistoryView.setCurrencyInName(history.getWriteInId().getCurrency_name());
             newHistoryView.setDate_valcurs(Date.valueOf(history.getDateValcurs().toLocalDate()));
             newHistoryView.setDate_conversion(Date.valueOf(history.getDateConversion().toLocalDate()));

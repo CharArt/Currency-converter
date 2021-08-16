@@ -55,4 +55,11 @@ public class ValCursView implements Serializable {
         this.valueValuteTwo = valueValuteTwo;
     }
 
+    @Override
+    public String toString() {
+        return nameValuteOne + " " +
+                valueValuteOne + " " +
+                nameValuteTwo + " " +
+                valueValuteTwo;
+    }
 }

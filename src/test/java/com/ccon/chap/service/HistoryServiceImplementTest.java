@@ -2,8 +2,6 @@ package com.ccon.chap.service;
 
 import com.ccon.chap.configurations.JpaConfiguration;
 import com.ccon.chap.entity.History;
-import com.ccon.chap.entity.User;
-import com.ccon.chap.entity.ValCurs;
 import com.ccon.chap.service.history.HistoryService;
 import com.ccon.chap.service.user.UserService;
 import com.ccon.chap.service.valcurs.ValCursService;
@@ -88,12 +86,14 @@ public class HistoryServiceImplementTest {
 
     @Test
     void createdNewHistoryTest() {
-        ValCurs valCursOf = valCursService.findValCursByWriteId(3L);
-        ValCurs valCursIn = valCursService.findValCursByWriteId(6L);
-        User user = userService.findByUserId(1L);
-        LocalDateTime now = LocalDateTime.now();
-
-        History history = new History(valCursOf.getCurrency_date(), LocalDateTime.now(), valCursOf, valCursIn, user);
+        float answer = 1;
+        float question = 2;
+        History history = new History(valCursService.findValCursByWriteId(3L),
+                                      valCursService.findValCursByWriteId(6L),
+                                      userService.findByUserId(1L),
+                                      question, answer,
+                                      valCursService.findValCursByWriteId(3L).getCurrency_date(),
+                                      LocalDateTime.now());
         historyService.saveHistory(history);
 
         assertEquals(31, historyService.findAll().size());
