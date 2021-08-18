@@ -70,7 +70,7 @@ public class UserServiceImplementTest {
     void findByUserActiveTest() {
         List<User> userList = userService.findByUserActive(true);
         for (User u : userList) {
-            assertTrue(u.isUser_is_active());
+            assertTrue(u.getUser_is_active());
         }
     }
 

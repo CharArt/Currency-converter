@@ -1,7 +1,6 @@
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\EnumReutersValutesXMLResponse.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\SwapInfoSellUSDVolResponse.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\dto\view\ValCursView.java
-D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\service\history\HistroyViewService.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\DragMetDynamicXML.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\GetReutersCursOnDateXMLResponse.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\dto\view\HistoryView.java
@@ -84,6 +83,7 @@ D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\entit
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\CoinsBase.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\MrrfXML.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\entity\Role.java
+D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\service\history\HistoryViewService.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\entity\ValCurs.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\Mrrf.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\service\valcurs\ValCursServiceImplement.java
@@ -122,16 +122,17 @@ D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\c
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\SwapDynamicResponse.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\service\history\HistoryServiceImplement.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\service\datetime\CustomDateTimeService.java
+D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\configurations\WebSecurityConfig.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\OmodInfoXML.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\service\parcer\ParcerServiceImplement.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\GetCursOnDateResponse.java
+D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\configurations\MyWebAppInitialazer.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\AllDataInfoXML.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\SwapInfoSellUSDXML.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\OvernightResponse.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\NewsInfoResponse.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\GetLatestDateSeld.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\DailyInfo.java
-D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\controller\ConvertorController.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\service\history\HistoryService.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\service\user\UserService.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\SwapDayTotalXML.java
@@ -159,6 +160,7 @@ D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\c
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\OmodInfoXMLResponse.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\SwapDayTotalResponse.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\ROISfixXMLResponse.java
+D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\configurations\SecurityWebAppInitializer.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\MainInfoXMLResponse.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\ValIntDayXML.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\GetReutersCursOnDateXML.java
@@ -180,6 +182,7 @@ D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\c
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\repository\HistoryRepository.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\ValIntDay.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\DepoDynamicResponse.java
+D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\controller\ConverterController.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\dto\ValuteDate.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\configurations\WebConfiguration.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\validation\UserCustomValidation.java

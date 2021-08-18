@@ -20,29 +20,29 @@ import java.time.LocalTime;
 import java.util.List;
 
 @Controller
-public class ConvertorController {
+public class ConverterController {
     private ValCursService valCursService;
     private ConverterService converterService;
     private UserService userService;
 
     @Autowired
-    public ConvertorController(ValCursService valCursService, ConverterService converterService, UserService userService) {
+    public ConverterController(ValCursService valCursService, ConverterService converterService, UserService userService) {
         this.valCursService = valCursService;
         this.converterService = converterService;
         this.userService = userService;
     }
 
-    @GetMapping("/Convertor")
+    @GetMapping("/Converter")
     public String FrontPage(ModelMap modelMap) {
         List<ValCurs> valCursList = valCursService.findValCursByDate(LocalDateTime.of(2002, 3, 2, 0, 0));
         modelMap.addAttribute("valCursList", valCursList);
 
         ValCursView valCursView = new ValCursView();
         modelMap.addAttribute("valCursView", valCursView);
-        return "Convertor";
+        return "Converter";
     }
 
-    @PostMapping("/Convertor")
+    @PostMapping("/Converter")
     public String ValCursWork(@ModelAttribute("valCursView") ValCursView valCursView, ModelMap modelMap) {
         User user = userService.findByUserId(2L);
 
@@ -54,6 +54,6 @@ public class ConvertorController {
 
         modelMap.addAttribute("valCursView", converterService.conversion(valCursList, valCursView, user));
         modelMap.addAttribute("valCursList", valCursList);
-        return "Convertor";
+        return "Converter";
     }
 }

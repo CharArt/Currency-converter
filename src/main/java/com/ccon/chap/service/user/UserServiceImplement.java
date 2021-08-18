@@ -3,6 +3,8 @@ package com.ccon.chap.service.user;
 import com.ccon.chap.entity.User;
 import com.ccon.chap.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -13,7 +15,7 @@ import java.util.List;
 @Transactional
 public class UserServiceImplement implements UserService {
 
-    private UserRepository repository;
+    private final UserRepository repository;
 
     @Autowired
     public UserServiceImplement(UserRepository repository) {
@@ -73,15 +75,17 @@ public class UserServiceImplement implements UserService {
     @Override
     public boolean isPresentLogin(String userLogin) {
         User user = repository.findByUserLogin(userLogin);
-        if (userLogin.equals(user.getUser_login())) return true;
-        return false;
+        return userLogin.equals(user.getUser_login());
     }
 
     @Override
     public boolean isPresentEmail(String userEmail) {
         User user = repository.findByUserEmail(userEmail);
-        if (userEmail.equals(user.getUser_email())) return true;
-        return false;
+        return userEmail.equals(user.getUser_email());
     }
 
+    @Override
+    public UserDetails loadUserByUsername(String userLogin) throws UsernameNotFoundException {
+        return repository.findByUserLogin(userLogin);
+    }
 }

@@ -29,16 +29,16 @@
                         <tr>
                             <th>User:</th>
                             <th>Currency from name:
-                                <input class="field-search" type="text" th:field="*{currencyNameFrom}">
+                                <input class="field-search" type="text" th:field="*{currencyOfName}">
                             </th>
                             <th>Currency value from:
-                                <input class="field-search" type="text" th:field="*{currencyValueFrom}">
+                                <input class="field-search" type="text" th:field="*{currencyOfValue}">
                             </th>
                             <th>Currency value to:
-                                <input class="field-search" type="text" th:field="*{currencyValueTo}">
+                                <input class="field-search" type="text" th:field="*{currencyInValue}">
                             </th>
                             <th>Currency to name:
-                                <input class="field-search" type="text" th:field="*{currencyNameTo}">
+                                <input class="field-search" type="text" th:field="*{currencyInName}">
                             </th>
                             <th>Date of currency entry:
                                 <input class="field-search" type="date" th:field="*{date_valcurs}">
@@ -51,10 +51,10 @@
                     <tbody>
                         <tr th:each="h:${historyViewList}">
                             <td th:text="${h.userName}"></td>
-                            <td th:text="${h.currencyNameFrom}"></td>
-                            <td th:text="${h.currencyValueFrom}"></td>
-                            <td th:text="${h.currencyValueTo}"></td>
-                            <td th:text="${h.currencyNameTo}"></td>
+                            <td th:text="${h.currencyOfName}"></td>
+                            <td th:text="${h.currencyOfValue}"></td>
+                            <td th:text="${h.currencyInValue}"></td>
+                            <td th:text="${h.currencyInName}"></td>
                             <td th:text="${h.date_valcurs}"></td>
                             <td th:text="${h.date_conversion}"></td>
                         </tr>

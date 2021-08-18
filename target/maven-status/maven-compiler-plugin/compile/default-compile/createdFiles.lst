@@ -13,6 +13,7 @@ ru\cbr\web\ROISfixXML.class
 ru\cbr\web\SwapInfoSellUSDXMLResponse$SwapInfoSellUSDXMLResult.class
 ru\cbr\web\KeyRateXMLResponse$KeyRateXMLResult.class
 ru\cbr\web\Mrrf7DXML.class
+com\ccon\chap\controller\ConverterController.class
 ru\cbr\web\SwapMonthTotalResponse$SwapMonthTotalResult.class
 ru\cbr\web\BiCurBacketResponse.class
 ru\cbr\web\Mrrf7DXMLResponse.class
@@ -69,7 +70,6 @@ ru\cbr\web\OstatDepoXML.class
 ru\cbr\web\EnumValutesXML.class
 ru\cbr\web\GetLatestDateTimeResponse.class
 ru\cbr\web\BiCurBaseResponse.class
-com\ccon\chap\controller\ConvertorController.class
 ru\cbr\web\ROISfix.class
 ru\cbr\web\CoinsBaseResponse.class
 ru\cbr\web\MainInfoXMLResponse.class
@@ -166,7 +166,7 @@ ru\cbr\web\SwapDynamicResponse$SwapDynamicResult.class
 ru\cbr\web\SaldoXMLResponse.class
 ru\cbr\web\NewsInfoXMLResponse.class
 ru\cbr\web\GetLatestReutersDateTime.class
-com\ccon\chap\service\history\HistroyViewService.class
+com\ccon\chap\configurations\SecurityWebAppInitializer.class
 ru\cbr\web\RuoniaResponse.class
 ru\cbr\web\DVXMLResponse$DVXMLResult.class
 ru\cbr\web\GetReutersCursOnDateXML.class
@@ -192,6 +192,7 @@ ru\cbr\web\RepoDebtXMLResponse$RepoDebtXMLResult.class
 ru\cbr\web\RepoDebtUSDResponse.class
 ru\cbr\web\ValIntDayXMLResponse.class
 ru\cbr\web\SwapDayTotalXMLResponse.class
+com\ccon\chap\service\history\HistoryViewService.class
 ru\cbr\web\SwapDayTotalResponse$SwapDayTotalResult.class
 com\ccon\chap\service\role\RoleService.class
 ru\cbr\web\AllDataInfoXMLResponse.class
@@ -215,6 +216,7 @@ ru\cbr\web\CoinsBaseResponse$CoinsBaseResult.class
 ru\cbr\web\RepoDebtUSDResponse$RepoDebtUSDResult.class
 ru\cbr\web\SwapDynamicXML.class
 ru\cbr\web\GetCursOnDateXMLResponse.class
+com\ccon\chap\configurations\MyWebAppInitialazer.class
 ru\cbr\web\SwapDayTotalResponse.class
 ru\cbr\web\BiCurBacket.class
 com\ccon\chap\controller\RegistrationController.class
@@ -260,6 +262,7 @@ ru\cbr\web\MKRResponse$MKRResult.class
 ru\cbr\web\DailyInfo.class
 ru\cbr\web\ValIntDayResponse$ValIntDayResult.class
 ru\cbr\web\OstatDynamicXML.class
+com\ccon\chap\configurations\WebSecurityConfig.class
 com\ccon\chap\service\parcer\ParcerService.class
 ru\cbr\web\GetSeldCursOnDate.class
 ru\cbr\web\SwapDayTotal.class

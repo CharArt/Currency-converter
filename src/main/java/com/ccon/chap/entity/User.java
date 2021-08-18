@@ -1,6 +1,9 @@
 package com.ccon.chap.entity;
 
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
@@ -10,12 +13,16 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "\"user\"")
 @Validated
-public class User implements Serializable {
+public class User implements UserDetails, Serializable {
+
+    private static String ROLE = "ROLE_";
 
     @Id
     @Column(name = "user_id")
@@ -148,7 +155,7 @@ public class User implements Serializable {
         this.user_created_at = user_created_at;
     }
 
-    public boolean isUser_is_active() {
+    public boolean getUser_is_active() {
         return user_is_active;
     }
 
@@ -170,5 +177,42 @@ public class User implements Serializable {
 
     public void setHistory(List<History> history) {
         this.history = history;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return getRole().stream().map(r -> {
+            return new SimpleGrantedAuthority(ROLE + r.getRole_name());
+        }).collect(Collectors.toList());
+    }
+
+    @Override
+    public String getPassword() {
+        return getUser_password();
+    }
+
+    @Override
+    public String getUsername() {
+        return getUser_login();
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return getUser_is_active();
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return getUser_is_active();
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return getUser_is_active();
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return getUser_is_active();
     }
 }

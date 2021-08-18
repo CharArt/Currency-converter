@@ -1,11 +1,12 @@
 package com.ccon.chap.service.user;
 
 import com.ccon.chap.entity.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-public interface UserService {
+public interface UserService extends UserDetailsService {
 
     User findByUserId(Long userId);
 

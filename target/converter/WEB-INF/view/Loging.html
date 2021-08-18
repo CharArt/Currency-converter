@@ -23,17 +23,17 @@
             <div class="left"></div>
 
             <div class="middle">
-                <form>
+                <form action="login" method="post">
                     <h2>Please sign in</h2>
                     <div class="lev25-log">
-                        <label for="email">Emal</label>
-                        <input class="field-log" type="email" id="email" placeholder="Your email..">
+                        <label for="username">Login</label>
+                        <input class="field-log" type="text" id="username" name="username" placeholder="Your login..">
                     </div>
                     <div class="lev25-log">
                         <label for="password">Password</label>
-                        <input class="field-log" type="password" id="password" placeholder="Your password..">
+                        <input class="field-log" type="password" id="password" name="password" placeholder="Your password..">
                     </div>
-                    <button class="btn-positive" type="submit" id="Login">Login</button>
+                    <button class="btn-positive" type="submit" >Login</button>
                     <input class="btn-positive" type="button" id="Registration" value="Registration" onClick='location.href="http://localhost:8080/converter/Registration"'>
                 </form>
             </div>

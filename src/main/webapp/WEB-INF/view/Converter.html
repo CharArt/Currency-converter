@@ -7,7 +7,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <link type="text/css" rel="stylesheet" href="../css/convertor.css" th:href="@{/css/convertor.css}">
+        <link type="text/css" rel="stylesheet" href="../css/converter.css" th:href="@{/css/converter.css}">
         <link type="text/css" rel="stylesheet" href="../css/field.css" th:href="@{/css/field.css}">
         <link type="text/css" rel="stylesheet" href="../css/button.css" th:href="@{/css/button.css}">
         <link type="text/css" rel="stylesheet" href="../css/footer.css" th:href="@{/css/footer.css}">
@@ -31,6 +31,7 @@
 
                         <input list="abbreviations-left" id="abb-left" name="Valute1" class="box1" type="text" th:field="*{nameValuteOne}"/>
                         <datalist id="abbreviations-left" >
+                            <option text="Rubles" value="Rubles"></option>
                             <option th:each="h:${valCursList}" th:value="${h.currency_name}" th:text="${h.currency_name}"></option>
                         </datalist>
 
@@ -44,6 +45,7 @@
 
                         <input list="abbreviations-box2" id="abb-middle" name="Valute2" class="datalist-box2" type="text" th:field="*{nameValuteTwo}"/>
                         <datalist id="abbreviations-box2">
+                            <option text="Rubles" value="Rubles"></option>
                             <option th:each="h:${valCursList}" th:value="${h.currency_name}" th:text="${h.currency_name}"></option>
                         </datalist>
 
