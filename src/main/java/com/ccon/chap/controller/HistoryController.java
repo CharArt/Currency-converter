@@ -4,6 +4,7 @@ import com.ccon.chap.dto.view.HistoryView;
 import com.ccon.chap.entity.History;
 import com.ccon.chap.service.history.HistoryService;
 import com.ccon.chap.service.history.HistoryViewService;
+import com.ccon.chap.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,30 +20,31 @@ import java.util.stream.Collectors;
 public class HistoryController {
     private HistoryService historyService;
     private HistoryViewService historyViewService;
+    private UserService userService;
 
     @Autowired
-    public HistoryController(HistoryService historyService, HistoryViewService historyViewService) {
+    public HistoryController(HistoryService historyService, HistoryViewService historyViewService, UserService userService) {
         this.historyService = historyService;
         this.historyViewService = historyViewService;
+        this.userService = userService;
     }
 
-    @GetMapping("/History")
-    public String getHistoryUser(Model model) {
-        List<History> historyList = historyService.findHistoryByUserId(2L);
+    @GetMapping("/history")
+    public String getHistoryUser(Model model, Principal principal) {
+        List<History> historyList = historyService.findHistoryByUserId(userService.findByUserLogin(principal.getName()).getUser_id());
 
         List<HistoryView> historyViewList = historyViewService.setListViewFromHistory(historyList);
 
         model.addAttribute("historyViewList", historyViewList);
         HistoryView historyView = new HistoryView();
 
-        model.addAttribute("history", historyView);
-        return "History";
+        model.addAttribute("histor", historyView);
+        return "history";
     }
 
-    @PostMapping("/History")
-    public String getRequiredField(@ModelAttribute("history") HistoryView historyView, Model model) {
-        List<History> historyList = historyService.findHistoryByUserId(2L);
-
+    @PostMapping("/history")
+    public String getRequiredField(@ModelAttribute("histor") HistoryView historyView, Model model, Principal principal) {
+        List<History> historyList = historyService.findHistoryByUserId(userService.findByUserLogin(principal.getName()).getUser_id());
         List<HistoryView> historyViewList = historyViewService.setListViewFromHistory(historyList);
 
         if (historyView.getCurrencyOfName().isEmpty() &&
@@ -51,7 +54,7 @@ public class HistoryController {
                 null != historyView.getDate_valcurs() &&
                 null != historyView.getDate_conversion()) {
             model.addAttribute("historyViewList", historyViewList);
-            return "History";
+            return "history";
         }
         if (!historyView.getCurrencyOfName().isEmpty()) {
             historyViewList = historyViewList.stream().filter(historyView1 -> !historyView1.getCurrencyOfName().isEmpty() && historyView1.getCurrencyOfName().equals(historyView.getCurrencyOfName())).collect(Collectors.toList());
@@ -72,6 +75,6 @@ public class HistoryController {
             historyViewList = historyViewList.stream().filter(historyView1 -> null != historyView1.getDate_conversion() && historyView1.getDate_conversion().equals(historyView.getDate_conversion())).collect(Collectors.toList());
         }
         model.addAttribute("historyViewList", historyViewList);
-        return "History";
+        return "history";
     }
 }

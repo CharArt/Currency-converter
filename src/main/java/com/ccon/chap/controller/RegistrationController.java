@@ -34,21 +34,21 @@ public class RegistrationController {
 
     }
 
-    @GetMapping("/Registration")
+    @GetMapping("/registration")
     public String FrontPage(ModelMap modelMap) {
         User newUser = new User();
         modelMap.addAttribute("user", newUser);
-        return "Registration";
+        return "registration";
     }
 
-    @PostMapping("/Registration")
+    @PostMapping("/registration")
     public String checkUserInfo(@ModelAttribute("user") @Valid User user, BindingResult bindingResult) {
         user.setUser_created_at(LocalDateTime.now());
         user.setUser_is_active(true);
         if (bindingResult.hasErrors()) {
-            return "Registration";
+            return "registration";
         }
         userService.createdNewUser(user);
-        return "redirect:/";
+        return "redirect:/login";
     }
 }

@@ -29,20 +29,21 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf()
                 .disable()
                 .authorizeRequests()
-        .and()
+                .and()
                 .formLogin()
-                .loginPage("/Loging")
-                .defaultSuccessUrl("/History.html",true)
+                .loginPage("/login")
+                .defaultSuccessUrl("/history", true)
+                .failureForwardUrl("/")
                 .permitAll()
-        .and()
+                .and()
                 .logout()
                 .permitAll()
-                .logoutSuccessUrl("/");
+                .logoutSuccessUrl("/login");
     }
 
     @Bean
-    public BCryptPasswordEncoder bCryptPasswordEncoder (){
-        return  new BCryptPasswordEncoder();
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
     @Autowired

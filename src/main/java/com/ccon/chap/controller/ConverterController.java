@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.security.Principal;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -32,19 +33,19 @@ public class ConverterController {
         this.userService = userService;
     }
 
-    @GetMapping("/Converter")
+    @GetMapping("/converter")
     public String FrontPage(ModelMap modelMap) {
         List<ValCurs> valCursList = valCursService.findValCursByDate(LocalDateTime.of(2002, 3, 2, 0, 0));
         modelMap.addAttribute("valCursList", valCursList);
 
         ValCursView valCursView = new ValCursView();
         modelMap.addAttribute("valCursView", valCursView);
-        return "Converter";
+        return "converter";
     }
 
-    @PostMapping("/Converter")
-    public String ValCursWork(@ModelAttribute("valCursView") ValCursView valCursView, ModelMap modelMap) {
-        User user = userService.findByUserId(2L);
+    @PostMapping("/converter")
+    public String ValCursWork(@ModelAttribute("valCursView") ValCursView valCursView, ModelMap modelMap, Principal principal) {
+        User user = userService.findByUserLogin(principal.getName());
 
         LocalDate localDate = LocalDate.parse(new SimpleDateFormat("yyyy-MM-dd").format(valCursView.getTimeSearch()));
         LocalTime localTime = LocalTime.of(11, 11);
@@ -54,6 +55,6 @@ public class ConverterController {
 
         modelMap.addAttribute("valCursView", converterService.conversion(valCursList, valCursView, user));
         modelMap.addAttribute("valCursList", valCursList);
-        return "Converter";
+        return "converter";
     }
 }

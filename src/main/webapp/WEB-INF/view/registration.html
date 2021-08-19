@@ -20,13 +20,13 @@
 
     <body class="grid-box">
 
-        <div class="headers" th:insert="~{Header.html :: header}"></div>
+        <div class="headers" th:insert="~{header.html :: header}"></div>
 
                 <div class="left"></div>
 
                 <div class="middle">
                     <h2>Your details:</h2>
-                    <form class="form-grid-container" action="#" th:action="@{/Registration}" th:object="${user}" method="post">
+                    <form class="form-grid-container" action="#" th:action="@{/registration}" th:object="${user}" method="post">
                         <div class="text-layer">
                             <label for="Login">Login:</label>
                             <p class="errors" th:if="${#fields.hasErrors('user_login')}" th:errors="*{user_login}">ERROR!</p>
@@ -57,13 +57,13 @@
 
                         <div class="button-layer">
                             <button class="btn-reg" type="submit" id="Registration">Registration</button>
-                            <input class="btn-reg" type="button" id="Back" value="Back" onClick='location.href="http://localhost:8080/converter/"'>
+                            <input class="btn-reg" type="button" id="Back" value="Back" onClick='location.href="http://localhost:8080/converter/login"'>
                         </div>
                     </form>
                 </div>
 
                 <div class="right"></div>
 
-        <div class="footer" th:insert="~{Footer.html :: footer}"></div>
+        <div class="footer" th:insert="~{footer.html :: footer}"></div>
     </body>
 </html>

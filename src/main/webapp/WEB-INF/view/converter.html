@@ -19,12 +19,12 @@
 
     <body class="grid-box">
 
-        <div class="headers" th:insert="~{Header.html :: header}"></div>
+        <div class="headers" th:insert="~{header.html :: header}"></div>
 
         <div class="left"></div>
 
             <div class="middle">
-                <form class="form-grid-container" action="#" th:action="@{/Convertor}" th:object="${valCursView}" method="post" >
+                <form class="form-grid-container" action="#" th:action="@{/convertor}" th:object="${valCursView}" method="post" >
                     <div class="box1">
 
                         <input class="field-search" type="date" th:field="*{timeSearch}"/>
@@ -58,6 +58,6 @@
 
         <div class="right"> </div>
 
-        <div class="footer" th:insert="~{Footer.html :: footer}"></div>
+        <div class="footer" th:insert="~{footer.html :: footer}"></div>
     </body>
 </html>

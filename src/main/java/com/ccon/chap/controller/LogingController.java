@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class LogingController {
 
-    @GetMapping("/")
+    @GetMapping("/login")
     public String LoginPage(ModelMap modelMap) {
-        return "Loging";
+        return "login";
     }
 }
