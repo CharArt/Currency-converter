@@ -17,7 +17,7 @@ import java.util.stream.Stream;
 @Transactional
 public class CustomDateTimeServiceImplement implements CustomDateTimeService {
 
-  private ValCursRepository repository;
+  private final ValCursRepository repository;
     @Autowired
     public CustomDateTimeServiceImplement(ValCursRepository repository) {
         this.repository = repository;

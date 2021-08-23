@@ -18,9 +18,9 @@ import java.util.List;
 @Transactional
 public class ValCursServiceImplement implements ValCursService {
 
-    private ValCursRepository repository;
-    private ParcerService parcerService;
-    private CustomDateTimeService customDateTimeService;
+    private final ValCursRepository repository;
+    private final ParcerService parcerService;
+    private final CustomDateTimeService customDateTimeService;
 
     @Autowired
     public ValCursServiceImplement(ValCursRepository repository, ParcerService parcerService, CustomDateTimeService customDateTimeService) {

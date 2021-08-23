@@ -17,9 +17,9 @@ import java.util.List;
 @Service
 @Transactional
 public class ConverterImplement implements ConverterService {
-    private HistoryService historyService;
-    private ValCursService valCursService;
-    private UserService userService;
+    private final HistoryService historyService;
+    private final ValCursService valCursService;
+    private final UserService userService;
 
     @Autowired
     public ConverterImplement(HistoryService historyService, ValCursService valCursService, UserService userService) {

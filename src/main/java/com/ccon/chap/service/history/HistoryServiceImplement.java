@@ -13,7 +13,7 @@ import java.util.List;
 @Transactional
 public class HistoryServiceImplement implements HistoryService {
 
-    private HistoryRepository repository;
+    private final HistoryRepository repository;
 
     @Autowired
     public HistoryServiceImplement(HistoryRepository historyRepository) {

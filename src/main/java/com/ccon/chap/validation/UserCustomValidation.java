@@ -10,8 +10,8 @@ import org.springframework.validation.Validator;
 @Component
 public class UserCustomValidation implements Validator {
 
-    private UserService userService;
-    private Validator basicValidator;
+    private final UserService userService;
+    private final Validator basicValidator;
 
     @Autowired
     public UserCustomValidation(UserService userService, Validator basicValidator) {
