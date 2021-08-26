@@ -1,5 +1,7 @@
 package com.ccon.chap.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -31,9 +33,11 @@ public class History implements Serializable {
     @Column(name = "answer")
     private float answer;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "date_valcurs")
     private LocalDateTime dateValcurs;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "date_conversion")
     private LocalDateTime dateConversion;
 

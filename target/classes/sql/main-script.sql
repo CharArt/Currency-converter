@@ -97,7 +97,7 @@ insert into user_role (user_id, role_id) values (10, 2);    --Irina-USER
 --Это исходно целевая валюта, поэтому у неё нет даты, все остальные валюты оцениваются в рублях.
 --This is the original target currency, so it does not have a date, all other currencies are valued in rubles.
 insert into valcurs (currency_id, currency_numcode, currency_charcode, currency_nominal, currency_name, currency_value, currency_date)--1)  Russian Ruble.
-values ('R00001', 001,'AUD', 1,'Russian Ruble', '1', '0001-1-1'::date);													                  --Russian Ruble.
+values ('R00001', 001,'AUD', 1,'Russian Ruble', '1', '1000-1-1'::date);													                  --Russian Ruble.
 
 --Первый блок таблицы датирован 2002.03.02, содержит 17 валют.
 --The first block of the table is dated for 2002.03.02, contains 17 currencies.

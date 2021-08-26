@@ -1,11 +1,13 @@
 package com.ccon.chap.service.valcurs;
 
+import com.ccon.chap.dto.ValCursDto;
 import com.ccon.chap.entity.ValCurs;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 public interface ValCursService {
+
     ValCurs findValCursByWriteId(Long write_id);
 
     ValCurs getLastEntry();
@@ -24,12 +26,35 @@ public interface ValCursService {
 
     void createdNewValCurs(ValCurs valCurs);
 
-    void UpdateValCurs(Long writeId, ValCurs newValCurs);
+    void updateValCurs(Long writeId, ValCurs newValCurs);
 
-    void DataEntryForspecifiedDate (LocalDateTime enteringDate);
+    void deleteValCursById(Long write_id);
 
-    void FillingInDatabaseValCura ();
+    void dataEntryForspecifiedDate(LocalDateTime enteringDate);
 
-    void UpdateDatabaseValCura ();
+    void fillingInDatabaseValCura();
+
+    void updateDatabaseValCura();
+
+    //DTO
+    ValCursDto findValCursDtoByWriteId(Long id);
+
+    ValCursDto getLastEntryDto();
+
+    List<ValCursDto> findAllDto();
+
+    List<ValCursDto> findValCursDtoByName(String name);
+
+    List<ValCursDto> findValCursDtoByCurrencyId(String currencyId);
+
+    List<ValCursDto> findValCursDtoByNumCode(Short numcode);
+
+    List<ValCursDto> findValCursDtoByDate(LocalDateTime date);
+
+    void createdNewValCursDto(ValCursDto valCurs);
+
+    void updateValCursDto(Long id, ValCursDto newValCursDto);
+
+    void deleteValCursDtoById(Long id);
 
 }

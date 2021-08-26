@@ -108,7 +108,7 @@ public class ValCursServiceImplementTest {
         newValCurs.setCurrency_name(valCursService.findValCursByWriteId(5L).getCurrency_name());
         newValCurs.setCurrency_value(valCursService.findValCursByWriteId(5L).getCurrency_value().replace(",", "."));
         newValCurs.setCurrency_date(valCursService.findValCursByWriteId(5L).getCurrency_date());
-        valCursService.UpdateValCurs(1L, newValCurs);
+        valCursService.updateValCurs(1L, newValCurs);
         assertEquals("Доллар США", valCursService.findValCursByWriteId(1L).getCurrency_name());
     }
 
@@ -119,7 +119,7 @@ public class ValCursServiceImplementTest {
 
     @Test
     void DataEntryForspecifiedDateTest() {
-        valCursService.DataEntryForspecifiedDate(LocalDateTime.now());
+        valCursService.dataEntryForspecifiedDate(LocalDateTime.now());
         List<ValCurs> valCursList = valCursService.findValCursByDate(LocalDateTime.now());
         for (ValCurs valCurs : valCursList) {
             assertEquals(valCurs.getCurrency_date().toLocalDate(), LocalDateTime.now().toLocalDate());

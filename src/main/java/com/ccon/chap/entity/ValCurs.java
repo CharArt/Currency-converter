@@ -1,5 +1,7 @@
 package com.ccon.chap.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -51,6 +53,7 @@ public class ValCurs implements Serializable {
     @Column(name = "currency_value")
     private String currency_value;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "currency_date")
     private LocalDateTime currency_date;
 
@@ -119,6 +122,14 @@ public class ValCurs implements Serializable {
 
     public void setCurrency_date(LocalDateTime currency_date) {
         this.currency_date = currency_date;
+    }
+
+    public List<History> getCurrentHistory() {
+        return currentHistory;
+    }
+
+    public void setCurrentHistory(List<History> currentHistory) {
+        this.currentHistory = currentHistory;
     }
 
     public boolean isNull() {

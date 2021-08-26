@@ -18,6 +18,7 @@ ru\cbr\web\SwapMonthTotalResponse$SwapMonthTotalResult.class
 ru\cbr\web\BiCurBacketResponse.class
 ru\cbr\web\Mrrf7DXMLResponse.class
 ru\cbr\web\BauctionResponse.class
+com\ccon\chap\controller\restcontroller\ValCursREST.class
 ru\cbr\web\MrrfXMLResponse.class
 ru\cbr\web\Mrrf7DXMLResponse$Mrrf7DXMLResult.class
 ru\cbr\web\DragMetDynamicXMLResponse.class

@@ -1,6 +1,7 @@
 package com.ccon.chap.service.valcurs;
 
 import com.ccon.chap.dto.CursDynamic;
+import com.ccon.chap.dto.ValCursDto;
 import com.ccon.chap.dto.ValuteCursOnDate;
 import com.ccon.chap.entity.ValCurs;
 import com.ccon.chap.repository.ValCursRepository;
@@ -13,6 +14,7 @@ import javax.transaction.Transactional;
 import javax.xml.datatype.DatatypeConfigurationException;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -32,6 +34,11 @@ public class ValCursServiceImplement implements ValCursService {
     @Override
     public ValCurs findValCursByWriteId(Long write_id) {
         return repository.getOne(write_id);
+    }
+
+    @Override
+    public ValCurs getLastEntry() {
+        return repository.lastEntry();
     }
 
     @Override
@@ -70,7 +77,7 @@ public class ValCursServiceImplement implements ValCursService {
     }
 
     @Override
-    public void UpdateValCurs(Long writeId, ValCurs newValCurs) {
+    public void updateValCurs(Long writeId, ValCurs newValCurs) {
         repository.UpdateValCurs(writeId,
                 newValCurs.getCurrency_id(),
                 newValCurs.getCurrency_numcode(),
@@ -82,7 +89,12 @@ public class ValCursServiceImplement implements ValCursService {
     }
 
     @Override
-    public void DataEntryForspecifiedDate(LocalDateTime enteringDate) {
+    public void deleteValCursById(Long write_id) {
+        repository.deleteValcursById(write_id);
+    }
+
+    @Override
+    public void dataEntryForspecifiedDate(LocalDateTime enteringDate) {
         try {
             List<CursDynamic> cursDynamicList = parcerService.getCursDynamicList();
             List<ValuteCursOnDate> valuteCursOnDateList = parcerService.getValuteCursOnDate(enteringDate);
@@ -107,7 +119,7 @@ public class ValCursServiceImplement implements ValCursService {
     }
 
     @Override
-    public void FillingInDatabaseValCura() {
+    public void fillingInDatabaseValCura() {
         try {
             List<LocalDateTime> listLoscalDateTime = customDateTimeService.getListOfDates(LocalDateTime.of(1993, 1, 6, 0, 0));
             List<CursDynamic> cursDynamicList = parcerService.getCursDynamicList();
@@ -133,7 +145,7 @@ public class ValCursServiceImplement implements ValCursService {
     }
 
     @Override
-    public void UpdateDatabaseValCura() {
+    public void updateDatabaseValCura() {
         try {
             List<LocalDateTime> listLoscalDateTime = customDateTimeService.getListOfDatesFromLastDate();
             List<CursDynamic> cursDynamicList = parcerService.getCursDynamicList();
@@ -159,7 +171,77 @@ public class ValCursServiceImplement implements ValCursService {
     }
 
     @Override
-    public ValCurs getLastEntry() {
-        return repository.lastEntry();
+    public ValCursDto findValCursDtoByWriteId(Long id) {
+        return toDto(findValCursByWriteId(id));
+    }
+
+    @Override
+    public ValCursDto getLastEntryDto() {
+        return null;
+    }
+
+    @Override
+    public List<ValCursDto> findAllDto() {
+        return findAll().stream().map(this::toDto).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ValCursDto> findValCursDtoByName(String name) {
+        return findValCursByName(name).stream().map(this::toDto).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ValCursDto> findValCursDtoByCurrencyId(String currencyId) {
+        return findValCursByCurrencyId(currencyId).stream().map(this::toDto).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ValCursDto> findValCursDtoByNumCode(Short numcode) {
+        return findValCursByNumCode(numcode).stream().map(this::toDto).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ValCursDto> findValCursDtoByDate(LocalDateTime date) {
+        return findValCursByDate(date).stream().map(this::toDto).collect(Collectors.toList());
+    }
+
+    @Override
+    public void createdNewValCursDto(ValCursDto valCursDto) {
+        createdNewValCurs(toValCurs(valCursDto));
+    }
+
+    @Override
+    public void updateValCursDto(Long id, ValCursDto newValCursDto) {
+        updateValCurs(id, toValCurs(newValCursDto));
+    }
+
+    @Override
+    public void deleteValCursDtoById(Long id) {
+        deleteValCursById(id);
+    }
+
+    private ValCursDto toDto(ValCurs valCurs) {
+        ValCursDto valCursDto = new ValCursDto();
+        valCursDto.setWrite_id(valCurs.getWrite_id());
+        valCursDto.setCurrency_id(valCurs.getCurrency_id());
+        valCursDto.setCurrency_numcode(valCurs.getCurrency_numcode());
+        valCursDto.setCurrency_charcode(valCurs.getCurrency_charcode());
+        valCursDto.setCurrency_nominal(valCurs.getCurrency_nominal());
+        valCursDto.setCurrency_name(valCurs.getCurrency_name());
+        valCursDto.setCurrency_value(valCurs.getCurrency_value());
+        valCursDto.setCurrency_date(valCurs.getCurrency_date());
+        return valCursDto;
+    }
+
+    private ValCurs toValCurs(ValCursDto valCursDto) {
+        ValCurs valCurs = new ValCurs();
+        valCurs.setWrite_id(valCursDto.getWrite_id());
+        valCurs.setCurrency_id(valCursDto.getCurrency_id());
+        valCurs.setCurrency_numcode(valCursDto.getCurrency_numcode());
+        valCurs.setCurrency_charcode(valCursDto.getCurrency_charcode());
+        valCurs.setCurrency_name(valCursDto.getCurrency_name());
+        valCurs.setCurrency_value(valCursDto.getCurrency_value());
+        valCurs.setCurrency_date(valCursDto.getCurrency_date());
+        return valCurs;
     }
 }
