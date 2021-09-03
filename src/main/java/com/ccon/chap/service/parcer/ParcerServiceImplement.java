@@ -2,6 +2,8 @@ package com.ccon.chap.service.parcer;
 
 import com.ccon.chap.dto.CursDynamic;
 import com.ccon.chap.dto.ValuteCursOnDate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -19,11 +21,15 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+
 @Service
 public class ParcerServiceImplement implements ParcerService {
+    private static final Logger logger = LoggerFactory.getLogger(ParcerServiceImplement.class);
 
     @Override
     public List<CursDynamic> getCursDynamicList() {
+        logger.info("Start Parser");
+
         DailyInfo service = new DailyInfo();
         DailyInfoSoap port = service.getDailyInfoSoap();
 
@@ -99,11 +105,14 @@ public class ParcerServiceImplement implements ParcerService {
             }
         }
         cursDynamicList.forEach(cursDynamic -> System.out.println(cursDynamic.getvCode()));
+        logger.info("Stop Parser");
         return cursDynamicList;
     }
 
     @Override
     public List<ValuteCursOnDate> getValuteCursOnDateList(List<LocalDateTime> listDate) throws DatatypeConfigurationException {
+        logger.info("Start Parser");
+
         DailyInfo service = new DailyInfo();
         DailyInfoSoap port = service.getDailyInfoSoap();
 
@@ -152,11 +161,14 @@ public class ParcerServiceImplement implements ParcerService {
                 valuteCursOnDateList.add(valuteCursOnDate);
             }
         }
+        logger.info("Stop Parser");
         return valuteCursOnDateList;
     }
 
     @Override
     public List<ValuteCursOnDate> getValuteCursOnDate(LocalDateTime localDateTime) throws DatatypeConfigurationException {
+        logger.info("Start Parser");
+
         DailyInfo service = new DailyInfo();
         DailyInfoSoap port = service.getDailyInfoSoap();
 
@@ -203,6 +215,7 @@ public class ParcerServiceImplement implements ParcerService {
 //-------------------------------------------------------------------------------------------------------------------------------------
             valuteCursOnDateList.add(valuteCursOnDate);
         }
+        logger.info("Stop Parser");
         return valuteCursOnDateList;
     }
 

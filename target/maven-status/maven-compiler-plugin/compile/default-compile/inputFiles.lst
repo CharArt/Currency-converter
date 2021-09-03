@@ -122,6 +122,7 @@ D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\c
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\SwapDynamicResponse.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\service\history\HistoryServiceImplement.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\service\datetime\CustomDateTimeService.java
+D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\configurations\MyBasicAuthenticationEntryPoint.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\configurations\WebSecurityConfig.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\OmodInfoXML.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\service\parcer\ParcerServiceImplement.java
@@ -154,6 +155,7 @@ D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\c
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\Saldo.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\SwapMonthTotalXMLResponse.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\dto\CursDynamic.java
+D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\dto\ValCursDto.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\GetLatestDate.java
 D:\ProjectOnJava\currency_converter_21.12.2020\src\main\java\com\ccon\chap\configurations\JpaConfiguration.java
 D:\ProjectOnJava\currency_converter_21.12.2020\target\generated-sources\cxf\ru\cbr\web\MrrfResponse.java

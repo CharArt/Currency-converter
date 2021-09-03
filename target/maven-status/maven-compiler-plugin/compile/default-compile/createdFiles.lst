@@ -102,6 +102,7 @@ ru\cbr\web\GetLatestDateTime.class
 ru\cbr\web\SwapInfoSellUSDVol.class
 ru\cbr\web\BiCurBacketXML.class
 ru\cbr\web\CoinsBase.class
+com\ccon\chap\dto\ValCursDto.class
 ru\cbr\web\GetCursDynamic.class
 ru\cbr\web\BauctionXMLResponse.class
 ru\cbr\web\GetReutersCursDynamicXMLResponse$GetReutersCursDynamicXMLResult.class
@@ -165,6 +166,7 @@ ru\cbr\web\FixingBaseXML.class
 ru\cbr\web\MainInfoXML.class
 ru\cbr\web\SwapDynamicResponse$SwapDynamicResult.class
 ru\cbr\web\SaldoXMLResponse.class
+com\ccon\chap\configurations\MyBasicAuthenticationEntryPoint.class
 ru\cbr\web\NewsInfoXMLResponse.class
 ru\cbr\web\GetLatestReutersDateTime.class
 com\ccon\chap\configurations\SecurityWebAppInitializer.class

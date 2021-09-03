@@ -54,7 +54,7 @@ public class ValCursREST {
     public ResponseEntity<List<ValCursDto>> findByDate(@RequestParam(required = false) String date) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate localDate = LocalDate.parse(date, formatter);
-        LocalDateTime localDateTime = LocalDateTime.of(localDate, LocalTime.of(0,0,0));
+        LocalDateTime localDateTime = LocalDateTime.of(localDate, LocalTime.of(0, 0, 0));
         return new ResponseEntity<>(valCursService.findValCursDtoByDate(localDateTime), HttpStatus.OK);
     }
 
@@ -66,13 +66,11 @@ public class ValCursREST {
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public void update(@PathVariable Long id, @RequestBody ValCursDto valCursDto) {
+    public void update(@PathVariable Long id, @RequestBody ValCursDto valCursDto, @RequestParam String date) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate localDate = LocalDate.parse(date, formatter);
+        LocalDateTime localDateTime = LocalDateTime.of(localDate, LocalTime.of(0, 0, 0));
+        valCursDto.setCurrency_date(localDateTime);
         valCursService.updateValCursDto(id, valCursDto);
-    }
-
-    @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.OK)
-    public void delete(@PathVariable Long id) {
-        valCursService.deleteValCursDtoById(id);
     }
 }

@@ -89,11 +89,6 @@ public class ValCursServiceImplement implements ValCursService {
     }
 
     @Override
-    public void deleteValCursById(Long write_id) {
-        repository.deleteValcursById(write_id);
-    }
-
-    @Override
     public void dataEntryForspecifiedDate(LocalDateTime enteringDate) {
         try {
             List<CursDynamic> cursDynamicList = parcerService.getCursDynamicList();
@@ -177,7 +172,7 @@ public class ValCursServiceImplement implements ValCursService {
 
     @Override
     public ValCursDto getLastEntryDto() {
-        return null;
+        return toDto(getLastEntry());
     }
 
     @Override
@@ -207,18 +202,14 @@ public class ValCursServiceImplement implements ValCursService {
 
     @Override
     public void createdNewValCursDto(ValCursDto valCursDto) {
-        createdNewValCurs(toValCurs(valCursDto));
+        createdNewValCurs(toValCursCreate(valCursDto));
     }
 
     @Override
     public void updateValCursDto(Long id, ValCursDto newValCursDto) {
-        updateValCurs(id, toValCurs(newValCursDto));
+        updateValCurs(id, toValCursUpdate(newValCursDto));
     }
 
-    @Override
-    public void deleteValCursDtoById(Long id) {
-        deleteValCursById(id);
-    }
 
     private ValCursDto toDto(ValCurs valCurs) {
         ValCursDto valCursDto = new ValCursDto();
@@ -233,15 +224,27 @@ public class ValCursServiceImplement implements ValCursService {
         return valCursDto;
     }
 
-    private ValCurs toValCurs(ValCursDto valCursDto) {
+    private ValCurs toValCursUpdate(ValCursDto valCursDto) {
         ValCurs valCurs = new ValCurs();
-        valCurs.setWrite_id(valCursDto.getWrite_id());
         valCurs.setCurrency_id(valCursDto.getCurrency_id());
         valCurs.setCurrency_numcode(valCursDto.getCurrency_numcode());
         valCurs.setCurrency_charcode(valCursDto.getCurrency_charcode());
         valCurs.setCurrency_name(valCursDto.getCurrency_name());
         valCurs.setCurrency_value(valCursDto.getCurrency_value());
+        valCurs.setCurrency_nominal(valCursDto.getCurrency_nominal());
         valCurs.setCurrency_date(valCursDto.getCurrency_date());
+        return valCurs;
+    }
+
+    private ValCurs toValCursCreate(ValCursDto valCursDto) {
+        ValCurs valCurs = new ValCurs();
+        valCurs.setCurrency_id(valCursDto.getCurrency_id());
+        valCurs.setCurrency_numcode(valCursDto.getCurrency_numcode());
+        valCurs.setCurrency_charcode(valCursDto.getCurrency_charcode());
+        valCurs.setCurrency_name(valCursDto.getCurrency_name());
+        valCurs.setCurrency_value(valCursDto.getCurrency_value());
+        valCurs.setCurrency_nominal(valCursDto.getCurrency_nominal());
+        valCurs.setCurrency_date(LocalDateTime.now());
         return valCurs;
     }
 }

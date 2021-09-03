@@ -39,8 +39,4 @@ public interface ValCursRepository extends JpaRepository<ValCurs, Long> {
 
     @Query(value = "SELECT * FROM valcurs ORDER BY write_id DESC LIMIT 1;", nativeQuery = true)
     ValCurs lastEntry();
-
-    @Modifying
-    @Query(value = "DELETE FROM valcurs v WHERE v.write_id=:write_id",nativeQuery = true)
-    void deleteValcursById(@Param("write_id") Long write_id);
 }

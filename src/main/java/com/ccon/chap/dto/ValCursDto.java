@@ -16,7 +16,7 @@ public class ValCursDto {
     private String currency_name;
     private String currency_value;
 
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDateTime currency_date;
 
 

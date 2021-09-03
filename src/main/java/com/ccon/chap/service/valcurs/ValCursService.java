@@ -28,8 +28,6 @@ public interface ValCursService {
 
     void updateValCurs(Long writeId, ValCurs newValCurs);
 
-    void deleteValCursById(Long write_id);
-
     void dataEntryForspecifiedDate(LocalDateTime enteringDate);
 
     void fillingInDatabaseValCura();
@@ -54,7 +52,5 @@ public interface ValCursService {
     void createdNewValCursDto(ValCursDto valCurs);
 
     void updateValCursDto(Long id, ValCursDto newValCursDto);
-
-    void deleteValCursDtoById(Long id);
 
 }
