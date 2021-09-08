@@ -2,7 +2,9 @@ package com.ccon.chap.service.parcer;
 
 import com.ccon.chap.dto.CursDynamic;
 import com.ccon.chap.dto.ValuteCursOnDate;
-import org.slf4j.Logger;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Element;
@@ -24,7 +26,7 @@ import java.util.List;
 
 @Service
 public class ParcerServiceImplement implements ParcerService {
-    private static final Logger logger = LoggerFactory.getLogger(ParcerServiceImplement.class);
+    private static final Logger logger = LogManager.getLogger(ParcerServiceImplement.class);
 
     @Override
     public List<CursDynamic> getCursDynamicList() {

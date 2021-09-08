@@ -14,7 +14,7 @@ public class CConWebApplicationInitializer implements WebApplicationInitializer 
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.register(WebConfiguration.class);
         context.setServletContext(servletContext);
-        ServletRegistration.Dynamic dispatchar =servletContext.addServlet("SpringDispatchar", new DispatcherServlet(context));
+        ServletRegistration.Dynamic dispatchar = servletContext.addServlet("SpringDispatchar", new DispatcherServlet(context));
         dispatchar.setLoadOnStartup(1);
         dispatchar.addMapping("/");
     }

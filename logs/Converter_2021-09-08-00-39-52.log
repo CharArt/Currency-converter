@@ -1,0 +1,1183 @@
+2021-09-08 00:39:49 DEBUG logging:38- Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2021-09-08 00:39:49 DEBUG LogHelper:102- PersistenceUnitInfo [
+	name: default
+	persistence provider classname: null
+	classloader: jdk.internal.loader.ClassLoaders$AppClassLoader@266474c2
+	excludeUnlistedClasses: true
+	JTA datasource: null
+	Non JTA datasource: org.springframework.jdbc.datasource.SimpleDriverDataSource@61884cb1
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/D:/ProjectOnJava/currency_converter_21.12.2020/target/test-classes/
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names [
+		com.ccon.chap.entity.History
+		com.ccon.chap.entity.Role
+		com.ccon.chap.entity.User
+		com.ccon.chap.entity.ValCurs]
+	Mapping files names []
+	Properties []
+2021-09-08 00:39:49 DEBUG IntegratorServiceImpl:46- Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2021-09-08 00:39:49 DEBUG IntegratorServiceImpl:46- Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+2021-09-08 00:39:49 DEBUG IntegratorServiceImpl:46- Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2021-09-08 00:39:49 INFO  Version:44- HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-09-08 00:39:49 DEBUG Environment:199- HHH000206: hibernate.properties not found
+2021-09-08 00:39:49 DEBUG ServiceBinding:68- Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+2021-09-08 00:39:49 DEBUG RegionFactoryInitiator:118- Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+2021-09-08 00:39:49 DEBUG RegionFactoryInitiator:49- Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2021-09-08 00:39:49 INFO  Version:49- HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration boolean -> org.hibernate.type.BooleanType@34523d46
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration boolean -> org.hibernate.type.BooleanType@34523d46
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@34523d46
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@5d235104
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration true_false -> org.hibernate.type.TrueFalseType@4443ef6f
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration yes_no -> org.hibernate.type.YesNoType@31fc71ab
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration byte -> org.hibernate.type.ByteType@42c2f48c
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration byte -> org.hibernate.type.ByteType@42c2f48c
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@42c2f48c
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration character -> org.hibernate.type.CharacterType@14151bc5
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration char -> org.hibernate.type.CharacterType@14151bc5
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@14151bc5
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration short -> org.hibernate.type.ShortType@982bb90
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration short -> org.hibernate.type.ShortType@982bb90
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Short -> org.hibernate.type.ShortType@982bb90
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration integer -> org.hibernate.type.IntegerType@44f3fe83
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration int -> org.hibernate.type.IntegerType@44f3fe83
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@44f3fe83
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration long -> org.hibernate.type.LongType@6de30571
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration long -> org.hibernate.type.LongType@6de30571
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Long -> org.hibernate.type.LongType@6de30571
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration float -> org.hibernate.type.FloatType@61a91912
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration float -> org.hibernate.type.FloatType@61a91912
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Float -> org.hibernate.type.FloatType@61a91912
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration double -> org.hibernate.type.DoubleType@2787de58
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration double -> org.hibernate.type.DoubleType@2787de58
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@2787de58
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@5116ac09
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@5116ac09
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration big_integer -> org.hibernate.type.BigIntegerType@f14e5bf
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@f14e5bf
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration string -> org.hibernate.type.StringType@aa004a0
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.String -> org.hibernate.type.StringType@aa004a0
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration nstring -> org.hibernate.type.StringNVarcharType@dffa30b
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@1bcf67e8
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration url -> org.hibernate.type.UrlType@76075d65
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.net.URL -> org.hibernate.type.UrlType@76075d65
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration Duration -> org.hibernate.type.DurationType@878537d
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.time.Duration -> org.hibernate.type.DurationType@878537d
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration Instant -> org.hibernate.type.InstantType@40ee0a22
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.time.Instant -> org.hibernate.type.InstantType@40ee0a22
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@629f066f
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@629f066f
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration LocalDate -> org.hibernate.type.LocalDateType@963176
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@963176
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@3eed0f5
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@3eed0f5
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@26dcd8c0
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@26dcd8c0
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@3a022576
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@3a022576
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@7df60067
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@7df60067
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration date -> org.hibernate.type.DateType@773dab28
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.sql.Date -> org.hibernate.type.DateType@773dab28
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration time -> org.hibernate.type.TimeType@8c46918
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.sql.Time -> org.hibernate.type.TimeType@8c46918
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration timestamp -> org.hibernate.type.TimestampType@7aad3f7d
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@7aad3f7d
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.util.Date -> org.hibernate.type.TimestampType@7aad3f7d
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@2bcec6a6
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration calendar -> org.hibernate.type.CalendarType@27fde870
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@27fde870
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@27fde870
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@4e4c3a38
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@1603dc2f
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration locale -> org.hibernate.type.LocaleType@325bb9a6
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@325bb9a6
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration currency -> org.hibernate.type.CurrencyType@1e9804b9
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@1e9804b9
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration timezone -> org.hibernate.type.TimeZoneType@7fab4be7
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@7fab4be7
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration class -> org.hibernate.type.ClassType@736f3e9e
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Class -> org.hibernate.type.ClassType@736f3e9e
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@87abc48
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@87abc48
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@7435a578
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration binary -> org.hibernate.type.BinaryType@49601f82
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration byte[] -> org.hibernate.type.BinaryType@49601f82
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration [B -> org.hibernate.type.BinaryType@49601f82
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@7551da2a
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@7551da2a
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@7551da2a
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration row_version -> org.hibernate.type.RowVersionType@173373b4
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration image -> org.hibernate.type.ImageType@5e9456ae
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration characters -> org.hibernate.type.CharArrayType@77bd7fe7
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration char[] -> org.hibernate.type.CharArrayType@77bd7fe7
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration [C -> org.hibernate.type.CharArrayType@77bd7fe7
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@4e25147a
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@4e25147a
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@4e25147a
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration text -> org.hibernate.type.TextType@30506c0d
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration ntext -> org.hibernate.type.NTextType@6124287a
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration blob -> org.hibernate.type.BlobType@31ee96f4
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@31ee96f4
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@51e0301d
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration clob -> org.hibernate.type.ClobType@29852487
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@29852487
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration nclob -> org.hibernate.type.NClobType@298d9a05
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@298d9a05
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@3c0036b
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@78e89bfe
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration serializable -> org.hibernate.type.SerializableType@1dbb650b
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration object -> org.hibernate.type.ObjectType@2e140e59
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@2e140e59
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@57aa341b
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@26e412ef
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@4ae263bf
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@7103ab0
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@19ccca5
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@769d513
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@5e4fa1da
+2021-09-08 00:39:49 DEBUG BasicTypeRegistry:157- Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@588cd519
+2021-09-08 00:39:49 DEBUG BootstrapContextImpl:262- Injecting JPA temp ClassLoader [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@b967222] into BootstrapContext; was [null]
+2021-09-08 00:39:49 DEBUG ClassLoaderAccessImpl:45- ClassLoaderAccessImpl#injectTempClassLoader(org.springframework.instrument.classloading.SimpleThrowawayClassLoader@b967222) [was null]
+2021-09-08 00:39:49 DEBUG BootstrapContextImpl:272- Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@723ed581] into BootstrapContext; was [null]
+2021-09-08 00:39:49 DEBUG BootstrapContextImpl:267- Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@6b760460] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@796065aa]
+2021-09-08 00:39:49 DEBUG BootstrapContextImpl:262- Injecting JPA temp ClassLoader [null] into BootstrapContext; was [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@b967222]
+2021-09-08 00:39:49 DEBUG ClassLoaderAccessImpl:45- ClassLoaderAccessImpl#injectTempClassLoader(null) [was org.springframework.instrument.classloading.SimpleThrowawayClassLoader@b967222]
+2021-09-08 00:39:49 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2021-09-08 00:39:49 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2021-09-08 00:39:49 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2021-09-08 00:39:49 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2021-09-08 00:39:49 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2021-09-08 00:39:49 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2021-09-08 00:39:49 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2021-09-08 00:39:49 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2021-09-08 00:39:49 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2021-09-08 00:39:49 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2021-09-08 00:39:49 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2021-09-08 00:39:49 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2021-09-08 00:39:49 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2021-09-08 00:39:49 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2021-09-08 00:39:50 DEBUG JdbcEnvironmentInitiator:72- Database ->
+       name : PostgreSQL
+    version : 13.1
+      major : 13
+      minor : 1
+2021-09-08 00:39:50 DEBUG JdbcEnvironmentInitiator:83- Driver ->
+       name : PostgreSQL JDBC Driver
+    version : 42.2.16
+      major : 42
+      minor : 2
+2021-09-08 00:39:50 DEBUG JdbcEnvironmentInitiator:389- JDBC version : 4.2
+2021-09-08 00:39:50 INFO  Dialect:170- HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-09-08 00:39:50 DEBUG IdentifierHelperBuilder:108- JDBC driver metadata reported database stores quoted identifiers in neither upper, lower nor mixed case
+2021-09-08 00:39:50 DEBUG Namespace:51- Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+2021-09-08 00:39:50 DEBUG BasicTypeRegistry:157- Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@eca6a74
+2021-09-08 00:39:50 DEBUG BasicTypeRegistry:157- Adding type registration java.util.UUID -> org.hibernate.type.PostgresUUIDType@eca6a74
+2021-09-08 00:39:50 DEBUG BasicTypeRegistry:160- HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@87abc48
+2021-09-08 00:39:50 DEBUG TypeConfiguration$Scope:152- Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@4f66ffc8] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@124ac145]
+2021-09-08 00:39:50 DEBUG AnnotationBinder:556- Binding entity from annotated class: com.ccon.chap.entity.History
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2021-09-08 00:39:50 DEBUG EntityBinder:430- Import with entity name History
+2021-09-08 00:39:50 DEBUG EntityBinder:873- Bind entity com.ccon.chap.entity.History on table history
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(history), mappingColumn=request_id, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property request_id with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.History:request_id]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for request_id
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property request_id
+2021-09-08 00:39:50 DEBUG BinderHelper:644- #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(request_id)]), request_id, identity, , ...)
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(history), mappingColumn=answer, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property answer with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.History:answer]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for answer
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property answer
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(history), mappingColumn=date_conversion, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property dateConversion with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.History:dateConversion]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for dateConversion
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property dateConversion
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(history), mappingColumn=date_valcurs, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property dateValcurs with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.History:dateValcurs]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for dateValcurs
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property dateValcurs
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(history), mappingColumn=question, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property question with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.History:question]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for question
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property question
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='user_id', referencedColumn='', mappedBy=''}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(history), mappingColumn=user, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property user
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='write_of_id', referencedColumn='', mappedBy=''}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(history), mappingColumn=writOfId, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property writOfId
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='write_in_id', referencedColumn='', mappedBy=''}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(history), mappingColumn=writeInId, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property writeInId
+2021-09-08 00:39:50 DEBUG AnnotationBinder:556- Binding entity from annotated class: com.ccon.chap.entity.Role
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2021-09-08 00:39:50 DEBUG EntityBinder:430- Import with entity name Role
+2021-09-08 00:39:50 DEBUG EntityBinder:873- Bind entity com.ccon.chap.entity.Role on table role
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=role_id, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property role_id with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.Role:role_id]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for role_id
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property role_id
+2021-09-08 00:39:50 DEBUG BinderHelper:644- #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(role_id)]), role_id, identity, , ...)
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=role_name, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property role_name with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.Role:role_name]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for role_name
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property role_name
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=users_KEY, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='users_KEY', referencedColumn='null', mappedBy='null'}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='role'}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='role'}
+2021-09-08 00:39:50 DEBUG CollectionBinder:450- Collection role: com.ccon.chap.entity.Role.users
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property users
+2021-09-08 00:39:50 DEBUG AnnotationBinder:556- Binding entity from annotated class: com.ccon.chap.entity.User
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2021-09-08 00:39:50 DEBUG EntityBinder:430- Import with entity name User
+2021-09-08 00:39:50 DEBUG EntityBinder:873- Bind entity com.ccon.chap.entity.User on table user
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_id, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_id with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_id]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for user_id
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property user_id
+2021-09-08 00:39:50 DEBUG BinderHelper:644- #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(user_id)]), user_id, identity, , ...)
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=history, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=history_KEY, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='history_KEY', referencedColumn='null', mappedBy='null'}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+2021-09-08 00:39:50 DEBUG CollectionBinder:450- Collection role: com.ccon.chap.entity.User.history
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property history
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=role_KEY, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='role_KEY', referencedColumn='null', mappedBy='null'}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='role_id', referencedColumn='', mappedBy=''}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='user_id', referencedColumn='', mappedBy=''}
+2021-09-08 00:39:50 DEBUG CollectionBinder:450- Collection role: com.ccon.chap.entity.User.role
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property role
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_created_at, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_created_at with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_created_at]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for user_created_at
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property user_created_at
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_email, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_email with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_email]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for user_email
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property user_email
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_is_active, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_is_active with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_is_active]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for user_is_active
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property user_is_active
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_login, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_login with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_login]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for user_login
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property user_login
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_name, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_name with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_name]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for user_name
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property user_name
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_of_birth, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_of_birth with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_of_birth]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for user_of_birth
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property user_of_birth
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_password, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_password with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_password]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for user_password
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property user_password
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_patronymic, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_patronymic with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_patronymic]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for user_patronymic
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property user_patronymic
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_surname, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_surname with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_surname]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for user_surname
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property user_surname
+2021-09-08 00:39:50 DEBUG AnnotationBinder:556- Binding entity from annotated class: com.ccon.chap.entity.ValCurs
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2021-09-08 00:39:50 DEBUG EntityBinder:430- Import with entity name ValCurs
+2021-09-08 00:39:50 DEBUG EntityBinder:873- Bind entity com.ccon.chap.entity.ValCurs on table valcurs
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=write_id, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property write_id with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.ValCurs:write_id]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for write_id
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property write_id
+2021-09-08 00:39:50 DEBUG BinderHelper:644- #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(write_id)]), write_id, identity, , ...)
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currency_charcode, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property currency_charcode with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.ValCurs:currency_charcode]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for currency_charcode
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property currency_charcode
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currency_date, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property currency_date with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.ValCurs:currency_date]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for currency_date
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property currency_date
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currency_id, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property currency_id with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.ValCurs:currency_id]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for currency_id
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property currency_id
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currency_name, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property currency_name with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.ValCurs:currency_name]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for currency_name
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property currency_name
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currency_nominal, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property currency_nominal with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.ValCurs:currency_nominal]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for currency_nominal
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property currency_nominal
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currency_numcode, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property currency_numcode with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.ValCurs:currency_numcode]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for currency_numcode
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property currency_numcode
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currency_value, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG PropertyBinder:175- MetadataSourceProcessor property currency_value with lazy=false
+2021-09-08 00:39:50 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.ValCurs:currency_value]
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:411- building SimpleValue for currency_value
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property currency_value
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currentHistory, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currentHistory_KEY, insertable=true, updatable=true, unique=false}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='currentHistory_KEY', referencedColumn='null', mappedBy='null'}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+2021-09-08 00:39:50 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+2021-09-08 00:39:50 DEBUG CollectionBinder:450- Collection role: com.ccon.chap.entity.ValCurs.currentHistory
+2021-09-08 00:39:50 DEBUG PropertyBinder:266- Building property currentHistory
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for request_id
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for answer
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for dateConversion
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for dateValcurs
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for question
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for role_id
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for role_name
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_id
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_created_at
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_email
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_is_active
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_login
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_name
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_of_birth
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_password
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_patronymic
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_surname
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for write_id
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for currency_charcode
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for currency_date
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for currency_id
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for currency_name
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for currency_nominal
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for currency_numcode
+2021-09-08 00:39:50 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for currency_value
+2021-09-08 00:39:50 DEBUG PrimaryKey:35- Forcing column [request_id] to be non-null as it is part of the primary key for table [history]
+2021-09-08 00:39:50 DEBUG PrimaryKey:35- Forcing column [role_id] to be non-null as it is part of the primary key for table [role]
+2021-09-08 00:39:50 DEBUG PrimaryKey:35- Forcing column [user_id] to be non-null as it is part of the primary key for table [user]
+2021-09-08 00:39:50 DEBUG PrimaryKey:35- Forcing column [write_id] to be non-null as it is part of the primary key for table [valcurs]
+2021-09-08 00:39:50 DEBUG CollectionSecondPass:50- Second pass for collection: com.ccon.chap.entity.ValCurs.currentHistory
+2021-09-08 00:39:50 DEBUG CollectionBinder:1316- Binding a OneToMany: com.ccon.chap.entity.ValCurs.currentHistory through an association table
+2021-09-08 00:39:50 DEBUG CollectionSecondPass:67- Mapped collection key: ValCurs_write_id, element: currentHistory_request_id
+2021-09-08 00:39:50 DEBUG CollectionSecondPass:50- Second pass for collection: com.ccon.chap.entity.User.role
+2021-09-08 00:39:50 DEBUG CollectionBinder:1319- Binding as ManyToMany: com.ccon.chap.entity.User.role
+2021-09-08 00:39:50 DEBUG CollectionSecondPass:67- Mapped collection key: role_id, element: user_id
+2021-09-08 00:39:50 DEBUG CollectionSecondPass:50- Second pass for collection: com.ccon.chap.entity.User.history
+2021-09-08 00:39:50 DEBUG CollectionBinder:1316- Binding a OneToMany: com.ccon.chap.entity.User.history through an association table
+2021-09-08 00:39:50 DEBUG CollectionSecondPass:67- Mapped collection key: User_user_id, element: history_request_id
+2021-09-08 00:39:50 DEBUG CollectionSecondPass:50- Second pass for collection: com.ccon.chap.entity.Role.users
+2021-09-08 00:39:50 DEBUG CollectionBinder:1319- Binding as ManyToMany: com.ccon.chap.entity.Role.users
+2021-09-08 00:39:50 DEBUG TableBinder:554- Retrieving property com.ccon.chap.entity.User.role
+2021-09-08 00:39:50 DEBUG CollectionSecondPass:67- Mapped collection key: user_id, element: role_id
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.User
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.ValCurs
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.ValCurs
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.History
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.User
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.Role
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.User
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.History
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.ValCurs
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.User
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.ValCurs
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.ValCurs
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.History
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.User
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.Role
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.User
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.History
+2021-09-08 00:39:50 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.ValCurs
+2021-09-08 00:39:50 DEBUG SessionFactoryImpl:203- Building session factory
+2021-09-08 00:39:50 DEBUG Settings:68- SessionFactory name : null
+2021-09-08 00:39:50 DEBUG Settings:69- Automatic flush during beforeCompletion(): enabled
+2021-09-08 00:39:50 DEBUG Settings:70- Automatic session close at end of transaction: disabled
+2021-09-08 00:39:50 DEBUG Settings:72- Statistics: disabled
+2021-09-08 00:39:50 DEBUG Settings:74- Deleted entity synthetic identifier rollback: disabled
+2021-09-08 00:39:50 DEBUG Settings:75- Default entity-mode: pojo
+2021-09-08 00:39:50 DEBUG Settings:76- Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2021-09-08 00:39:50 DEBUG Settings:77- Allow initialization of lazy state outside session : disabled
+2021-09-08 00:39:50 DEBUG Settings:79- Using BatchFetchStyle : LEGACY
+2021-09-08 00:39:50 DEBUG Settings:80- Default batch fetch size: -1
+2021-09-08 00:39:50 DEBUG Settings:81- Maximum outer join fetch depth: null
+2021-09-08 00:39:50 DEBUG Settings:82- Default null ordering: NONE
+2021-09-08 00:39:50 DEBUG Settings:83- Order SQL updates by primary key: disabled
+2021-09-08 00:39:50 DEBUG Settings:84- Order SQL inserts for batching: disabled
+2021-09-08 00:39:50 DEBUG Settings:86- multi-tenancy strategy : NONE
+2021-09-08 00:39:50 DEBUG Settings:88- JTA Track by Thread: enabled
+2021-09-08 00:39:50 DEBUG Settings:90- Query language substitutions: {}
+2021-09-08 00:39:50 DEBUG Settings:91- Named query checking : enabled
+2021-09-08 00:39:50 DEBUG Settings:93- Second-level cache: disabled
+2021-09-08 00:39:50 DEBUG Settings:94- Second-level query cache: disabled
+2021-09-08 00:39:50 DEBUG Settings:95- Second-level query cache factory: null
+2021-09-08 00:39:50 DEBUG Settings:96- Second-level cache region prefix: null
+2021-09-08 00:39:50 DEBUG Settings:97- Optimize second-level cache for minimal puts: disabled
+2021-09-08 00:39:50 DEBUG Settings:98- Structured second-level cache entries: disabled
+2021-09-08 00:39:50 DEBUG Settings:99- Second-level cache direct-reference entries: disabled
+2021-09-08 00:39:50 DEBUG Settings:100- Automatic eviction of collection cache: disabled
+2021-09-08 00:39:50 DEBUG Settings:102- JDBC batch size: 15
+2021-09-08 00:39:50 DEBUG Settings:103- JDBC batch updates for versioned data: enabled
+2021-09-08 00:39:50 DEBUG Settings:104- Scrollable result sets: enabled
+2021-09-08 00:39:50 DEBUG Settings:105- Wrap result sets: disabled
+2021-09-08 00:39:50 DEBUG Settings:106- JDBC3 getGeneratedKeys(): enabled
+2021-09-08 00:39:50 DEBUG Settings:107- JDBC result set fetch size: null
+2021-09-08 00:39:50 DEBUG Settings:108- Connection release mode: ON_CLOSE
+2021-09-08 00:39:50 DEBUG Settings:109- Generate SQL with comments: disabled
+2021-09-08 00:39:50 DEBUG Settings:111- JPA compliance - query : disabled
+2021-09-08 00:39:50 DEBUG Settings:112- JPA compliance - closed-handling : disabled
+2021-09-08 00:39:50 DEBUG Settings:113- JPA compliance - lists : disabled
+2021-09-08 00:39:50 DEBUG Settings:114- JPA compliance - transactions : disabled
+2021-09-08 00:39:50 DEBUG SessionFactoryImpl:258- Session factory constructed with filter configurations : {}
+2021-09-08 00:39:50 DEBUG SessionFactoryImpl:259- Instantiating session factory with properties: {java.specification.version=16, sun.cpu.isalist=amd64, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, sun.jnu.encoding=Cp1251, hibernate.dialect=org.hibernate.dialect.PostgreSQL10Dialect, java.class.path=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\lib\idea_rt.jar;C:\Users\Artem\.m2\repository\org\junit\platform\junit-platform-launcher\1.7.0\junit-platform-launcher-1.7.0.jar;C:\Users\Artem\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\Artem\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\plugins\junit\lib\junit5-rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\plugins\junit\lib\junit-rt.jar;D:\ProjectOnJava\currency_converter_21.12.2020\target\test-classes;D:\ProjectOnJava\currency_converter_21.12.2020\target\classes;C:\Users\Artem\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Artem\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Artem\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Artem\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Artem\.m2\repository\org\mockito\mockito-all\1.10.19\mockito-all-1.10.19.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-test\5.3.5\spring-test-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-core\5.3.5\spring-core-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-jcl\5.3.5\spring-jcl-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-orm\5.3.5\spring-orm-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-beans\5.3.5\spring-beans-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-jdbc\5.3.5\spring-jdbc-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-tx\5.3.5\spring-tx-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-webmvc\5.3.5\spring-webmvc-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-aop\5.3.5\spring-aop-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-context\5.3.5\spring-context-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-expression\5.3.5\spring-expression-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-web\5.3.5\spring-web-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\security\spring-security-core\5.4.0\spring-security-core-5.4.0.jar;C:\Users\Artem\.m2\repository\org\springframework\security\spring-security-web\5.4.0\spring-security-web-5.4.0.jar;C:\Users\Artem\.m2\repository\org\springframework\security\spring-security-config\5.4.0\spring-security-config-5.4.0.jar;C:\Users\Artem\.m2\repository\org\springframework\data\spring-data-jpa\2.3.5.RELEASE\spring-data-jpa-2.3.5.RELEASE.jar;C:\Users\Artem\.m2\repository\org\springframework\data\spring-data-commons\2.3.5.RELEASE\spring-data-commons-2.3.5.RELEASE.jar;C:\Users\Artem\.m2\repository\org\aspectj\aspectjrt\1.9.6\aspectjrt-1.9.6.jar;C:\Users\Artem\.m2\repository\org\postgresql\postgresql\42.2.16\postgresql-42.2.16.jar;C:\Users\Artem\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Users\Artem\.m2\repository\org\hibernate\hibernate-core\5.4.21.Final\hibernate-core-5.4.21.Final.jar;C:\Users\Artem\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;C:\Users\Artem\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\Artem\.m2\repository\org\javassist\javassist\3.24.0-GA\javassist-3.24.0-GA.jar;C:\Users\Artem\.m2\repository\net\bytebuddy\byte-buddy\1.10.10\byte-buddy-1.10.10.jar;C:\Users\Artem\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Artem\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\Artem\.m2\repository\org\jboss\jandex\2.1.3.Final\jandex-2.1.3.Final.jar;C:\Users\Artem\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\Artem\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\Artem\.m2\repository\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;C:\Users\Artem\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.0.Final\hibernate-commons-annotations-5.1.0.Final.jar;C:\Users\Artem\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\Artem\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\Artem\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\Artem\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\Artem\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\Artem\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;C:\Users\Artem\.m2\repository\org\hibernate\validator\hibernate-validator\7.0.1.Final\hibernate-validator-7.0.1.Final.jar;C:\Users\Artem\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.0\jakarta.validation-api-3.0.0.jar;C:\Users\Artem\.m2\repository\javax\servlet\javax.servlet-api\4.0.1\javax.servlet-api-4.0.1.jar;C:\Users\Artem\.m2\repository\org\thymeleaf\thymeleaf-spring5\3.0.11.RELEASE\thymeleaf-spring5-3.0.11.RELEASE.jar;C:\Users\Artem\.m2\repository\org\thymeleaf\extras\thymeleaf-extras-java8time\3.0.4.RELEASE\thymeleaf-extras-java8time-3.0.4.RELEASE.jar;C:\Users\Artem\.m2\repository\org\thymeleaf\thymeleaf\3.0.11.RELEASE\thymeleaf-3.0.11.RELEASE.jar;C:\Users\Artem\.m2\repository\ognl\ognl\3.1.12\ognl-3.1.12.jar;C:\Users\Artem\.m2\repository\org\attoparser\attoparser\2.0.5.RELEASE\attoparser-2.0.5.RELEASE.jar;C:\Users\Artem\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;C:\Users\Artem\.m2\repository\org\thymeleaf\extras\thymeleaf-extras-springsecurity5\3.0.4.RELEASE\thymeleaf-extras-springsecurity5-3.0.4.RELEASE.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-frontend-jaxws\3.3.0\cxf-rt-frontend-jaxws-3.3.0.jar;C:\Users\Artem\.m2\repository\xml-resolver\xml-resolver\1.2\xml-resolver-1.2.jar;C:\Users\Artem\.m2\repository\org\ow2\asm\asm\7.0\asm-7.0.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-core\3.3.0\cxf-core-3.3.0.jar;C:\Users\Artem\.m2\repository\com\fasterxml\woodstox\woodstox-core\5.0.3\woodstox-core-5.0.3.jar;C:\Users\Artem\.m2\repository\org\codehaus\woodstox\stax2-api\3.1.4\stax2-api-3.1.4.jar;C:\Users\Artem\.m2\repository\org\apache\ws\xmlschema\xmlschema-core\2.2.4\xmlschema-core-2.2.4.jar;C:\Users\Artem\.m2\repository\org\glassfish\jaxb\jaxb-xjc\2.3.2\jaxb-xjc-2.3.2.jar;C:\Users\Artem\.m2\repository\org\glassfish\jaxb\xsom\2.3.2\xsom-2.3.2.jar;C:\Users\Artem\.m2\repository\org\glassfish\jaxb\codemodel\2.3.2\codemodel-2.3.2.jar;C:\Users\Artem\.m2\repository\com\sun\xml\bind\external\rngom\2.3.2\rngom-2.3.2.jar;C:\Users\Artem\.m2\repository\com\sun\xml\dtd-parser\dtd-parser\1.4.1\dtd-parser-1.4.1.jar;C:\Users\Artem\.m2\repository\com\sun\istack\istack-commons-tools\3.0.8\istack-commons-tools-3.0.8.jar;C:\Users\Artem\.m2\repository\org\apache\ant\ant\1.10.5\ant-1.10.5.jar;C:\Users\Artem\.m2\repository\org\apache\ant\ant-launcher\1.10.5\ant-launcher-1.10.5.jar;C:\Users\Artem\.m2\repository\com\sun\xml\bind\external\relaxng-datatype\2.3.2\relaxng-datatype-2.3.2.jar;C:\Users\Artem\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;C:\Users\Artem\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-bindings-soap\3.3.0\cxf-rt-bindings-soap-3.3.0.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-wsdl\3.3.0\cxf-rt-wsdl-3.3.0.jar;C:\Users\Artem\.m2\repository\wsdl4j\wsdl4j\1.6.3\wsdl4j-1.6.3.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-databinding-jaxb\3.3.0\cxf-rt-databinding-jaxb-3.3.0.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-bindings-xml\3.3.0\cxf-rt-bindings-xml-3.3.0.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-frontend-simple\3.3.0\cxf-rt-frontend-simple-3.3.0.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-ws-addr\3.3.0\cxf-rt-ws-addr-3.3.0.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-ws-policy\3.3.0\cxf-rt-ws-policy-3.3.0.jar;C:\Users\Artem\.m2\repository\org\apache\neethi\neethi\3.1.1\neethi-3.1.1.jar;C:\Users\Artem\.m2\repository\javax\annotation\javax.annotation-api\1.3.1\javax.annotation-api-1.3.1.jar;C:\Users\Artem\.m2\repository\javax\xml\ws\jaxws-api\2.3.0\jaxws-api-2.3.0.jar;C:\Users\Artem\.m2\repository\javax\xml\soap\javax.xml.soap-api\1.4.0\javax.xml.soap-api-1.4.0.jar;C:\Users\Artem\.m2\repository\com\sun\activation\javax.activation\1.2.0\javax.activation-1.2.0.jar;C:\Users\Artem\.m2\repository\org\apache\geronimo\specs\geronimo-ws-metadata_2.0_spec\1.1.3\geronimo-ws-metadata_2.0_spec-1.1.3.jar;C:\Users\Artem\.m2\repository\com\sun\xml\messaging\saaj\saaj-impl\1.4.0-b03\saaj-impl-1.4.0-b03.jar;C:\Users\Artem\.m2\repository\org\jvnet\mimepull\mimepull\1.9.7\mimepull-1.9.7.jar;C:\Users\Artem\.m2\repository\org\apache\geronimo\specs\geronimo-jta_1.1_spec\1.1.1\geronimo-jta_1.1_spec-1.1.1.jar;C:\Users\Artem\.m2\repository\org\jboss\spec\javax\rmi\jboss-rmi-api_1.0_spec\1.0.6.Final\jboss-rmi-api_1.0_spec-1.0.6.Final.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-transports-http\3.3.0\cxf-rt-transports-http-3.3.0.jar;C:\Users\Artem\.m2\repository\xerces\xercesImpl\2.9.1\xercesImpl-2.9.1.jar;C:\Users\Artem\.m2\repository\xml-apis\xml-apis\1.3.04\xml-apis-1.3.04.jar;C:\Users\Artem\.m2\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;C:\Users\Artem\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.4\jackson-databind-2.12.4.jar;C:\Users\Artem\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.4\jackson-annotations-2.12.4.jar;C:\Users\Artem\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.4\jackson-core-2.12.4.jar;C:\Users\Artem\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.12.4\jackson-datatype-jsr310-2.12.4.jar;C:\Users\Artem\.m2\repository\org\springframework\security\oauth\spring-security-oauth2\2.5.0.RELEASE\spring-security-oauth2-2.5.0.RELEASE.jar;C:\Users\Artem\.m2\repository\commons-codec\commons-codec\1.14\commons-codec-1.14.jar;C:\Users\Artem\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\Artem\.m2\repository\org\slf4j\slf4j-simple\1.6.4\slf4j-simple-1.6.4.jar;C:\Users\Artem\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, idea.test.cyclic.buffer.size=1048576, user.variant=, java.vendor.url=https://java.oracle.com/, user.timezone=Europe/Moscow, java.vm.specification.version=16, os.name=Windows 10, javax.persistence.validation.mode=AUTO, sun.java.launcher=SUN_STANDARD, user.country=RU, sun.boot.library.path=C:\Java\bin, sun.java.command=com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit5 com.ccon.chap.rest.ValCursAPITest,findById, javax.persistence.nonJtaDataSource=org.springframework.jdbc.datasource.SimpleDriverDataSource@61884cb1, javax.persistence.sharedCache.mode=UNSPECIFIED, jdk.debug=release, sun.cpu.endian=little, user.home=C:\Users\Artem, user.language=ru, java.specification.vendor=Oracle Corporation, java.version.date=2021-04-20, java.home=C:\Java, file.separator=\, java.vm.compressedOopsMode=Zero based, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, hibernate.hbm2ddl.auto=none, user.script=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=16.0.1+9-24, user.name=Artem, path.separator=;, os.version=10.0, java.runtime.name=Java(TM) SE Runtime Environment, file.encoding=UTF-8, hibernate.ejb.persistenceUnitName=default, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=C:\Users\Artem\AppData\Local\Temp\, java.version=16.0.1, user.dir=D:\ProjectOnJava\currency_converter_21.12.2020, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, sun.os.patch.level=, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.registry.StandardServiceRegistryBuilder$1@3c380bd8, java.library.path=C:\Java\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\System32;C:\Java\bin;C:\Program Files\Maven\apache-maven-3.6.3\bin;C:\drive\apache-tomcat-9.0.48\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Git\cmd;C:\Program Files\Polyspace\R2020b\runtime\win64;C:\Program Files\Polyspace\R2020b\bin;C:\Program Files\Polyspace\R2020b\polyspace\bin;C:\Java\bin;C:\Program Files\Maven\apache-maven-3.6.3\bin;C:\drive\apache-tomcat-9.0.48\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Git\cmd;C:\Program Files\Polyspace\R2020b\runtime\win64;C:\Program Files\Polyspace\R2020b\bin;C:\Program Files\Polyspace\R2020b\polyspace\bin;C:\Java\bin;C:\Program Files\Maven\apache-maven-3.6.3\bin;C:\drive\apache-tomcat-9.0.48\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Git\cmd;C:\Program Files\Polyspace\R2020b\runtime\win64;C:\Program Files\Polyspace\R2020b\bin;C:\Program Files\Polyspace\R2020b\polyspace\bin;C:\Users\Artem\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\bin;;;., java.vendor=Oracle Corporation, java.vm.info=mixed mode, sharing, java.vm.version=16.0.1+9-24, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeLittle, hibernate.connection.datasource=org.springframework.jdbc.datasource.SimpleDriverDataSource@61884cb1, java.class.version=60.0}
+2021-09-08 00:39:50 DEBUG TypeSafeActivator:94- Unable to acquire Bean Validation ValidatorFactory, skipping activation
+2021-09-08 00:39:50 DEBUG JaccIntegrator:80- Skipping JACC integration as it was not enabled
+2021-09-08 00:39:50 DEBUG SessionFactoryImpl:298- Instantiated session factory
+2021-09-08 00:39:50 DEBUG TypeConfiguration$Scope:157- Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@4f66ffc8] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@f5cf29b]
+2021-09-08 00:39:50 DEBUG ClassLoaderAccessImpl:60- Not known whether passed class name [com.ccon.chap.entity.Role] is safe
+2021-09-08 00:39:50 DEBUG ClassLoaderAccessImpl:62- No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.ccon.chap.entity.Role
+2021-09-08 00:39:50 DEBUG ClassLoaderAccessImpl:60- Not known whether passed class name [com.ccon.chap.entity.Role] is safe
+2021-09-08 00:39:50 DEBUG ClassLoaderAccessImpl:62- No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.ccon.chap.entity.Role
+2021-09-08 00:39:50 DEBUG ClassLoaderAccessImpl:60- Not known whether passed class name [com.ccon.chap.entity.User] is safe
+2021-09-08 00:39:50 DEBUG ClassLoaderAccessImpl:62- No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.ccon.chap.entity.User
+2021-09-08 00:39:50 DEBUG ClassLoaderAccessImpl:60- Not known whether passed class name [com.ccon.chap.entity.User] is safe
+2021-09-08 00:39:50 DEBUG ClassLoaderAccessImpl:62- No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.ccon.chap.entity.User
+2021-09-08 00:39:50 DEBUG ClassLoaderAccessImpl:60- Not known whether passed class name [com.ccon.chap.entity.ValCurs] is safe
+2021-09-08 00:39:50 DEBUG ClassLoaderAccessImpl:62- No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.ccon.chap.entity.ValCurs
+2021-09-08 00:39:50 DEBUG ClassLoaderAccessImpl:60- Not known whether passed class name [com.ccon.chap.entity.ValCurs] is safe
+2021-09-08 00:39:50 DEBUG ClassLoaderAccessImpl:62- No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.ccon.chap.entity.ValCurs
+2021-09-08 00:39:50 DEBUG ClassLoaderAccessImpl:60- Not known whether passed class name [com.ccon.chap.entity.History] is safe
+2021-09-08 00:39:50 DEBUG ClassLoaderAccessImpl:62- No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.ccon.chap.entity.History
+2021-09-08 00:39:50 DEBUG ClassLoaderAccessImpl:60- Not known whether passed class name [com.ccon.chap.entity.History] is safe
+2021-09-08 00:39:50 DEBUG ClassLoaderAccessImpl:62- No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.ccon.chap.entity.History
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:692- Static SQL for collection: com.ccon.chap.entity.ValCurs.currentHistory
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:694-  Row insert: insert into valcurs_history (ValCurs_write_id, currentHistory_request_id) values (?, ?)
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:697-  Row update: update valcurs_history set currentHistory_request_id=? where ValCurs_write_id=? and currentHistory_request_id=?
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:700-  Row delete: delete from valcurs_history where ValCurs_write_id=? and currentHistory_request_id=?
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:703-  One-shot delete: delete from valcurs_history where ValCurs_write_id=?
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:692- Static SQL for collection: com.ccon.chap.entity.Role.users
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:694-  Row insert: insert into user_role (user_id, role_id) values (?, ?)
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:697-  Row update: update user_role set role_id=? where user_id=? and role_id=?
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:700-  Row delete: delete from user_role where user_id=? and role_id=?
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:703-  One-shot delete: delete from user_role where user_id=?
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:692- Static SQL for collection: com.ccon.chap.entity.User.role
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:694-  Row insert: insert into user_role (role_id, user_id) values (?, ?)
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:697-  Row update: update user_role set user_id=? where role_id=? and user_id=?
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:700-  Row delete: delete from user_role where role_id=? and user_id=?
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:703-  One-shot delete: delete from user_role where role_id=?
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:692- Static SQL for collection: com.ccon.chap.entity.User.history
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:694-  Row insert: insert into "user_history" ("User_user_id", history_request_id) values (?, ?)
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:697-  Row update: update "user_history" set history_request_id=? where "User_user_id"=? and history_request_id=?
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:700-  Row delete: delete from "user_history" where "User_user_id"=? and history_request_id=?
+2021-09-08 00:39:51 DEBUG AbstractCollectionPersister:703-  One-shot delete: delete from "user_history" where "User_user_id"=?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:3877- Static SQL for entity: com.ccon.chap.entity.Role
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:3882-  Version select: select role_id from role where role_id =?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:3885-  Snapshot select: select role_.role_id, role_.role_name as role_nam2_1_ from role role_ where role_.role_id=?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:394-  Insert 0: insert into role (role_name, role_id) values (?, ?)
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:394-  Update 0: update role set role_name=? where role_id=?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:394-  Delete 0: delete from role where role_id=?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:3893-  Identity insert: insert into role (role_name) values (?)
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7f5fcfe9]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : role_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : users
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@118acf70]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@646427f7]
+2021-09-08 00:39:51 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150- Building LoadPlan...
+2021-09-08 00:39:51 DEBUG LoadQueryJoinAndFetchProcessor:102- processing queryspace <gen:0>
+2021-09-08 00:39:51 DEBUG LoadPlanTreePrinter:55- LoadPlan(entity=com.ccon.chap.entity.Role)
+    - Returns
+       - EntityReturnImpl(entity=com.ccon.chap.entity.Role, querySpaceUid=<gen:0>, path=com.ccon.chap.entity.Role)
+          - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.Role.users, querySpaceUid=<gen:1>, path=com.ccon.chap.entity.Role.users)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.User, querySpaceUid=<gen:2>, path=com.ccon.chap.entity.Role.users.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ccon.chap.entity.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {role_id1_1_0_}
+
+2021-09-08 00:39:51 DEBUG EntityLoader:137- Static select for entity com.ccon.chap.entity.Role [NONE]: select role0_.role_id as role_id1_1_0_, role0_.role_name as role_nam2_1_0_ from role role0_ where role0_.role_id=?
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@740a0d5e]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : role_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : users
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@265c1a7c]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5b2b8d86]
+2021-09-08 00:39:51 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150- Building LoadPlan...
+2021-09-08 00:39:51 DEBUG LoadQueryJoinAndFetchProcessor:102- processing queryspace <gen:0>
+2021-09-08 00:39:51 DEBUG LoadPlanTreePrinter:55- LoadPlan(entity=com.ccon.chap.entity.Role)
+    - Returns
+       - EntityReturnImpl(entity=com.ccon.chap.entity.Role, querySpaceUid=<gen:0>, path=com.ccon.chap.entity.Role)
+          - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.Role.users, querySpaceUid=<gen:1>, path=com.ccon.chap.entity.Role.users)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.User, querySpaceUid=<gen:2>, path=com.ccon.chap.entity.Role.users.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ccon.chap.entity.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {role_id1_1_0_}
+
+2021-09-08 00:39:51 DEBUG EntityLoader:137- Static select for entity com.ccon.chap.entity.Role [READ]: select role0_.role_id as role_id1_1_0_, role0_.role_name as role_nam2_1_0_ from role role0_ where role0_.role_id=?
+2021-09-08 00:39:51 DEBUG Loader:38- Static select for action ACTION_MERGE on entity com.ccon.chap.entity.Role: select role0_.role_id as role_id1_1_0_, role0_.role_name as role_nam2_1_0_ from role role0_ where role0_.role_id=?
+2021-09-08 00:39:51 DEBUG Loader:38- Static select for action ACTION_REFRESH on entity com.ccon.chap.entity.Role: select role0_.role_id as role_id1_1_0_, role0_.role_name as role_nam2_1_0_ from role role0_ where role0_.role_id=?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:3877- Static SQL for entity: com.ccon.chap.entity.User
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:3882-  Version select: select user_id from "user" where user_id =?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:3885-  Snapshot select: select user_.user_id, user_.user_created_at as user_cre2_2_, user_.user_email as user_ema3_2_, user_.user_is_active as user_is_4_2_, user_.user_login as user_log5_2_, user_.user_name as user_nam6_2_, user_.user_of_birth as user_of_7_2_, user_.user_password as user_pas8_2_, user_.user_patronymic as user_pat9_2_, user_.user_surname as user_su10_2_ from "user" user_ where user_.user_id=?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:394-  Insert 0: insert into "user" (user_created_at, user_email, user_is_active, user_login, user_name, user_of_birth, user_password, user_patronymic, user_surname, user_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:394-  Update 0: update "user" set user_created_at=?, user_email=?, user_is_active=?, user_login=?, user_name=?, user_of_birth=?, user_password=?, user_patronymic=?, user_surname=? where user_id=?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:394-  Delete 0: delete from "user" where user_id=?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:3893-  Identity insert: insert into "user" (user_created_at, user_email, user_is_active, user_login, user_name, user_of_birth, user_password, user_patronymic, user_surname) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@626b639e]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : history
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@527a8665]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7ab2a07e]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : role
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@580902cd]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3b435211]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : role.role_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : role.users
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:154- Property path deemed to be circular : role.users
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_created_at
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_email
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_is_active
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_login
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_of_birth
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_password
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_patronymic
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_surname
+2021-09-08 00:39:51 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150- Building LoadPlan...
+2021-09-08 00:39:51 DEBUG LoadQueryJoinAndFetchProcessor:102- processing queryspace <gen:0>
+2021-09-08 00:39:51 DEBUG LoadPlanTreePrinter:55- LoadPlan(entity=com.ccon.chap.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=com.ccon.chap.entity.User, querySpaceUid=<gen:0>, path=com.ccon.chap.entity.User)
+          - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.User.history, querySpaceUid=<gen:1>, path=com.ccon.chap.entity.User.history)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:2>, path=com.ccon.chap.entity.User.history.<elements>)
+          - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.User.role, querySpaceUid=<gen:3>, path=com.ccon.chap.entity.User.role)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.Role, querySpaceUid=<gen:4>, path=com.ccon.chap.entity.User.role.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ccon.chap.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {user_id1_2_0_}
+          - JOIN (JoinDefinedByMetadata(role)) : <gen:0> -> <gen:3>
+             - CollectionQuerySpaceImpl(uid=<gen:3>, collection=com.ccon.chap.entity.User.role)
+                - SQL table alias mapping - role1_
+                - alias suffix - 1_
+                - suffixed key columns - {role_id1_4_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - role_id1_1_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:3> -> <gen:4>
+                   - EntityQuerySpaceImpl(uid=<gen:4>, entity=com.ccon.chap.entity.Role)
+                      - SQL table alias mapping - role2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {role_id1_1_2_}
+
+2021-09-08 00:39:51 DEBUG EntityLoader:137- Static select for entity com.ccon.chap.entity.User [NONE]: select user0_.user_id as user_id1_2_0_, user0_.user_created_at as user_cre2_2_0_, user0_.user_email as user_ema3_2_0_, user0_.user_is_active as user_is_4_2_0_, user0_.user_login as user_log5_2_0_, user0_.user_name as user_nam6_2_0_, user0_.user_of_birth as user_of_7_2_0_, user0_.user_password as user_pas8_2_0_, user0_.user_patronymic as user_pat9_2_0_, user0_.user_surname as user_su10_2_0_, role1_.role_id as role_id1_4_1_, role2_.role_id as user_id2_4_1_, role2_.role_id as role_id1_1_2_, role2_.role_name as role_nam2_1_2_ from "user" user0_ left outer join user_role role1_ on user0_.user_id=role1_.role_id left outer join role role2_ on role1_.user_id=role2_.role_id where user0_.user_id=?
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2dff7085]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : history
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@501957bf]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5d1d9d73]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : role
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@b30a50d]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@764a3e5d]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : role.role_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : role.users
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:154- Property path deemed to be circular : role.users
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_created_at
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_email
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_is_active
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_login
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_of_birth
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_password
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_patronymic
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_surname
+2021-09-08 00:39:51 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150- Building LoadPlan...
+2021-09-08 00:39:51 DEBUG LoadQueryJoinAndFetchProcessor:102- processing queryspace <gen:0>
+2021-09-08 00:39:51 DEBUG LoadPlanTreePrinter:55- LoadPlan(entity=com.ccon.chap.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=com.ccon.chap.entity.User, querySpaceUid=<gen:0>, path=com.ccon.chap.entity.User)
+          - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.User.history, querySpaceUid=<gen:1>, path=com.ccon.chap.entity.User.history)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:2>, path=com.ccon.chap.entity.User.history.<elements>)
+          - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.User.role, querySpaceUid=<gen:3>, path=com.ccon.chap.entity.User.role)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.Role, querySpaceUid=<gen:4>, path=com.ccon.chap.entity.User.role.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ccon.chap.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {user_id1_2_0_}
+          - JOIN (JoinDefinedByMetadata(role)) : <gen:0> -> <gen:3>
+             - CollectionQuerySpaceImpl(uid=<gen:3>, collection=com.ccon.chap.entity.User.role)
+                - SQL table alias mapping - role1_
+                - alias suffix - 1_
+                - suffixed key columns - {role_id1_4_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - role_id1_1_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:3> -> <gen:4>
+                   - EntityQuerySpaceImpl(uid=<gen:4>, entity=com.ccon.chap.entity.Role)
+                      - SQL table alias mapping - role2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {role_id1_1_2_}
+
+2021-09-08 00:39:51 DEBUG EntityLoader:137- Static select for entity com.ccon.chap.entity.User [READ]: select user0_.user_id as user_id1_2_0_, user0_.user_created_at as user_cre2_2_0_, user0_.user_email as user_ema3_2_0_, user0_.user_is_active as user_is_4_2_0_, user0_.user_login as user_log5_2_0_, user0_.user_name as user_nam6_2_0_, user0_.user_of_birth as user_of_7_2_0_, user0_.user_password as user_pas8_2_0_, user0_.user_patronymic as user_pat9_2_0_, user0_.user_surname as user_su10_2_0_, role1_.role_id as role_id1_4_1_, role2_.role_id as user_id2_4_1_, role2_.role_id as role_id1_1_2_, role2_.role_name as role_nam2_1_2_ from "user" user0_ left outer join user_role role1_ on user0_.user_id=role1_.role_id left outer join role role2_ on role1_.user_id=role2_.role_id where user0_.user_id=?
+2021-09-08 00:39:51 DEBUG Loader:38- Static select for action ACTION_MERGE on entity com.ccon.chap.entity.User: select user0_.user_id as user_id1_2_0_, user0_.user_created_at as user_cre2_2_0_, user0_.user_email as user_ema3_2_0_, user0_.user_is_active as user_is_4_2_0_, user0_.user_login as user_log5_2_0_, user0_.user_name as user_nam6_2_0_, user0_.user_of_birth as user_of_7_2_0_, user0_.user_password as user_pas8_2_0_, user0_.user_patronymic as user_pat9_2_0_, user0_.user_surname as user_su10_2_0_ from "user" user0_ where user0_.user_id=?
+2021-09-08 00:39:51 DEBUG Loader:38- Static select for action ACTION_REFRESH on entity com.ccon.chap.entity.User: select user0_.user_id as user_id1_2_0_, user0_.user_created_at as user_cre2_2_0_, user0_.user_email as user_ema3_2_0_, user0_.user_is_active as user_is_4_2_0_, user0_.user_login as user_log5_2_0_, user0_.user_name as user_nam6_2_0_, user0_.user_of_birth as user_of_7_2_0_, user0_.user_password as user_pas8_2_0_, user0_.user_patronymic as user_pat9_2_0_, user0_.user_surname as user_su10_2_0_ from "user" user0_ where user0_.user_id=?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:3877- Static SQL for entity: com.ccon.chap.entity.ValCurs
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:3882-  Version select: select write_id from valcurs where write_id =?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:3885-  Snapshot select: select valcurs_.write_id, valcurs_.currency_charcode as currency2_5_, valcurs_.currency_date as currency3_5_, valcurs_.currency_id as currency4_5_, valcurs_.currency_name as currency5_5_, valcurs_.currency_nominal as currency6_5_, valcurs_.currency_numcode as currency7_5_, valcurs_.currency_value as currency8_5_ from valcurs valcurs_ where valcurs_.write_id=?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:394-  Insert 0: insert into valcurs (currency_charcode, currency_date, currency_id, currency_name, currency_nominal, currency_numcode, currency_value, write_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:394-  Update 0: update valcurs set currency_charcode=?, currency_date=?, currency_id=?, currency_name=?, currency_nominal=?, currency_numcode=?, currency_value=? where write_id=?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:394-  Delete 0: delete from valcurs where write_id=?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:3893-  Identity insert: insert into valcurs (currency_charcode, currency_date, currency_id, currency_name, currency_nominal, currency_numcode, currency_value) values (?, ?, ?, ?, ?, ?, ?)
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@53a50b0a]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : currency_charcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : currency_date
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : currency_id
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : currency_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : currency_nominal
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : currency_numcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : currency_value
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : currentHistory
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@395f52ed]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7a84788f]
+2021-09-08 00:39:51 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150- Building LoadPlan...
+2021-09-08 00:39:51 DEBUG LoadQueryJoinAndFetchProcessor:102- processing queryspace <gen:0>
+2021-09-08 00:39:51 DEBUG LoadPlanTreePrinter:55- LoadPlan(entity=com.ccon.chap.entity.ValCurs)
+    - Returns
+       - EntityReturnImpl(entity=com.ccon.chap.entity.ValCurs, querySpaceUid=<gen:0>, path=com.ccon.chap.entity.ValCurs)
+          - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.ValCurs.currentHistory, querySpaceUid=<gen:1>, path=com.ccon.chap.entity.ValCurs.currentHistory)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:2>, path=com.ccon.chap.entity.ValCurs.currentHistory.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ccon.chap.entity.ValCurs)
+          - SQL table alias mapping - valcurs0_
+          - alias suffix - 0_
+          - suffixed key columns - {write_id1_5_0_}
+
+2021-09-08 00:39:51 DEBUG EntityLoader:137- Static select for entity com.ccon.chap.entity.ValCurs [NONE]: select valcurs0_.write_id as write_id1_5_0_, valcurs0_.currency_charcode as currency2_5_0_, valcurs0_.currency_date as currency3_5_0_, valcurs0_.currency_id as currency4_5_0_, valcurs0_.currency_name as currency5_5_0_, valcurs0_.currency_nominal as currency6_5_0_, valcurs0_.currency_numcode as currency7_5_0_, valcurs0_.currency_value as currency8_5_0_ from valcurs valcurs0_ where valcurs0_.write_id=?
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@102c18e]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : currency_charcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : currency_date
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : currency_id
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : currency_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : currency_nominal
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : currency_numcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : currency_value
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : currentHistory
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@65eb3597]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3c7279a5]
+2021-09-08 00:39:51 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150- Building LoadPlan...
+2021-09-08 00:39:51 DEBUG LoadQueryJoinAndFetchProcessor:102- processing queryspace <gen:0>
+2021-09-08 00:39:51 DEBUG LoadPlanTreePrinter:55- LoadPlan(entity=com.ccon.chap.entity.ValCurs)
+    - Returns
+       - EntityReturnImpl(entity=com.ccon.chap.entity.ValCurs, querySpaceUid=<gen:0>, path=com.ccon.chap.entity.ValCurs)
+          - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.ValCurs.currentHistory, querySpaceUid=<gen:1>, path=com.ccon.chap.entity.ValCurs.currentHistory)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:2>, path=com.ccon.chap.entity.ValCurs.currentHistory.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ccon.chap.entity.ValCurs)
+          - SQL table alias mapping - valcurs0_
+          - alias suffix - 0_
+          - suffixed key columns - {write_id1_5_0_}
+
+2021-09-08 00:39:51 DEBUG EntityLoader:137- Static select for entity com.ccon.chap.entity.ValCurs [READ]: select valcurs0_.write_id as write_id1_5_0_, valcurs0_.currency_charcode as currency2_5_0_, valcurs0_.currency_date as currency3_5_0_, valcurs0_.currency_id as currency4_5_0_, valcurs0_.currency_name as currency5_5_0_, valcurs0_.currency_nominal as currency6_5_0_, valcurs0_.currency_numcode as currency7_5_0_, valcurs0_.currency_value as currency8_5_0_ from valcurs valcurs0_ where valcurs0_.write_id=?
+2021-09-08 00:39:51 DEBUG Loader:38- Static select for action ACTION_MERGE on entity com.ccon.chap.entity.ValCurs: select valcurs0_.write_id as write_id1_5_0_, valcurs0_.currency_charcode as currency2_5_0_, valcurs0_.currency_date as currency3_5_0_, valcurs0_.currency_id as currency4_5_0_, valcurs0_.currency_name as currency5_5_0_, valcurs0_.currency_nominal as currency6_5_0_, valcurs0_.currency_numcode as currency7_5_0_, valcurs0_.currency_value as currency8_5_0_ from valcurs valcurs0_ where valcurs0_.write_id=?
+2021-09-08 00:39:51 DEBUG Loader:38- Static select for action ACTION_REFRESH on entity com.ccon.chap.entity.ValCurs: select valcurs0_.write_id as write_id1_5_0_, valcurs0_.currency_charcode as currency2_5_0_, valcurs0_.currency_date as currency3_5_0_, valcurs0_.currency_id as currency4_5_0_, valcurs0_.currency_name as currency5_5_0_, valcurs0_.currency_nominal as currency6_5_0_, valcurs0_.currency_numcode as currency7_5_0_, valcurs0_.currency_value as currency8_5_0_ from valcurs valcurs0_ where valcurs0_.write_id=?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:3877- Static SQL for entity: com.ccon.chap.entity.History
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:3882-  Version select: select request_id from history where request_id =?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:3885-  Snapshot select: select history_.request_id, history_.answer as answer2_0_, history_.date_conversion as date_con3_0_, history_.date_valcurs as date_val4_0_, history_.question as question5_0_, history_.user_id as user_id6_0_, history_.write_of_id as write_of7_0_, history_.write_in_id as write_in8_0_ from history history_ where history_.request_id=?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:394-  Insert 0: insert into history (answer, date_conversion, date_valcurs, question, user_id, write_of_id, write_in_id, request_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:394-  Update 0: update history set answer=?, date_conversion=?, date_valcurs=?, question=?, user_id=?, write_of_id=?, write_in_id=? where request_id=?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:394-  Delete 0: delete from history where request_id=?
+2021-09-08 00:39:51 DEBUG AbstractEntityPersister:3893-  Identity insert: insert into history (answer, date_conversion, date_valcurs, question, user_id, write_of_id, write_in_id) values (?, ?, ?, ?, ?, ?, ?)
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2bebd114]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : answer
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : dateConversion
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : dateValcurs
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : question
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@374c40ba]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.history
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@4a50c746]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3709748f]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.role
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@79ecc507]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6ef2f7ad]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.role.role_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.role.users
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:154- Property path deemed to be circular : user.role.users
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_created_at
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_email
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_is_active
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_login
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_of_birth
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_password
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_patronymic
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_surname
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@41def031]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_charcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_date
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_id
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_nominal
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_numcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_value
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currentHistory
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:7> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@39832280]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:8> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4966bab1]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:9> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7f0f84d4]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_charcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_date
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_id
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_nominal
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_numcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_value
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currentHistory
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:10> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@26e8ff8c]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:11> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5aa76ad2]
+2021-09-08 00:39:51 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150- Building LoadPlan...
+2021-09-08 00:39:51 DEBUG LoadQueryJoinAndFetchProcessor:102- processing queryspace <gen:0>
+2021-09-08 00:39:51 DEBUG LoadPlanTreePrinter:55- LoadPlan(entity=com.ccon.chap.entity.History)
+    - Returns
+       - EntityReturnImpl(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:0>, path=com.ccon.chap.entity.History)
+          - EntityAttributeFetchImpl(entity=com.ccon.chap.entity.User, querySpaceUid=<gen:1>, path=com.ccon.chap.entity.History.user)
+             - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.User.history, querySpaceUid=<gen:2>, path=com.ccon.chap.entity.History.user.history)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:3>, path=com.ccon.chap.entity.History.user.history.<elements>)
+             - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.User.role, querySpaceUid=<gen:4>, path=com.ccon.chap.entity.History.user.role)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.Role, querySpaceUid=<gen:5>, path=com.ccon.chap.entity.History.user.role.<elements>)
+          - EntityAttributeFetchImpl(entity=com.ccon.chap.entity.ValCurs, querySpaceUid=<gen:6>, path=com.ccon.chap.entity.History.writOfId)
+             - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.ValCurs.currentHistory, querySpaceUid=<gen:7>, path=com.ccon.chap.entity.History.writOfId.currentHistory)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:8>, path=com.ccon.chap.entity.History.writOfId.currentHistory.<elements>)
+          - EntityAttributeFetchImpl(entity=com.ccon.chap.entity.ValCurs, querySpaceUid=<gen:9>, path=com.ccon.chap.entity.History.writeInId)
+             - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.ValCurs.currentHistory, querySpaceUid=<gen:10>, path=com.ccon.chap.entity.History.writeInId.currentHistory)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:11>, path=com.ccon.chap.entity.History.writeInId.currentHistory.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ccon.chap.entity.History)
+          - SQL table alias mapping - history0_
+          - alias suffix - 0_
+          - suffixed key columns - {request_1_0_0_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.ccon.chap.entity.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {user_id1_2_1_}
+                - JOIN (JoinDefinedByMetadata(role)) : <gen:1> -> <gen:4>
+                   - CollectionQuerySpaceImpl(uid=<gen:4>, collection=com.ccon.chap.entity.User.role)
+                      - SQL table alias mapping - role2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {role_id1_4_2_}
+                      - entity-element alias suffix - 3_
+                      - 3_entity-element suffixed key columns - role_id1_1_3_
+                      - JOIN (JoinDefinedByMetadata(elements)) : <gen:4> -> <gen:5>
+                         - EntityQuerySpaceImpl(uid=<gen:5>, entity=com.ccon.chap.entity.Role)
+                            - SQL table alias mapping - role3_
+                            - alias suffix - 3_
+                            - suffixed key columns - {role_id1_1_3_}
+          - JOIN (JoinDefinedByMetadata(writOfId)) : <gen:0> -> <gen:6>
+             - EntityQuerySpaceImpl(uid=<gen:6>, entity=com.ccon.chap.entity.ValCurs)
+                - SQL table alias mapping - valcurs4_
+                - alias suffix - 4_
+                - suffixed key columns - {write_id1_5_4_}
+          - JOIN (JoinDefinedByMetadata(writeInId)) : <gen:0> -> <gen:9>
+             - EntityQuerySpaceImpl(uid=<gen:9>, entity=com.ccon.chap.entity.ValCurs)
+                - SQL table alias mapping - valcurs5_
+                - alias suffix - 5_
+                - suffixed key columns - {write_id1_5_5_}
+
+2021-09-08 00:39:51 DEBUG EntityLoader:137- Static select for entity com.ccon.chap.entity.History [NONE]: select history0_.request_id as request_1_0_0_, history0_.answer as answer2_0_0_, history0_.date_conversion as date_con3_0_0_, history0_.date_valcurs as date_val4_0_0_, history0_.question as question5_0_0_, history0_.user_id as user_id6_0_0_, history0_.write_of_id as write_of7_0_0_, history0_.write_in_id as write_in8_0_0_, user1_.user_id as user_id1_2_1_, user1_.user_created_at as user_cre2_2_1_, user1_.user_email as user_ema3_2_1_, user1_.user_is_active as user_is_4_2_1_, user1_.user_login as user_log5_2_1_, user1_.user_name as user_nam6_2_1_, user1_.user_of_birth as user_of_7_2_1_, user1_.user_password as user_pas8_2_1_, user1_.user_patronymic as user_pat9_2_1_, user1_.user_surname as user_su10_2_1_, role2_.role_id as role_id1_4_2_, role3_.role_id as user_id2_4_2_, role3_.role_id as role_id1_1_3_, role3_.role_name as role_nam2_1_3_, valcurs4_.write_id as write_id1_5_4_, valcurs4_.currency_charcode as currency2_5_4_, valcurs4_.currency_date as currency3_5_4_, valcurs4_.currency_id as currency4_5_4_, valcurs4_.currency_name as currency5_5_4_, valcurs4_.currency_nominal as currency6_5_4_, valcurs4_.currency_numcode as currency7_5_4_, valcurs4_.currency_value as currency8_5_4_, valcurs5_.write_id as write_id1_5_5_, valcurs5_.currency_charcode as currency2_5_5_, valcurs5_.currency_date as currency3_5_5_, valcurs5_.currency_id as currency4_5_5_, valcurs5_.currency_name as currency5_5_5_, valcurs5_.currency_nominal as currency6_5_5_, valcurs5_.currency_numcode as currency7_5_5_, valcurs5_.currency_value as currency8_5_5_ from history history0_ left outer join "user" user1_ on history0_.user_id=user1_.user_id left outer join user_role role2_ on user1_.user_id=role2_.role_id left outer join role role3_ on role2_.user_id=role3_.role_id left outer join valcurs valcurs4_ on history0_.write_of_id=valcurs4_.write_id left outer join valcurs valcurs5_ on history0_.write_in_id=valcurs5_.write_id where history0_.request_id=?
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@590d6c76]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : answer
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : dateConversion
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : dateValcurs
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : question
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@448c92fc]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.history
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@17c0274c]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7abeabe9]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.role
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@5a05dd30]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1b52699c]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.role.role_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.role.users
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:154- Property path deemed to be circular : user.role.users
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_created_at
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_email
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_is_active
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_login
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_of_birth
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_password
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_patronymic
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_surname
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@76c86567]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_charcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_date
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_id
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_nominal
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_numcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_value
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currentHistory
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:7> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@5a4dda2]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:8> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1d2fb82]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:9> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@34045582]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_charcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_date
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_id
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_nominal
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_numcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_value
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currentHistory
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:10> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@1edccfd4]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:11> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@8c43966]
+2021-09-08 00:39:51 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150- Building LoadPlan...
+2021-09-08 00:39:51 DEBUG LoadQueryJoinAndFetchProcessor:102- processing queryspace <gen:0>
+2021-09-08 00:39:51 DEBUG LoadPlanTreePrinter:55- LoadPlan(entity=com.ccon.chap.entity.History)
+    - Returns
+       - EntityReturnImpl(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:0>, path=com.ccon.chap.entity.History)
+          - EntityAttributeFetchImpl(entity=com.ccon.chap.entity.User, querySpaceUid=<gen:1>, path=com.ccon.chap.entity.History.user)
+             - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.User.history, querySpaceUid=<gen:2>, path=com.ccon.chap.entity.History.user.history)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:3>, path=com.ccon.chap.entity.History.user.history.<elements>)
+             - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.User.role, querySpaceUid=<gen:4>, path=com.ccon.chap.entity.History.user.role)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.Role, querySpaceUid=<gen:5>, path=com.ccon.chap.entity.History.user.role.<elements>)
+          - EntityAttributeFetchImpl(entity=com.ccon.chap.entity.ValCurs, querySpaceUid=<gen:6>, path=com.ccon.chap.entity.History.writOfId)
+             - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.ValCurs.currentHistory, querySpaceUid=<gen:7>, path=com.ccon.chap.entity.History.writOfId.currentHistory)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:8>, path=com.ccon.chap.entity.History.writOfId.currentHistory.<elements>)
+          - EntityAttributeFetchImpl(entity=com.ccon.chap.entity.ValCurs, querySpaceUid=<gen:9>, path=com.ccon.chap.entity.History.writeInId)
+             - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.ValCurs.currentHistory, querySpaceUid=<gen:10>, path=com.ccon.chap.entity.History.writeInId.currentHistory)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:11>, path=com.ccon.chap.entity.History.writeInId.currentHistory.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ccon.chap.entity.History)
+          - SQL table alias mapping - history0_
+          - alias suffix - 0_
+          - suffixed key columns - {request_1_0_0_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.ccon.chap.entity.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {user_id1_2_1_}
+                - JOIN (JoinDefinedByMetadata(role)) : <gen:1> -> <gen:4>
+                   - CollectionQuerySpaceImpl(uid=<gen:4>, collection=com.ccon.chap.entity.User.role)
+                      - SQL table alias mapping - role2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {role_id1_4_2_}
+                      - entity-element alias suffix - 3_
+                      - 3_entity-element suffixed key columns - role_id1_1_3_
+                      - JOIN (JoinDefinedByMetadata(elements)) : <gen:4> -> <gen:5>
+                         - EntityQuerySpaceImpl(uid=<gen:5>, entity=com.ccon.chap.entity.Role)
+                            - SQL table alias mapping - role3_
+                            - alias suffix - 3_
+                            - suffixed key columns - {role_id1_1_3_}
+          - JOIN (JoinDefinedByMetadata(writOfId)) : <gen:0> -> <gen:6>
+             - EntityQuerySpaceImpl(uid=<gen:6>, entity=com.ccon.chap.entity.ValCurs)
+                - SQL table alias mapping - valcurs4_
+                - alias suffix - 4_
+                - suffixed key columns - {write_id1_5_4_}
+          - JOIN (JoinDefinedByMetadata(writeInId)) : <gen:0> -> <gen:9>
+             - EntityQuerySpaceImpl(uid=<gen:9>, entity=com.ccon.chap.entity.ValCurs)
+                - SQL table alias mapping - valcurs5_
+                - alias suffix - 5_
+                - suffixed key columns - {write_id1_5_5_}
+
+2021-09-08 00:39:51 DEBUG EntityLoader:137- Static select for entity com.ccon.chap.entity.History [READ]: select history0_.request_id as request_1_0_0_, history0_.answer as answer2_0_0_, history0_.date_conversion as date_con3_0_0_, history0_.date_valcurs as date_val4_0_0_, history0_.question as question5_0_0_, history0_.user_id as user_id6_0_0_, history0_.write_of_id as write_of7_0_0_, history0_.write_in_id as write_in8_0_0_, user1_.user_id as user_id1_2_1_, user1_.user_created_at as user_cre2_2_1_, user1_.user_email as user_ema3_2_1_, user1_.user_is_active as user_is_4_2_1_, user1_.user_login as user_log5_2_1_, user1_.user_name as user_nam6_2_1_, user1_.user_of_birth as user_of_7_2_1_, user1_.user_password as user_pas8_2_1_, user1_.user_patronymic as user_pat9_2_1_, user1_.user_surname as user_su10_2_1_, role2_.role_id as role_id1_4_2_, role3_.role_id as user_id2_4_2_, role3_.role_id as role_id1_1_3_, role3_.role_name as role_nam2_1_3_, valcurs4_.write_id as write_id1_5_4_, valcurs4_.currency_charcode as currency2_5_4_, valcurs4_.currency_date as currency3_5_4_, valcurs4_.currency_id as currency4_5_4_, valcurs4_.currency_name as currency5_5_4_, valcurs4_.currency_nominal as currency6_5_4_, valcurs4_.currency_numcode as currency7_5_4_, valcurs4_.currency_value as currency8_5_4_, valcurs5_.write_id as write_id1_5_5_, valcurs5_.currency_charcode as currency2_5_5_, valcurs5_.currency_date as currency3_5_5_, valcurs5_.currency_id as currency4_5_5_, valcurs5_.currency_name as currency5_5_5_, valcurs5_.currency_nominal as currency6_5_5_, valcurs5_.currency_numcode as currency7_5_5_, valcurs5_.currency_value as currency8_5_5_ from history history0_ left outer join "user" user1_ on history0_.user_id=user1_.user_id left outer join user_role role2_ on user1_.user_id=role2_.role_id left outer join role role3_ on role2_.user_id=role3_.role_id left outer join valcurs valcurs4_ on history0_.write_of_id=valcurs4_.write_id left outer join valcurs valcurs5_ on history0_.write_in_id=valcurs5_.write_id where history0_.request_id=?
+2021-09-08 00:39:51 DEBUG Loader:38- Static select for action ACTION_MERGE on entity com.ccon.chap.entity.History: select history0_.request_id as request_1_0_0_, history0_.answer as answer2_0_0_, history0_.date_conversion as date_con3_0_0_, history0_.date_valcurs as date_val4_0_0_, history0_.question as question5_0_0_, history0_.user_id as user_id6_0_0_, history0_.write_of_id as write_of7_0_0_, history0_.write_in_id as write_in8_0_0_ from history history0_ where history0_.request_id=?
+2021-09-08 00:39:51 DEBUG Loader:38- Static select for action ACTION_REFRESH on entity com.ccon.chap.entity.History: select history0_.request_id as request_1_0_0_, history0_.answer as answer2_0_0_, history0_.date_conversion as date_con3_0_0_, history0_.date_valcurs as date_val4_0_0_, history0_.question as question5_0_0_, history0_.user_id as user_id6_0_0_, history0_.write_of_id as write_of7_0_0_, history0_.write_in_id as write_in8_0_0_ from history history0_ where history0_.request_id=?
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@349c4d1c]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@21edd891]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : answer
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : dateConversion
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : dateValcurs
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : question
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2fd39436]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.history
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@46394f65]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@31aab981]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.role
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@26be9a6]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4d518c66]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_created_at
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_email
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_is_active
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_login
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_of_birth
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_password
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_patronymic
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_surname
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:7> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@411fa0ce]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_charcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_date
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_id
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_nominal
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_numcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_value
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currentHistory
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:154- Property path deemed to be circular : writOfId.currentHistory
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:8> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@78e68401]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_charcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_date
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_id
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_nominal
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_numcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_value
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currentHistory
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:154- Property path deemed to be circular : writeInId.currentHistory
+2021-09-08 00:39:51 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150- Building LoadPlan...
+2021-09-08 00:39:51 DEBUG LoadQueryJoinAndFetchProcessor:102- processing queryspace <gen:0>
+2021-09-08 00:39:51 DEBUG LoadPlanTreePrinter:55- LoadPlan(collection=com.ccon.chap.entity.ValCurs.currentHistory)
+    - Returns
+       - CollectionReturnImpl(collection=com.ccon.chap.entity.ValCurs.currentHistory, querySpaceUid=<gen:0>, path=[com.ccon.chap.entity.ValCurs.currentHistory])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:1>, path=[com.ccon.chap.entity.ValCurs.currentHistory].<elements>)
+             - EntityAttributeFetchImpl(entity=com.ccon.chap.entity.User, querySpaceUid=<gen:2>, path=[com.ccon.chap.entity.ValCurs.currentHistory].<elements>.user)
+                - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.User.history, querySpaceUid=<gen:3>, path=[com.ccon.chap.entity.ValCurs.currentHistory].<elements>.user.history)
+                   - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:4>, path=[com.ccon.chap.entity.ValCurs.currentHistory].<elements>.user.history.<elements>)
+                - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.User.role, querySpaceUid=<gen:5>, path=[com.ccon.chap.entity.ValCurs.currentHistory].<elements>.user.role)
+                   - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.Role, querySpaceUid=<gen:6>, path=[com.ccon.chap.entity.ValCurs.currentHistory].<elements>.user.role.<elements>)
+             - EntityAttributeFetchImpl(entity=com.ccon.chap.entity.ValCurs, querySpaceUid=<gen:7>, path=[com.ccon.chap.entity.ValCurs.currentHistory].<elements>.writOfId)
+             - EntityAttributeFetchImpl(entity=com.ccon.chap.entity.ValCurs, querySpaceUid=<gen:8>, path=[com.ccon.chap.entity.ValCurs.currentHistory].<elements>.writeInId)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.ccon.chap.entity.ValCurs.currentHistory)
+          - SQL table alias mapping - currenthis0_
+          - alias suffix - 0_
+          - suffixed key columns - {valcurs_1_6_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - request_1_0_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.ccon.chap.entity.History)
+                - SQL table alias mapping - history1_
+                - alias suffix - 1_
+                - suffixed key columns - {request_1_0_1_}
+                - JOIN (JoinDefinedByMetadata(user)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=com.ccon.chap.entity.User)
+                      - SQL table alias mapping - user2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {user_id1_2_2_}
+                - JOIN (JoinDefinedByMetadata(writOfId)) : <gen:1> -> <gen:7>
+                   - EntityQuerySpaceImpl(uid=<gen:7>, entity=com.ccon.chap.entity.ValCurs)
+                      - SQL table alias mapping - valcurs3_
+                      - alias suffix - 3_
+                      - suffixed key columns - {write_id1_5_3_}
+                - JOIN (JoinDefinedByMetadata(writeInId)) : <gen:1> -> <gen:8>
+                   - EntityQuerySpaceImpl(uid=<gen:8>, entity=com.ccon.chap.entity.ValCurs)
+                      - SQL table alias mapping - valcurs4_
+                      - alias suffix - 4_
+                      - suffixed key columns - {write_id1_5_4_}
+
+2021-09-08 00:39:51 DEBUG CollectionLoader:83- Static select for collection com.ccon.chap.entity.ValCurs.currentHistory: select currenthis0_.ValCurs_write_id as valcurs_1_6_0_, currenthis0_.currentHistory_request_id as currenth2_6_0_, history1_.request_id as request_1_0_1_, history1_.answer as answer2_0_1_, history1_.date_conversion as date_con3_0_1_, history1_.date_valcurs as date_val4_0_1_, history1_.question as question5_0_1_, history1_.user_id as user_id6_0_1_, history1_.write_of_id as write_of7_0_1_, history1_.write_in_id as write_in8_0_1_, user2_.user_id as user_id1_2_2_, user2_.user_created_at as user_cre2_2_2_, user2_.user_email as user_ema3_2_2_, user2_.user_is_active as user_is_4_2_2_, user2_.user_login as user_log5_2_2_, user2_.user_name as user_nam6_2_2_, user2_.user_of_birth as user_of_7_2_2_, user2_.user_password as user_pas8_2_2_, user2_.user_patronymic as user_pat9_2_2_, user2_.user_surname as user_su10_2_2_, valcurs3_.write_id as write_id1_5_3_, valcurs3_.currency_charcode as currency2_5_3_, valcurs3_.currency_date as currency3_5_3_, valcurs3_.currency_id as currency4_5_3_, valcurs3_.currency_name as currency5_5_3_, valcurs3_.currency_nominal as currency6_5_3_, valcurs3_.currency_numcode as currency7_5_3_, valcurs3_.currency_value as currency8_5_3_, valcurs4_.write_id as write_id1_5_4_, valcurs4_.currency_charcode as currency2_5_4_, valcurs4_.currency_date as currency3_5_4_, valcurs4_.currency_id as currency4_5_4_, valcurs4_.currency_name as currency5_5_4_, valcurs4_.currency_nominal as currency6_5_4_, valcurs4_.currency_numcode as currency7_5_4_, valcurs4_.currency_value as currency8_5_4_ from valcurs_history currenthis0_ inner join history history1_ on currenthis0_.currentHistory_request_id=history1_.request_id left outer join "user" user2_ on history1_.user_id=user2_.user_id left outer join valcurs valcurs3_ on history1_.write_of_id=valcurs3_.write_id left outer join valcurs valcurs4_ on history1_.write_in_id=valcurs4_.write_id where currenthis0_.ValCurs_write_id=?
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@62b6c045]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@58f254b1]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : history
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@706f6d26]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3af2f846]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : role
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:154- Property path deemed to be circular : role
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_created_at
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_email
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_is_active
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_login
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_of_birth
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_password
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_patronymic
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user_surname
+2021-09-08 00:39:51 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150- Building LoadPlan...
+2021-09-08 00:39:51 DEBUG LoadQueryJoinAndFetchProcessor:102- processing queryspace <gen:0>
+2021-09-08 00:39:51 DEBUG LoadPlanTreePrinter:55- LoadPlan(collection=com.ccon.chap.entity.Role.users)
+    - Returns
+       - CollectionReturnImpl(collection=com.ccon.chap.entity.Role.users, querySpaceUid=<gen:0>, path=[com.ccon.chap.entity.Role.users])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.User, querySpaceUid=<gen:1>, path=[com.ccon.chap.entity.Role.users].<elements>)
+             - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.User.history, querySpaceUid=<gen:2>, path=[com.ccon.chap.entity.Role.users].<elements>.history)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:3>, path=[com.ccon.chap.entity.Role.users].<elements>.history.<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.ccon.chap.entity.Role.users)
+          - SQL table alias mapping - users0_
+          - alias suffix - 0_
+          - suffixed key columns - {user_id2_4_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - user_id1_2_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.ccon.chap.entity.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {user_id1_2_1_}
+
+2021-09-08 00:39:51 DEBUG CollectionLoader:83- Static select for collection com.ccon.chap.entity.Role.users: select users0_.user_id as user_id2_4_0_, users0_.role_id as role_id1_4_0_, user1_.user_id as user_id1_2_1_, user1_.user_created_at as user_cre2_2_1_, user1_.user_email as user_ema3_2_1_, user1_.user_is_active as user_is_4_2_1_, user1_.user_login as user_log5_2_1_, user1_.user_name as user_nam6_2_1_, user1_.user_of_birth as user_of_7_2_1_, user1_.user_password as user_pas8_2_1_, user1_.user_patronymic as user_pat9_2_1_, user1_.user_surname as user_su10_2_1_ from user_role users0_ inner join "user" user1_ on users0_.role_id=user1_.user_id where users0_.user_id=?
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@6af65f29]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@370c9018]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : role_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : users
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:154- Property path deemed to be circular : users
+2021-09-08 00:39:51 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150- Building LoadPlan...
+2021-09-08 00:39:51 DEBUG LoadQueryJoinAndFetchProcessor:102- processing queryspace <gen:0>
+2021-09-08 00:39:51 DEBUG LoadPlanTreePrinter:55- LoadPlan(collection=com.ccon.chap.entity.User.role)
+    - Returns
+       - CollectionReturnImpl(collection=com.ccon.chap.entity.User.role, querySpaceUid=<gen:0>, path=[com.ccon.chap.entity.User.role])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.Role, querySpaceUid=<gen:1>, path=[com.ccon.chap.entity.User.role].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.ccon.chap.entity.User.role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {role_id1_4_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - role_id1_1_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.ccon.chap.entity.Role)
+                - SQL table alias mapping - role1_
+                - alias suffix - 1_
+                - suffixed key columns - {role_id1_1_1_}
+
+2021-09-08 00:39:51 DEBUG CollectionLoader:83- Static select for collection com.ccon.chap.entity.User.role: select role0_.role_id as role_id1_4_0_, role0_.user_id as user_id2_4_0_, role1_.role_id as role_id1_1_1_, role1_.role_name as role_nam2_1_1_ from user_role role0_ inner join role role1_ on role0_.user_id=role1_.role_id where role0_.role_id=?
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@49cb3881]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1a14fdf0]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : answer
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : dateConversion
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : dateValcurs
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : question
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@482c351d]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.history
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:154- Property path deemed to be circular : user.history
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.role
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@320be73]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@435e416c]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_created_at
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_email
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_is_active
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_login
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_of_birth
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_password
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_patronymic
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : user.user_surname
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6af310c7]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_charcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_date
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_id
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_nominal
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_numcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currency_value
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writOfId.currentHistory
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@4c38cd16]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:7> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7ddcb0dc]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:8> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@f5bf288]
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_charcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_date
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_id
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_name
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_nominal
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_numcode
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currency_value
+2021-09-08 00:39:51 DEBUG MetamodelGraphWalker:146- Visiting attribute path : writeInId.currentHistory
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:9> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@26c77f54]
+2021-09-08 00:39:51 DEBUG QuerySpacesImpl:174- Adding QuerySpace : uid = <gen:10> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3e856100]
+2021-09-08 00:39:51 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150- Building LoadPlan...
+2021-09-08 00:39:51 DEBUG LoadQueryJoinAndFetchProcessor:102- processing queryspace <gen:0>
+2021-09-08 00:39:51 DEBUG LoadPlanTreePrinter:55- LoadPlan(collection=com.ccon.chap.entity.User.history)
+    - Returns
+       - CollectionReturnImpl(collection=com.ccon.chap.entity.User.history, querySpaceUid=<gen:0>, path=[com.ccon.chap.entity.User.history])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:1>, path=[com.ccon.chap.entity.User.history].<elements>)
+             - EntityAttributeFetchImpl(entity=com.ccon.chap.entity.User, querySpaceUid=<gen:2>, path=[com.ccon.chap.entity.User.history].<elements>.user)
+                - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.User.role, querySpaceUid=<gen:3>, path=[com.ccon.chap.entity.User.history].<elements>.user.role)
+                   - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.Role, querySpaceUid=<gen:4>, path=[com.ccon.chap.entity.User.history].<elements>.user.role.<elements>)
+             - EntityAttributeFetchImpl(entity=com.ccon.chap.entity.ValCurs, querySpaceUid=<gen:5>, path=[com.ccon.chap.entity.User.history].<elements>.writOfId)
+                - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.ValCurs.currentHistory, querySpaceUid=<gen:6>, path=[com.ccon.chap.entity.User.history].<elements>.writOfId.currentHistory)
+                   - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:7>, path=[com.ccon.chap.entity.User.history].<elements>.writOfId.currentHistory.<elements>)
+             - EntityAttributeFetchImpl(entity=com.ccon.chap.entity.ValCurs, querySpaceUid=<gen:8>, path=[com.ccon.chap.entity.User.history].<elements>.writeInId)
+                - CollectionAttributeFetchImpl(collection=com.ccon.chap.entity.ValCurs.currentHistory, querySpaceUid=<gen:9>, path=[com.ccon.chap.entity.User.history].<elements>.writeInId.currentHistory)
+                   - (collection element) CollectionFetchableElementEntityGraph(entity=com.ccon.chap.entity.History, querySpaceUid=<gen:10>, path=[com.ccon.chap.entity.User.history].<elements>.writeInId.currentHistory.<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.ccon.chap.entity.User.history)
+          - SQL table alias mapping - history0_
+          - alias suffix - 0_
+          - suffixed key columns - {user_use1_3_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - request_1_0_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.ccon.chap.entity.History)
+                - SQL table alias mapping - history1_
+                - alias suffix - 1_
+                - suffixed key columns - {request_1_0_1_}
+                - JOIN (JoinDefinedByMetadata(user)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=com.ccon.chap.entity.User)
+                      - SQL table alias mapping - user2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {user_id1_2_2_}
+                - JOIN (JoinDefinedByMetadata(writOfId)) : <gen:1> -> <gen:5>
+                   - EntityQuerySpaceImpl(uid=<gen:5>, entity=com.ccon.chap.entity.ValCurs)
+                      - SQL table alias mapping - valcurs3_
+                      - alias suffix - 3_
+                      - suffixed key columns - {write_id1_5_3_}
+                - JOIN (JoinDefinedByMetadata(writeInId)) : <gen:1> -> <gen:8>
+                   - EntityQuerySpaceImpl(uid=<gen:8>, entity=com.ccon.chap.entity.ValCurs)
+                      - SQL table alias mapping - valcurs4_
+                      - alias suffix - 4_
+                      - suffixed key columns - {write_id1_5_4_}
+
+2021-09-08 00:39:51 DEBUG CollectionLoader:83- Static select for collection com.ccon.chap.entity.User.history: select history0_."User_user_id" as user_use1_3_0_, history0_.history_request_id as history_2_3_0_, history1_.request_id as request_1_0_1_, history1_.answer as answer2_0_1_, history1_.date_conversion as date_con3_0_1_, history1_.date_valcurs as date_val4_0_1_, history1_.question as question5_0_1_, history1_.user_id as user_id6_0_1_, history1_.write_of_id as write_of7_0_1_, history1_.write_in_id as write_in8_0_1_, user2_.user_id as user_id1_2_2_, user2_.user_created_at as user_cre2_2_2_, user2_.user_email as user_ema3_2_2_, user2_.user_is_active as user_is_4_2_2_, user2_.user_login as user_log5_2_2_, user2_.user_name as user_nam6_2_2_, user2_.user_of_birth as user_of_7_2_2_, user2_.user_password as user_pas8_2_2_, user2_.user_patronymic as user_pat9_2_2_, user2_.user_surname as user_su10_2_2_, valcurs3_.write_id as write_id1_5_3_, valcurs3_.currency_charcode as currency2_5_3_, valcurs3_.currency_date as currency3_5_3_, valcurs3_.currency_id as currency4_5_3_, valcurs3_.currency_name as currency5_5_3_, valcurs3_.currency_nominal as currency6_5_3_, valcurs3_.currency_numcode as currency7_5_3_, valcurs3_.currency_value as currency8_5_3_, valcurs4_.write_id as write_id1_5_4_, valcurs4_.currency_charcode as currency2_5_4_, valcurs4_.currency_date as currency3_5_4_, valcurs4_.currency_id as currency4_5_4_, valcurs4_.currency_name as currency5_5_4_, valcurs4_.currency_nominal as currency6_5_4_, valcurs4_.currency_numcode as currency7_5_4_, valcurs4_.currency_value as currency8_5_4_ from "user_history" history0_ inner join history history1_ on history0_.history_request_id=history1_.request_id left outer join "user" user2_ on history1_.user_id=user2_.user_id left outer join valcurs valcurs3_ on history1_.write_of_id=valcurs3_.write_id left outer join valcurs valcurs4_ on history1_.write_in_id=valcurs4_.write_id where history0_."User_user_id"=?
+2021-09-08 00:39:51 DEBUG SchemaManagementToolCoordinator:57- No actions specified; doing nothing
+2021-09-08 00:39:51 DEBUG JtaPlatformInitiator:43- No JtaPlatform was specified, checking resolver
+2021-09-08 00:39:51 DEBUG JtaPlatformResolverInitiator:33- No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+2021-09-08 00:39:51 DEBUG StandardJtaPlatformResolver:137- Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-08 00:39:51 INFO  JtaPlatformInitiator:52- HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-08 00:39:51 DEBUG NamedQueryRepository:151- Checking 0 named HQL queries
+2021-09-08 00:39:51 DEBUG NamedQueryRepository:167- Checking 0 named SQL queries
+2021-09-08 00:39:51 DEBUG SessionFactoryRegistry:52- Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@138f0661
+2021-09-08 00:39:51 DEBUG SessionFactoryRegistry:74- Registering SessionFactory: a52ae38a-1309-4ae3-a141-66c6be42c6be (<unnamed>)
+2021-09-08 00:39:51 DEBUG SessionFactoryRegistry:81- Not binding SessionFactory to JNDI, no JNDI name configured
+2021-09-08 00:39:51 DEBUG StatisticsInitiator:101- Statistics initialized [enabled=false]
+2021-09-08 00:39:52 DEBUG SessionFactoryImpl:771- HHH000031: Closing
+2021-09-08 00:39:52 DEBUG TypeConfiguration$Scope:350- Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@406715de] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@f5cf29b]
+2021-09-08 00:39:52 DEBUG AbstractServiceRegistryImpl:419- Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+2021-09-08 00:39:52 DEBUG BootstrapServiceRegistryImpl:295- Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries

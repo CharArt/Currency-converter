@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xsi:schemaLocation="http://www.thymeleaf.org">
+    <meta charset="UTF-8"/>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header class="container" th:fragment="header">
+            <a class="simply" type="button" sec:authorize="hasRole('USER')" th:href="@{http://localhost:8080/converter/converter}">Converter</a>
+            <a class="simply" type="button" sec:authorize="!isAuthenticated()" th:href="@{http://localhost:8080/converter/registration}">Reg</a>
+            <a class="simply" type="button" sec:authorize="isAuthenticated()" th:href="@{http://localhost:8080/converter/history}">History</a>
+            <a class="simply" type="button" sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a>
+        </header>
+    </body>
+</html>

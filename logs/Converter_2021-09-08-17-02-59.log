@@ -1,0 +1,476 @@
+2021-09-08 17:02:59 DEBUG logging:38- Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2021-09-08 17:02:59 DEBUG LogHelper:102- PersistenceUnitInfo [
+	name: default
+	persistence provider classname: null
+	classloader: jdk.internal.loader.ClassLoaders$AppClassLoader@266474c2
+	excludeUnlistedClasses: true
+	JTA datasource: null
+	Non JTA datasource: org.springframework.jdbc.datasource.SimpleDriverDataSource@30c31dd7
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/D:/ProjectOnJava/currency_converter_21.12.2020/target/test-classes/
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names [
+		com.ccon.chap.entity.History
+		com.ccon.chap.entity.Role
+		com.ccon.chap.entity.User
+		com.ccon.chap.entity.ValCurs]
+	Mapping files names []
+	Properties []
+2021-09-08 17:02:59 DEBUG IntegratorServiceImpl:46- Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2021-09-08 17:02:59 DEBUG IntegratorServiceImpl:46- Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+2021-09-08 17:02:59 DEBUG IntegratorServiceImpl:46- Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2021-09-08 17:02:59 INFO  Version:44- HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-09-08 17:02:59 DEBUG Environment:199- HHH000206: hibernate.properties not found
+2021-09-08 17:02:59 DEBUG ServiceBinding:68- Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+2021-09-08 17:02:59 DEBUG RegionFactoryInitiator:118- Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+2021-09-08 17:02:59 DEBUG RegionFactoryInitiator:49- Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2021-09-08 17:02:59 INFO  Version:49- HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration boolean -> org.hibernate.type.BooleanType@77010a30
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration boolean -> org.hibernate.type.BooleanType@77010a30
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@77010a30
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@67c119b7
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration true_false -> org.hibernate.type.TrueFalseType@6de0f580
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration yes_no -> org.hibernate.type.YesNoType@5782d777
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration byte -> org.hibernate.type.ByteType@363f0ba0
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration byte -> org.hibernate.type.ByteType@363f0ba0
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@363f0ba0
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration character -> org.hibernate.type.CharacterType@2aeefcc
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration char -> org.hibernate.type.CharacterType@2aeefcc
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@2aeefcc
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration short -> org.hibernate.type.ShortType@3701e6e4
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration short -> org.hibernate.type.ShortType@3701e6e4
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Short -> org.hibernate.type.ShortType@3701e6e4
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration integer -> org.hibernate.type.IntegerType@29528a22
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration int -> org.hibernate.type.IntegerType@29528a22
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@29528a22
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration long -> org.hibernate.type.LongType@27a7ef08
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration long -> org.hibernate.type.LongType@27a7ef08
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Long -> org.hibernate.type.LongType@27a7ef08
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration float -> org.hibernate.type.FloatType@4cb0a000
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration float -> org.hibernate.type.FloatType@4cb0a000
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Float -> org.hibernate.type.FloatType@4cb0a000
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration double -> org.hibernate.type.DoubleType@22367b8
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration double -> org.hibernate.type.DoubleType@22367b8
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@22367b8
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@5bcb04cb
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@5bcb04cb
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration big_integer -> org.hibernate.type.BigIntegerType@7de843ef
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@7de843ef
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration string -> org.hibernate.type.StringType@ab20d7c
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.String -> org.hibernate.type.StringType@ab20d7c
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration nstring -> org.hibernate.type.StringNVarcharType@1b7cae6f
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@e3994ef
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration url -> org.hibernate.type.UrlType@418c020b
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.net.URL -> org.hibernate.type.UrlType@418c020b
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration Duration -> org.hibernate.type.DurationType@62566842
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.time.Duration -> org.hibernate.type.DurationType@62566842
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration Instant -> org.hibernate.type.InstantType@7d070ef5
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.time.Instant -> org.hibernate.type.InstantType@7d070ef5
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@12b5454f
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@12b5454f
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration LocalDate -> org.hibernate.type.LocalDateType@67110f71
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@67110f71
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@4ab550d5
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@4ab550d5
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@4df39a88
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@4df39a88
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@5f18f9d2
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@5f18f9d2
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@5e8c34a0
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@5e8c34a0
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration date -> org.hibernate.type.DateType@3533df16
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.sql.Date -> org.hibernate.type.DateType@3533df16
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration time -> org.hibernate.type.TimeType@7e94d093
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.sql.Time -> org.hibernate.type.TimeType@7e94d093
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration timestamp -> org.hibernate.type.TimestampType@9a6fbc0
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@9a6fbc0
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.util.Date -> org.hibernate.type.TimestampType@9a6fbc0
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@bd1111a
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration calendar -> org.hibernate.type.CalendarType@1a480135
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@1a480135
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@1a480135
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@68c7ef83
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@6c1832aa
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration locale -> org.hibernate.type.LocaleType@6be7bf6d
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@6be7bf6d
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration currency -> org.hibernate.type.CurrencyType@12010fd1
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@12010fd1
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration timezone -> org.hibernate.type.TimeZoneType@7318daf8
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@7318daf8
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration class -> org.hibernate.type.ClassType@2b98b3bb
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Class -> org.hibernate.type.ClassType@2b98b3bb
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@7308ffff
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@7308ffff
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@573284a5
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration binary -> org.hibernate.type.BinaryType@365a6a43
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration byte[] -> org.hibernate.type.BinaryType@365a6a43
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration [B -> org.hibernate.type.BinaryType@365a6a43
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@35342d2f
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@35342d2f
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@35342d2f
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration row_version -> org.hibernate.type.RowVersionType@47ad69f7
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration image -> org.hibernate.type.ImageType@100c567f
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration characters -> org.hibernate.type.CharArrayType@743c6ce4
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration char[] -> org.hibernate.type.CharArrayType@743c6ce4
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration [C -> org.hibernate.type.CharArrayType@743c6ce4
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@28fd3dc1
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@28fd3dc1
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@28fd3dc1
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration text -> org.hibernate.type.TextType@15e0fe05
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration ntext -> org.hibernate.type.NTextType@3b90a30a
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration blob -> org.hibernate.type.BlobType@49a26d19
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@49a26d19
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@4315e9af
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration clob -> org.hibernate.type.ClobType@4ca8dbfa
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@4ca8dbfa
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration nclob -> org.hibernate.type.NClobType@3491e86e
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@3491e86e
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@22590e3e
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@2eaef76d
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration serializable -> org.hibernate.type.SerializableType@1da4b6b3
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration object -> org.hibernate.type.ObjectType@736048ed
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@736048ed
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@6940f685
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@47b179d7
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@39008c9f
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@162b3d47
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@783115d9
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@3402b4c9
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@95bb2a2
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@46d567cb
+2021-09-08 17:02:59 DEBUG BootstrapContextImpl:262- Injecting JPA temp ClassLoader [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@39c1fe0b] into BootstrapContext; was [null]
+2021-09-08 17:02:59 DEBUG ClassLoaderAccessImpl:45- ClassLoaderAccessImpl#injectTempClassLoader(org.springframework.instrument.classloading.SimpleThrowawayClassLoader@39c1fe0b) [was null]
+2021-09-08 17:02:59 DEBUG BootstrapContextImpl:272- Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@10bd9df0] into BootstrapContext; was [null]
+2021-09-08 17:02:59 DEBUG BootstrapContextImpl:267- Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@3ae0b770] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@55e3d6c3]
+2021-09-08 17:02:59 DEBUG BootstrapContextImpl:262- Injecting JPA temp ClassLoader [null] into BootstrapContext; was [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@39c1fe0b]
+2021-09-08 17:02:59 DEBUG ClassLoaderAccessImpl:45- ClassLoaderAccessImpl#injectTempClassLoader(null) [was org.springframework.instrument.classloading.SimpleThrowawayClassLoader@39c1fe0b]
+2021-09-08 17:02:59 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2021-09-08 17:02:59 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2021-09-08 17:02:59 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2021-09-08 17:02:59 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2021-09-08 17:02:59 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2021-09-08 17:02:59 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2021-09-08 17:02:59 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2021-09-08 17:02:59 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2021-09-08 17:02:59 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2021-09-08 17:02:59 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2021-09-08 17:02:59 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2021-09-08 17:02:59 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2021-09-08 17:02:59 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2021-09-08 17:02:59 DEBUG DefaultIdentifierGeneratorFactory:81- Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2021-09-08 17:02:59 DEBUG JdbcEnvironmentInitiator:72- Database ->
+       name : PostgreSQL
+    version : 13.1
+      major : 13
+      minor : 1
+2021-09-08 17:02:59 DEBUG JdbcEnvironmentInitiator:83- Driver ->
+       name : PostgreSQL JDBC Driver
+    version : 42.2.16
+      major : 42
+      minor : 2
+2021-09-08 17:02:59 DEBUG JdbcEnvironmentInitiator:389- JDBC version : 4.2
+2021-09-08 17:02:59 INFO  Dialect:170- HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-09-08 17:02:59 DEBUG IdentifierHelperBuilder:108- JDBC driver metadata reported database stores quoted identifiers in neither upper, lower nor mixed case
+2021-09-08 17:02:59 DEBUG Namespace:51- Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@354e7004
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:157- Adding type registration java.util.UUID -> org.hibernate.type.PostgresUUIDType@354e7004
+2021-09-08 17:02:59 DEBUG BasicTypeRegistry:160- HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7308ffff
+2021-09-08 17:02:59 DEBUG TypeConfiguration$Scope:152- Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@54db056b] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@d5af0a5]
+2021-09-08 17:02:59 DEBUG AnnotationBinder:556- Binding entity from annotated class: com.ccon.chap.entity.History
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2021-09-08 17:02:59 DEBUG EntityBinder:430- Import with entity name History
+2021-09-08 17:02:59 DEBUG EntityBinder:873- Bind entity com.ccon.chap.entity.History on table history
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(history), mappingColumn=request_id, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property request_id with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.History:request_id]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for request_id
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property request_id
+2021-09-08 17:02:59 DEBUG BinderHelper:644- #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(request_id)]), request_id, identity, , ...)
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(history), mappingColumn=answer, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property answer with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.History:answer]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for answer
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property answer
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(history), mappingColumn=date_conversion, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property dateConversion with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.History:dateConversion]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for dateConversion
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property dateConversion
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(history), mappingColumn=date_valcurs, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property dateValcurs with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.History:dateValcurs]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for dateValcurs
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property dateValcurs
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(history), mappingColumn=question, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property question with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.History:question]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for question
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property question
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='user_id', referencedColumn='', mappedBy=''}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(history), mappingColumn=user, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property user
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='write_of_id', referencedColumn='', mappedBy=''}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(history), mappingColumn=writOfId, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property writOfId
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='write_in_id', referencedColumn='', mappedBy=''}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(history), mappingColumn=writeInId, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property writeInId
+2021-09-08 17:02:59 DEBUG AnnotationBinder:556- Binding entity from annotated class: com.ccon.chap.entity.Role
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2021-09-08 17:02:59 DEBUG EntityBinder:430- Import with entity name Role
+2021-09-08 17:02:59 DEBUG EntityBinder:873- Bind entity com.ccon.chap.entity.Role on table role
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=role_id, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property role_id with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.Role:role_id]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for role_id
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property role_id
+2021-09-08 17:02:59 DEBUG BinderHelper:644- #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(role_id)]), role_id, identity, , ...)
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=role_name, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property role_name with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.Role:role_name]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for role_name
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property role_name
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=users_KEY, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='users_KEY', referencedColumn='null', mappedBy='null'}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='role'}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='role'}
+2021-09-08 17:02:59 DEBUG CollectionBinder:450- Collection role: com.ccon.chap.entity.Role.users
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property users
+2021-09-08 17:02:59 DEBUG AnnotationBinder:556- Binding entity from annotated class: com.ccon.chap.entity.User
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2021-09-08 17:02:59 DEBUG EntityBinder:430- Import with entity name User
+2021-09-08 17:02:59 DEBUG EntityBinder:873- Bind entity com.ccon.chap.entity.User on table user
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_id, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_id with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_id]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for user_id
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property user_id
+2021-09-08 17:02:59 DEBUG BinderHelper:644- #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(user_id)]), user_id, identity, , ...)
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=history, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=history_KEY, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='history_KEY', referencedColumn='null', mappedBy='null'}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+2021-09-08 17:02:59 DEBUG CollectionBinder:450- Collection role: com.ccon.chap.entity.User.history
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property history
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=role_KEY, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='role_KEY', referencedColumn='null', mappedBy='null'}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='role_id', referencedColumn='', mappedBy=''}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='user_id', referencedColumn='', mappedBy=''}
+2021-09-08 17:02:59 DEBUG CollectionBinder:450- Collection role: com.ccon.chap.entity.User.role
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property role
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_created_at, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_created_at with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_created_at]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for user_created_at
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property user_created_at
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_email, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_email with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_email]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for user_email
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property user_email
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_is_active, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_is_active with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_is_active]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for user_is_active
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property user_is_active
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_login, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_login with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_login]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for user_login
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property user_login
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_name, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_name with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_name]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for user_name
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property user_name
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_of_birth, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_of_birth with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_of_birth]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for user_of_birth
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property user_of_birth
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_password, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_password with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_password]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for user_password
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property user_password
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_patronymic, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_patronymic with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_patronymic]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for user_patronymic
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property user_patronymic
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_surname, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property user_surname with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.User:user_surname]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for user_surname
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property user_surname
+2021-09-08 17:02:59 DEBUG AnnotationBinder:556- Binding entity from annotated class: com.ccon.chap.entity.ValCurs
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2021-09-08 17:02:59 DEBUG EntityBinder:430- Import with entity name ValCurs
+2021-09-08 17:02:59 DEBUG EntityBinder:873- Bind entity com.ccon.chap.entity.ValCurs on table valcurs
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=write_id, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property write_id with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.ValCurs:write_id]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for write_id
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property write_id
+2021-09-08 17:02:59 DEBUG BinderHelper:644- #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(write_id)]), write_id, identity, , ...)
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currency_charcode, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property currency_charcode with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.ValCurs:currency_charcode]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for currency_charcode
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property currency_charcode
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currency_date, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property currency_date with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.ValCurs:currency_date]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for currency_date
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property currency_date
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currency_id, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property currency_id with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.ValCurs:currency_id]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for currency_id
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property currency_id
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currency_name, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property currency_name with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.ValCurs:currency_name]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for currency_name
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property currency_name
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currency_nominal, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property currency_nominal with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.ValCurs:currency_nominal]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for currency_nominal
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property currency_nominal
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currency_numcode, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property currency_numcode with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.ValCurs:currency_numcode]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for currency_numcode
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property currency_numcode
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currency_value, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG PropertyBinder:175- MetadataSourceProcessor property currency_value with lazy=false
+2021-09-08 17:02:59 DEBUG AbstractPropertyHolder:94- Attempting to locate auto-apply AttributeConverter for property [com.ccon.chap.entity.ValCurs:currency_value]
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:411- building SimpleValue for currency_value
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property currency_value
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currentHistory, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3Column{table=org.hibernate.mapping.Table(valcurs), mappingColumn=currentHistory_KEY, insertable=true, updatable=true, unique=false}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='currentHistory_KEY', referencedColumn='null', mappedBy='null'}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+2021-09-08 17:02:59 DEBUG Ejb3Column:213- Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+2021-09-08 17:02:59 DEBUG CollectionBinder:450- Collection role: com.ccon.chap.entity.ValCurs.currentHistory
+2021-09-08 17:02:59 DEBUG PropertyBinder:266- Building property currentHistory
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for request_id
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for answer
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for dateConversion
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for dateValcurs
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for question
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for role_id
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for role_name
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_id
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_created_at
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_email
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_is_active
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_login
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_name
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_of_birth
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_password
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_patronymic
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for user_surname
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for write_id
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for currency_charcode
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for currency_date
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for currency_id
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for currency_name
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for currency_nominal
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for currency_numcode
+2021-09-08 17:02:59 DEBUG SimpleValueBinder:456- Starting fillSimpleValue for currency_value
+2021-09-08 17:02:59 DEBUG PrimaryKey:35- Forcing column [request_id] to be non-null as it is part of the primary key for table [history]
+2021-09-08 17:02:59 DEBUG PrimaryKey:35- Forcing column [role_id] to be non-null as it is part of the primary key for table [role]
+2021-09-08 17:02:59 DEBUG PrimaryKey:35- Forcing column [user_id] to be non-null as it is part of the primary key for table [user]
+2021-09-08 17:02:59 DEBUG PrimaryKey:35- Forcing column [write_id] to be non-null as it is part of the primary key for table [valcurs]
+2021-09-08 17:02:59 DEBUG CollectionSecondPass:50- Second pass for collection: com.ccon.chap.entity.ValCurs.currentHistory
+2021-09-08 17:02:59 DEBUG CollectionBinder:1316- Binding a OneToMany: com.ccon.chap.entity.ValCurs.currentHistory through an association table
+2021-09-08 17:02:59 DEBUG CollectionSecondPass:67- Mapped collection key: ValCurs_write_id, element: currentHistory_request_id
+2021-09-08 17:02:59 DEBUG CollectionSecondPass:50- Second pass for collection: com.ccon.chap.entity.User.role
+2021-09-08 17:02:59 DEBUG CollectionBinder:1319- Binding as ManyToMany: com.ccon.chap.entity.User.role
+2021-09-08 17:02:59 DEBUG CollectionSecondPass:67- Mapped collection key: role_id, element: user_id
+2021-09-08 17:02:59 DEBUG CollectionSecondPass:50- Second pass for collection: com.ccon.chap.entity.User.history
+2021-09-08 17:02:59 DEBUG CollectionBinder:1316- Binding a OneToMany: com.ccon.chap.entity.User.history through an association table
+2021-09-08 17:02:59 DEBUG CollectionSecondPass:67- Mapped collection key: User_user_id, element: history_request_id
+2021-09-08 17:02:59 DEBUG CollectionSecondPass:50- Second pass for collection: com.ccon.chap.entity.Role.users
+2021-09-08 17:02:59 DEBUG CollectionBinder:1319- Binding as ManyToMany: com.ccon.chap.entity.Role.users
+2021-09-08 17:02:59 DEBUG TableBinder:554- Retrieving property com.ccon.chap.entity.User.role
+2021-09-08 17:02:59 DEBUG CollectionSecondPass:67- Mapped collection key: user_id, element: role_id
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.User
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.ValCurs
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.ValCurs
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.History
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.User
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.Role
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.User
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.History
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.ValCurs
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.User
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.ValCurs
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.ValCurs
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.History
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.User
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.Role
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.User
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.History
+2021-09-08 17:02:59 DEBUG InFlightMetadataCollectorImpl:1869- Resolving reference to class: com.ccon.chap.entity.ValCurs
+2021-09-08 17:02:59 DEBUG SessionFactoryImpl:203- Building session factory
+2021-09-08 17:02:59 DEBUG Settings:68- SessionFactory name : null
+2021-09-08 17:02:59 DEBUG Settings:69- Automatic flush during beforeCompletion(): enabled
+2021-09-08 17:02:59 DEBUG Settings:70- Automatic session close at end of transaction: disabled
+2021-09-08 17:02:59 DEBUG Settings:72- Statistics: disabled
+2021-09-08 17:02:59 DEBUG Settings:74- Deleted entity synthetic identifier rollback: disabled
+2021-09-08 17:02:59 DEBUG Settings:75- Default entity-mode: pojo
+2021-09-08 17:02:59 DEBUG Settings:76- Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2021-09-08 17:02:59 DEBUG Settings:77- Allow initialization of lazy state outside session : disabled
+2021-09-08 17:02:59 DEBUG Settings:79- Using BatchFetchStyle : LEGACY
+2021-09-08 17:02:59 DEBUG Settings:80- Default batch fetch size: -1
+2021-09-08 17:02:59 DEBUG Settings:81- Maximum outer join fetch depth: null
+2021-09-08 17:02:59 DEBUG Settings:82- Default null ordering: NONE
+2021-09-08 17:02:59 DEBUG Settings:83- Order SQL updates by primary key: disabled
+2021-09-08 17:02:59 DEBUG Settings:84- Order SQL inserts for batching: disabled
+2021-09-08 17:02:59 DEBUG Settings:86- multi-tenancy strategy : NONE
+2021-09-08 17:02:59 DEBUG Settings:88- JTA Track by Thread: enabled
+2021-09-08 17:02:59 DEBUG Settings:90- Query language substitutions: {}
+2021-09-08 17:02:59 DEBUG Settings:91- Named query checking : enabled
+2021-09-08 17:02:59 DEBUG Settings:93- Second-level cache: disabled
+2021-09-08 17:02:59 DEBUG Settings:94- Second-level query cache: disabled
+2021-09-08 17:02:59 DEBUG Settings:95- Second-level query cache factory: null
+2021-09-08 17:02:59 DEBUG Settings:96- Second-level cache region prefix: null
+2021-09-08 17:02:59 DEBUG Settings:97- Optimize second-level cache for minimal puts: disabled
+2021-09-08 17:02:59 DEBUG Settings:98- Structured second-level cache entries: disabled
+2021-09-08 17:02:59 DEBUG Settings:99- Second-level cache direct-reference entries: disabled
+2021-09-08 17:02:59 DEBUG Settings:100- Automatic eviction of collection cache: disabled
+2021-09-08 17:02:59 DEBUG Settings:102- JDBC batch size: 15
+2021-09-08 17:02:59 DEBUG Settings:103- JDBC batch updates for versioned data: enabled
+2021-09-08 17:02:59 DEBUG Settings:104- Scrollable result sets: enabled
+2021-09-08 17:02:59 DEBUG Settings:105- Wrap result sets: disabled
+2021-09-08 17:02:59 DEBUG Settings:106- JDBC3 getGeneratedKeys(): enabled
+2021-09-08 17:02:59 DEBUG Settings:107- JDBC result set fetch size: null
+2021-09-08 17:02:59 DEBUG Settings:108- Connection release mode: ON_CLOSE
+2021-09-08 17:02:59 DEBUG Settings:109- Generate SQL with comments: disabled
+2021-09-08 17:02:59 DEBUG Settings:111- JPA compliance - query : disabled
+2021-09-08 17:02:59 DEBUG Settings:112- JPA compliance - closed-handling : disabled
+2021-09-08 17:02:59 DEBUG Settings:113- JPA compliance - lists : disabled
+2021-09-08 17:02:59 DEBUG Settings:114- JPA compliance - transactions : disabled
+2021-09-08 17:02:59 DEBUG SessionFactoryImpl:258- Session factory constructed with filter configurations : {}
+2021-09-08 17:02:59 DEBUG SessionFactoryImpl:259- Instantiating session factory with properties: {java.specification.version=16, sun.cpu.isalist=amd64, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, sun.jnu.encoding=Cp1251, hibernate.dialect=org.hibernate.dialect.PostgreSQL10Dialect, java.class.path=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\lib\idea_rt.jar;C:\Users\Artem\.m2\repository\org\junit\platform\junit-platform-launcher\1.7.0\junit-platform-launcher-1.7.0.jar;C:\Users\Artem\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\Artem\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\plugins\junit\lib\junit5-rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\plugins\junit\lib\junit-rt.jar;D:\ProjectOnJava\currency_converter_21.12.2020\target\test-classes;D:\ProjectOnJava\currency_converter_21.12.2020\target\classes;C:\Users\Artem\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Artem\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Artem\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Artem\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-test\5.3.5\spring-test-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-core\5.3.5\spring-core-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-jcl\5.3.5\spring-jcl-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-orm\5.3.5\spring-orm-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-beans\5.3.5\spring-beans-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-jdbc\5.3.5\spring-jdbc-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-tx\5.3.5\spring-tx-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-webmvc\5.3.5\spring-webmvc-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-aop\5.3.5\spring-aop-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-context\5.3.5\spring-context-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-expression\5.3.5\spring-expression-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\spring-web\5.3.5\spring-web-5.3.5.jar;C:\Users\Artem\.m2\repository\org\springframework\security\spring-security-core\5.4.0\spring-security-core-5.4.0.jar;C:\Users\Artem\.m2\repository\org\springframework\security\spring-security-web\5.4.0\spring-security-web-5.4.0.jar;C:\Users\Artem\.m2\repository\org\springframework\security\spring-security-config\5.4.0\spring-security-config-5.4.0.jar;C:\Users\Artem\.m2\repository\org\springframework\data\spring-data-jpa\2.3.5.RELEASE\spring-data-jpa-2.3.5.RELEASE.jar;C:\Users\Artem\.m2\repository\org\springframework\data\spring-data-commons\2.3.5.RELEASE\spring-data-commons-2.3.5.RELEASE.jar;C:\Users\Artem\.m2\repository\org\aspectj\aspectjrt\1.9.6\aspectjrt-1.9.6.jar;C:\Users\Artem\.m2\repository\org\postgresql\postgresql\42.2.16\postgresql-42.2.16.jar;C:\Users\Artem\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Users\Artem\.m2\repository\org\hibernate\hibernate-core\5.4.21.Final\hibernate-core-5.4.21.Final.jar;C:\Users\Artem\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;C:\Users\Artem\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\Artem\.m2\repository\org\javassist\javassist\3.24.0-GA\javassist-3.24.0-GA.jar;C:\Users\Artem\.m2\repository\net\bytebuddy\byte-buddy\1.10.10\byte-buddy-1.10.10.jar;C:\Users\Artem\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Artem\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\Artem\.m2\repository\org\jboss\jandex\2.1.3.Final\jandex-2.1.3.Final.jar;C:\Users\Artem\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\Artem\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\Artem\.m2\repository\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;C:\Users\Artem\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.0.Final\hibernate-commons-annotations-5.1.0.Final.jar;C:\Users\Artem\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\Artem\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\Artem\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\Artem\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\Artem\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\Artem\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;C:\Users\Artem\.m2\repository\org\hibernate\validator\hibernate-validator\7.0.1.Final\hibernate-validator-7.0.1.Final.jar;C:\Users\Artem\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.0\jakarta.validation-api-3.0.0.jar;C:\Users\Artem\.m2\repository\javax\servlet\javax.servlet-api\4.0.1\javax.servlet-api-4.0.1.jar;C:\Users\Artem\.m2\repository\org\thymeleaf\thymeleaf-spring5\3.0.11.RELEASE\thymeleaf-spring5-3.0.11.RELEASE.jar;C:\Users\Artem\.m2\repository\org\thymeleaf\extras\thymeleaf-extras-java8time\3.0.4.RELEASE\thymeleaf-extras-java8time-3.0.4.RELEASE.jar;C:\Users\Artem\.m2\repository\org\thymeleaf\thymeleaf\3.0.11.RELEASE\thymeleaf-3.0.11.RELEASE.jar;C:\Users\Artem\.m2\repository\ognl\ognl\3.1.12\ognl-3.1.12.jar;C:\Users\Artem\.m2\repository\org\attoparser\attoparser\2.0.5.RELEASE\attoparser-2.0.5.RELEASE.jar;C:\Users\Artem\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;C:\Users\Artem\.m2\repository\org\thymeleaf\extras\thymeleaf-extras-springsecurity5\3.0.4.RELEASE\thymeleaf-extras-springsecurity5-3.0.4.RELEASE.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-frontend-jaxws\3.3.0\cxf-rt-frontend-jaxws-3.3.0.jar;C:\Users\Artem\.m2\repository\xml-resolver\xml-resolver\1.2\xml-resolver-1.2.jar;C:\Users\Artem\.m2\repository\org\ow2\asm\asm\7.0\asm-7.0.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-core\3.3.0\cxf-core-3.3.0.jar;C:\Users\Artem\.m2\repository\com\fasterxml\woodstox\woodstox-core\5.0.3\woodstox-core-5.0.3.jar;C:\Users\Artem\.m2\repository\org\codehaus\woodstox\stax2-api\3.1.4\stax2-api-3.1.4.jar;C:\Users\Artem\.m2\repository\org\apache\ws\xmlschema\xmlschema-core\2.2.4\xmlschema-core-2.2.4.jar;C:\Users\Artem\.m2\repository\org\glassfish\jaxb\jaxb-xjc\2.3.2\jaxb-xjc-2.3.2.jar;C:\Users\Artem\.m2\repository\org\glassfish\jaxb\xsom\2.3.2\xsom-2.3.2.jar;C:\Users\Artem\.m2\repository\org\glassfish\jaxb\codemodel\2.3.2\codemodel-2.3.2.jar;C:\Users\Artem\.m2\repository\com\sun\xml\bind\external\rngom\2.3.2\rngom-2.3.2.jar;C:\Users\Artem\.m2\repository\com\sun\xml\dtd-parser\dtd-parser\1.4.1\dtd-parser-1.4.1.jar;C:\Users\Artem\.m2\repository\com\sun\istack\istack-commons-tools\3.0.8\istack-commons-tools-3.0.8.jar;C:\Users\Artem\.m2\repository\org\apache\ant\ant\1.10.5\ant-1.10.5.jar;C:\Users\Artem\.m2\repository\org\apache\ant\ant-launcher\1.10.5\ant-launcher-1.10.5.jar;C:\Users\Artem\.m2\repository\com\sun\xml\bind\external\relaxng-datatype\2.3.2\relaxng-datatype-2.3.2.jar;C:\Users\Artem\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;C:\Users\Artem\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-bindings-soap\3.3.0\cxf-rt-bindings-soap-3.3.0.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-wsdl\3.3.0\cxf-rt-wsdl-3.3.0.jar;C:\Users\Artem\.m2\repository\wsdl4j\wsdl4j\1.6.3\wsdl4j-1.6.3.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-databinding-jaxb\3.3.0\cxf-rt-databinding-jaxb-3.3.0.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-bindings-xml\3.3.0\cxf-rt-bindings-xml-3.3.0.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-frontend-simple\3.3.0\cxf-rt-frontend-simple-3.3.0.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-ws-addr\3.3.0\cxf-rt-ws-addr-3.3.0.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-ws-policy\3.3.0\cxf-rt-ws-policy-3.3.0.jar;C:\Users\Artem\.m2\repository\org\apache\neethi\neethi\3.1.1\neethi-3.1.1.jar;C:\Users\Artem\.m2\repository\javax\annotation\javax.annotation-api\1.3.1\javax.annotation-api-1.3.1.jar;C:\Users\Artem\.m2\repository\javax\xml\ws\jaxws-api\2.3.0\jaxws-api-2.3.0.jar;C:\Users\Artem\.m2\repository\javax\xml\soap\javax.xml.soap-api\1.4.0\javax.xml.soap-api-1.4.0.jar;C:\Users\Artem\.m2\repository\com\sun\activation\javax.activation\1.2.0\javax.activation-1.2.0.jar;C:\Users\Artem\.m2\repository\org\apache\geronimo\specs\geronimo-ws-metadata_2.0_spec\1.1.3\geronimo-ws-metadata_2.0_spec-1.1.3.jar;C:\Users\Artem\.m2\repository\com\sun\xml\messaging\saaj\saaj-impl\1.4.0-b03\saaj-impl-1.4.0-b03.jar;C:\Users\Artem\.m2\repository\org\jvnet\mimepull\mimepull\1.9.7\mimepull-1.9.7.jar;C:\Users\Artem\.m2\repository\org\apache\geronimo\specs\geronimo-jta_1.1_spec\1.1.1\geronimo-jta_1.1_spec-1.1.1.jar;C:\Users\Artem\.m2\repository\org\jboss\spec\javax\rmi\jboss-rmi-api_1.0_spec\1.0.6.Final\jboss-rmi-api_1.0_spec-1.0.6.Final.jar;C:\Users\Artem\.m2\repository\org\apache\cxf\cxf-rt-transports-http\3.3.0\cxf-rt-transports-http-3.3.0.jar;C:\Users\Artem\.m2\repository\xerces\xercesImpl\2.9.1\xercesImpl-2.9.1.jar;C:\Users\Artem\.m2\repository\xml-apis\xml-apis\1.3.04\xml-apis-1.3.04.jar;C:\Users\Artem\.m2\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;C:\Users\Artem\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.4\jackson-databind-2.12.4.jar;C:\Users\Artem\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.4\jackson-annotations-2.12.4.jar;C:\Users\Artem\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.4\jackson-core-2.12.4.jar;C:\Users\Artem\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.12.4\jackson-datatype-jsr310-2.12.4.jar;C:\Users\Artem\.m2\repository\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;C:\Users\Artem\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Artem\.m2\repository\org\springframework\security\oauth\spring-security-oauth2\2.5.0.RELEASE\spring-security-oauth2-2.5.0.RELEASE.jar;C:\Users\Artem\.m2\repository\commons-codec\commons-codec\1.14\commons-codec-1.14.jar;C:\Users\Artem\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\Artem\.m2\repository\org\slf4j\slf4j-simple\1.6.4\slf4j-simple-1.6.4.jar;C:\Users\Artem\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, idea.test.cyclic.buffer.size=1048576, user.variant=, java.vendor.url=https://java.oracle.com/, user.timezone=Europe/Moscow, java.vm.specification.version=16, os.name=Windows 10, javax.persistence.validation.mode=AUTO, sun.java.launcher=SUN_STANDARD, user.country=RU, sun.boot.library.path=C:\Java\bin, sun.java.command=com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit5 com.ccon.chap.rest.ValCursAPITest,findByCurrencyId, javax.persistence.nonJtaDataSource=org.springframework.jdbc.datasource.SimpleDriverDataSource@30c31dd7, javax.persistence.sharedCache.mode=UNSPECIFIED, jdk.debug=release, sun.cpu.endian=little, user.home=C:\Users\Artem, user.language=ru, java.specification.vendor=Oracle Corporation, java.version.date=2021-04-20, java.home=C:\Java, file.separator=\, java.vm.compressedOopsMode=Zero based, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, hibernate.hbm2ddl.auto=none, user.script=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=16.0.1+9-24, user.name=Artem, path.separator=;, os.version=10.0, java.runtime.name=Java(TM) SE Runtime Environment, file.encoding=UTF-8, hibernate.ejb.persistenceUnitName=default, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=C:\Users\Artem\AppData\Local\Temp\, java.version=16.0.1, user.dir=D:\ProjectOnJava\currency_converter_21.12.2020, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, sun.os.patch.level=, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.registry.StandardServiceRegistryBuilder$1@662e682a, java.library.path=C:\Java\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\System32;C:\Java\bin;C:\Program Files\Maven\apache-maven-3.6.3\bin;C:\drive\apache-tomcat-9.0.48\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Git\cmd;C:\Program Files\Polyspace\R2020b\runtime\win64;C:\Program Files\Polyspace\R2020b\bin;C:\Program Files\Polyspace\R2020b\polyspace\bin;C:\Java\bin;C:\Program Files\Maven\apache-maven-3.6.3\bin;C:\drive\apache-tomcat-9.0.48\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Git\cmd;C:\Program Files\Polyspace\R2020b\runtime\win64;C:\Program Files\Polyspace\R2020b\bin;C:\Program Files\Polyspace\R2020b\polyspace\bin;C:\Java\bin;C:\Program Files\Maven\apache-maven-3.6.3\bin;C:\drive\apache-tomcat-9.0.48\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Git\cmd;C:\Program Files\Polyspace\R2020b\runtime\win64;C:\Program Files\Polyspace\R2020b\bin;C:\Program Files\Polyspace\R2020b\polyspace\bin;C:\Users\Artem\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\bin;;;., java.vendor=Oracle Corporation, java.vm.info=mixed mode, sharing, java.vm.version=16.0.1+9-24, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeLittle, hibernate.connection.datasource=org.springframework.jdbc.datasource.SimpleDriverDataSource@30c31dd7, java.class.version=60.0}
+2021-09-08 17:02:59 DEBUG TypeSafeActivator:94- Unable to acquire Bean Validation ValidatorFactory, skipping activation
+2021-09-08 17:02:59 DEBUG JaccIntegrator:80- Skipping JACC integration as it was not enabled
+2021-09-08 17:02:59 DEBUG SessionFactoryImpl:298- Instantiated session factory
+2021-09-08 17:02:59 DEBUG TypeConfiguration$Scope:157- Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@54db056b] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@5438c17a]
