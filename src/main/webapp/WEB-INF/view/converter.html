@@ -24,14 +24,14 @@
         <div class="left"></div>
 
             <div class="middle">
-                <form class="form-grid-container" action="#" th:action="@{/convertor}" th:object="${valCursView}" method="post" >
+                <form class="form-grid-container" action="#" th:action="@{/converter}" th:object="${valCursView}" method="post" >
                     <div class="box1">
 
-                        <input class="field-search" type="date" th:field="*{timeSearch}"/>
+                        <input class="field-search" type="date" th:field="*{timeSearch}"  min="1993-01-06" required/>
 
                         <input list="abbreviations-left" id="abb-left" name="Valute1" class="box1" type="text" th:field="*{nameValuteOne}"/>
                         <datalist id="abbreviations-left" >
-                            <option text="Rubles" value="Rubles"></option>
+                            <option text="Рублей" value="Рублей"></option>
                             <option th:each="h:${valCursList}" th:value="${h.currency_name}" th:text="${h.currency_name}"></option>
                         </datalist>
 
@@ -45,7 +45,7 @@
 
                         <input list="abbreviations-box2" id="abb-middle" name="Valute2" class="datalist-box2" type="text" th:field="*{nameValuteTwo}"/>
                         <datalist id="abbreviations-box2">
-                            <option text="Rubles" value="Rubles"></option>
+                            <option text="Рублей" value="Рублей"></option>
                             <option th:each="h:${valCursList}" th:value="${h.currency_name}" th:text="${h.currency_name}"></option>
                         </datalist>
 

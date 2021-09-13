@@ -2,10 +2,8 @@ package com.ccon.chap.service.parcer;
 
 import com.ccon.chap.dto.CursDynamic;
 import com.ccon.chap.dto.ValuteCursOnDate;
-
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -106,7 +104,6 @@ public class ParcerServiceImplement implements ParcerService {
                 cursDynamicList.add(cursDynamic);
             }
         }
-        cursDynamicList.forEach(cursDynamic -> System.out.println(cursDynamic.getvCode()));
         logger.info("Stop Parser");
         return cursDynamicList;
     }
@@ -134,29 +131,44 @@ public class ParcerServiceImplement implements ParcerService {
                 Element elementValute = (Element) nodeValute;
 //-------------------------------------------------------------------------------------------------------------------------------------
                 Node vNameNode = elementValute.getElementsByTagName("Vname").item(0);
-                String vName = vNameNode.getTextContent();
-                String vNameShort = vName.trim();
-                valuteCursOnDate.setName(vNameShort);
+                String vNameStringShort = "Null";
+                if (vNameNode != null) {
+                    String vName = vNameNode.getTextContent();
+                    vNameStringShort = vName.trim();
+                }
+                valuteCursOnDate.setName(vNameStringShort);
 //-------------------------------------------------------------------------------------------------------------------------------------
                 Node vNomNode = elementValute.getElementsByTagName("Vnom").item(0);
-                String vNom = vNomNode.getTextContent();
-                String vNomShort = vNom.trim();
-                valuteCursOnDate.setNom(vNomShort);
+                String vNomStringShort = "Null";
+                if (vNomNode != null) {
+                    String vNom = vNomNode.getTextContent();
+                    vNomStringShort = vNom.trim();
+                }
+                valuteCursOnDate.setNom(vNomStringShort);
 //-------------------------------------------------------------------------------------------------------------------------------------
                 Node vCursNode = elementValute.getElementsByTagName("Vcurs").item(0);
-                String vCurs = vCursNode.getTextContent();
-                String vCursShort = vCurs.trim();
-                valuteCursOnDate.setCurs(vCursShort);
+                String vCursStringShort = "Null";
+                if (vCursNode != null) {
+                    String vCurs = vCursNode.getTextContent();
+                    vCursStringShort = vCurs.trim();
+                }
+                valuteCursOnDate.setCurs(vCursStringShort);
 //-------------------------------------------------------------------------------------------------------------------------------------
                 Node vCodeNode = elementValute.getElementsByTagName("Vcode").item(0);
-                String vCode = vCodeNode.getTextContent();
-                String vCodeShort = vCode.trim();
-                valuteCursOnDate.setCode(vCodeShort);
+                String vCodeStringShort = "Null";
+                if (vCodeNode != null) {
+                    String vCode = vCodeNode.getTextContent();
+                    vCodeStringShort = vCode.trim();
+                }
+                valuteCursOnDate.setCode(vCodeStringShort);
 //-------------------------------------------------------------------------------------------------------------------------------------
                 Node vchCodeNode = elementValute.getElementsByTagName("VchCode").item(0);
-                String vChCode = vchCodeNode.getTextContent();
-                String vChCodeShort = vChCode.trim();
-                valuteCursOnDate.setChCode(vChCodeShort);
+                String vChCodeStringShort = "Null";
+                if (vchCodeNode != null) {
+                    String vChCode = vchCodeNode.getTextContent();
+                    vChCodeStringShort = vChCode.trim();
+                }
+                valuteCursOnDate.setChCode(vChCodeStringShort);
 //-------------------------------------------------------------------------------------------------------------------------------------
                 valuteCursOnDate.setDate(localDateTime);
 //-------------------------------------------------------------------------------------------------------------------------------------
@@ -189,29 +201,44 @@ public class ParcerServiceImplement implements ParcerService {
             Element elementValute = (Element) nodeValute;
 //-------------------------------------------------------------------------------------------------------------------------------------
             Node vNameNode = elementValute.getElementsByTagName("Vname").item(0);
-            String vName = vNameNode.getTextContent();
-            String vNameShort = vName.trim();
-            valuteCursOnDate.setName(vNameShort);
+            String vNameStringShort = "Null";
+            if (vNameNode != null) {
+                String vName = vNameNode.getTextContent();
+                vNameStringShort = vName.trim();
+            }
+            valuteCursOnDate.setName(vNameStringShort);
 //-------------------------------------------------------------------------------------------------------------------------------------
             Node vNomNode = elementValute.getElementsByTagName("Vnom").item(0);
-            String vNom = vNomNode.getTextContent();
-            String vNomShort = vNom.trim();
-            valuteCursOnDate.setNom(vNomShort);
+            String vNomStringShort = "Null";
+            if (vNomNode != null) {
+                String vNom = vNomNode.getTextContent();
+                vNomStringShort = vNom.trim();
+            }
+            valuteCursOnDate.setNom(vNomStringShort);
 //-------------------------------------------------------------------------------------------------------------------------------------
             Node vCursNode = elementValute.getElementsByTagName("Vcurs").item(0);
-            String vCurs = vCursNode.getTextContent();
-            String vCursShort = vCurs.trim();
-            valuteCursOnDate.setCurs(vCursShort);
+            String vCursStringShort = "Null";
+            if (vCursNode != null) {
+                String vCurs = vCursNode.getTextContent();
+                vCursStringShort = vCurs.trim();
+            }
+            valuteCursOnDate.setCurs(vCursStringShort);
 //-------------------------------------------------------------------------------------------------------------------------------------
             Node vCodeNode = elementValute.getElementsByTagName("Vcode").item(0);
-            String vCode = vCodeNode.getTextContent();
-            String vCodeShort = vCode.trim();
-            valuteCursOnDate.setCode(vCodeShort);
+            String vCodeStringShort = "NUll";
+            if (vCodeNode != null) {
+                String vCode = vCodeNode.getTextContent();
+                vCodeStringShort = vCode.trim();
+            }
+            valuteCursOnDate.setCode(vCodeStringShort);
 //-------------------------------------------------------------------------------------------------------------------------------------
             Node vchCodeNode = elementValute.getElementsByTagName("VchCode").item(0);
-            String vChCode = vchCodeNode.getTextContent();
-            String vChCodeShort = vChCode.trim();
-            valuteCursOnDate.setChCode(vChCodeShort);
+            String vChCodeStringShort = "Null";
+            if (vchCodeNode != null) {
+                String vChCode = vchCodeNode.getTextContent();
+                vChCodeStringShort = vChCode.trim();
+            }
+            valuteCursOnDate.setChCode(vChCodeStringShort);
 //-------------------------------------------------------------------------------------------------------------------------------------
             valuteCursOnDate.setDate(localDateTime);
 //-------------------------------------------------------------------------------------------------------------------------------------

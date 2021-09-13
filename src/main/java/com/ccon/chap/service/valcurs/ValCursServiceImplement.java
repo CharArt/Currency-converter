@@ -121,14 +121,19 @@ public class ValCursServiceImplement implements ValCursService {
             List<ValuteCursOnDate> valuteCursOnDateList = parcerService.getValuteCursOnDateList(listLoscalDateTime);
             for (ValuteCursOnDate valuteCursOnDate : valuteCursOnDateList) {
                 ValCurs valCurs = new ValCurs();
-                valCurs.setCurrency_numcode(Short.parseShort(valuteCursOnDate.getCode()));
+                valCurs.setCurrency_id("Null");
+                if(!valuteCursOnDate.getCode().equals("Null")){
+                    valCurs.setCurrency_numcode(Short.parseShort(valuteCursOnDate.getCode()));
+                }else {
+                    valCurs.setCurrency_numcode((short) 0);
+                }
                 valCurs.setCurrency_charcode(valuteCursOnDate.getChCode());
                 valCurs.setCurrency_nominal(Integer.parseInt(valuteCursOnDate.getNom()));
                 valCurs.setCurrency_name(valuteCursOnDate.getName());
                 valCurs.setCurrency_value(valuteCursOnDate.getCurs().replace(",", "."));
                 valCurs.setCurrency_date(valuteCursOnDate.getDate());
                 for (CursDynamic cursDynamic : cursDynamicList) {
-                    if (valCurs.getCurrency_numcode() == Short.parseShort(cursDynamic.getvNumCode())) {
+                    if (cursDynamic.getvName().equals(valuteCursOnDate.getName()) || cursDynamic.getvNumCode().equals(String.valueOf(valuteCursOnDate.getCode())) || cursDynamic.getvCharCode().equals(valuteCursOnDate.getChCode())) {
                         valCurs.setCurrency_id(cursDynamic.getvCode());
                     }
                 }
@@ -147,14 +152,19 @@ public class ValCursServiceImplement implements ValCursService {
             List<ValuteCursOnDate> valuteCursOnDateList = parcerService.getValuteCursOnDateList(listLoscalDateTime);
             for (ValuteCursOnDate valuteCursOnDate : valuteCursOnDateList) {
                 ValCurs valCurs = new ValCurs();
-                valCurs.setCurrency_numcode(Short.parseShort(valuteCursOnDate.getCode()));
+                valCurs.setCurrency_id("Null");
+                if(!valuteCursOnDate.getCode().equals("Null")){
+                    valCurs.setCurrency_numcode(Short.parseShort(valuteCursOnDate.getCode()));
+                }else {
+                    valCurs.setCurrency_numcode((short) 0);
+                }
                 valCurs.setCurrency_charcode(valuteCursOnDate.getChCode());
                 valCurs.setCurrency_nominal(Integer.parseInt(valuteCursOnDate.getNom()));
                 valCurs.setCurrency_name(valuteCursOnDate.getName());
                 valCurs.setCurrency_value(valuteCursOnDate.getCurs().replace(",", "."));
                 valCurs.setCurrency_date(valuteCursOnDate.getDate());
                 for (CursDynamic cursDynamic : cursDynamicList) {
-                    if (valCurs.getCurrency_numcode() == Short.parseShort(cursDynamic.getvNumCode())) {
+                    if (cursDynamic.getvName().equals(valuteCursOnDate.getName()) || cursDynamic.getvNumCode().equals(String.valueOf(valuteCursOnDate.getCode())) || cursDynamic.getvCharCode().equals(valuteCursOnDate.getChCode())) {
                         valCurs.setCurrency_id(cursDynamic.getvCode());
                     }
                 }
@@ -165,6 +175,7 @@ public class ValCursServiceImplement implements ValCursService {
         }
     }
 
+    //For DTO
     @Override
     public ValCursDto findValCursDtoByWriteId(Long id) {
         return toDto(findValCursByWriteId(id));

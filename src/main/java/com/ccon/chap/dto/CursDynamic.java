@@ -85,12 +85,22 @@ public class CursDynamic implements Serializable {
     }
 
     public static boolean equalsCursDynamicWithoutNull(CursDynamic cursDynamic) {
-        return  !cursDynamic.getvCode().equals("Null") &&
+        return !cursDynamic.getvCode().equals("Null") &&
                 !cursDynamic.getvName().equals("Null") &&
                 !cursDynamic.getvEngName().equals("Null") &&
                 !cursDynamic.getvNom().equals("Null") &&
                 !cursDynamic.getvNumCode().equals("Null") &&
                 !cursDynamic.getvCharCode().equals("Null");
+    }
+
+    public void print() {
+        System.out.println("[ " +
+                this.vCode + " " +
+                this.vName + " " +
+                this.vEngName + " " +
+                this.vNom + " " +
+                this.vNumCode + " " +
+                this.vCharCode + " ]");
     }
 
 }

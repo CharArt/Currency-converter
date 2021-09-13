@@ -142,4 +142,16 @@ public class ValCurs implements Serializable {
                 this.currency_value == null &&
                 this.currency_date == null;
     }
+
+    public void print() {
+        System.out.println(
+                " [ " + this.currency_id + " " +
+                        this.currency_numcode + " " +
+                        this.currency_charcode + " " +
+                        this.currency_nominal + " " +
+                        this.currency_name + " " +
+                        this.currency_value + " " +
+                        this.currency_date + " ]"
+        );
+    }
 }

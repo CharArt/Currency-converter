@@ -36,8 +36,8 @@ public class ConverterImplement implements ConverterService {
          * Нельзя воспользоваться ValCursService потому что List<ValCurs> valCursList содержит в себе список  валют определенной даты.
          * После чего мы ищем целевые валюты.
          * */
-        ValCurs currencyOf = new ValCurs();
-        ValCurs currencyIn = new ValCurs();
+        ValCurs currencyOf = valCursService.findValCursByWriteId(1L);
+        ValCurs currencyIn = valCursService.findValCursByWriteId(1L);
         for (ValCurs valCurs : valCursList) {
             if (valCursView.getNameValuteOne().equals(valCurs.getCurrency_name())) {
                 currencyOf = valCurs;
@@ -59,8 +59,7 @@ public class ConverterImplement implements ConverterService {
          * Потом мы передаем в вещественное значение в переменную valueTwo посредством ParserFloat.
          * В сохранении истории рубль участвовать не может так как данные времени не доставерны.
          * */
-        if (valCursView.getNameValuteOne().equals("Rubles") && currencyOf.isNull()) {
-            currencyOf = valCursService.findValCursByWriteId(1L);
+        if (valCursView.getNameValuteOne().equals("Рублей") && valCursView.getValueValuteOne().isEmpty()) {
             float valueTwo = Float.parseFloat(valCursView.getValueValuteTwo());
             float answer = valueTwo * Float.parseFloat(currencyIn.getCurrency_value());
             valCursView.setValueValuteOne(String.valueOf(answer));
@@ -74,8 +73,7 @@ public class ConverterImplement implements ConverterService {
             return valCursView;
         }
 
-        if (valCursView.getNameValuteTwo().equals("Rubles") && currencyIn.isNull()) {
-            currencyIn = valCursService.findValCursByWriteId(1L);
+        if (valCursView.getNameValuteTwo().equals("Рублей") && valCursView.getValueValuteTwo().isEmpty()) {
             float valueOne = Float.parseFloat(valCursView.getValueValuteOne());
             float answer = valueOne * Float.parseFloat(currencyOf.getCurrency_value());
             valCursView.setValueValuteTwo(String.valueOf(answer));

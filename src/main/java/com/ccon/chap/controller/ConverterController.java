@@ -35,7 +35,14 @@ public class ConverterController {
 
     @GetMapping("/converter")
     public String FrontPage(ModelMap modelMap) {
-        List<ValCurs> valCursList = valCursService.findValCursByDate(LocalDateTime.of(2002, 3, 2, 0, 0));
+        LocalDate localDate = LocalDate.now();
+        if (!localDate.equals(valCursService.getLastEntry().getCurrency_date().toLocalDate()) && valCursService.getLastEntry().getCurrency_name().equals("Российский рубль")) {
+            valCursService.fillingInDatabaseValCura();
+        }
+        if (!localDate.equals(valCursService.getLastEntry().getCurrency_date().toLocalDate()) && !valCursService.getLastEntry().getCurrency_name().equals("Российский рубль")) {
+            valCursService.updateDatabaseValCura();
+        }
+        List<ValCurs> valCursList = valCursService.findValCursByDate(valCursService.getLastEntry().getCurrency_date());
         modelMap.addAttribute("valCursList", valCursList);
 
         ValCursView valCursView = new ValCursView();
@@ -48,7 +55,7 @@ public class ConverterController {
         User user = userService.findByUserLogin(principal.getName());
 
         LocalDate localDate = LocalDate.parse(new SimpleDateFormat("yyyy-MM-dd").format(valCursView.getTimeSearch()));
-        LocalTime localTime = LocalTime.of(11, 11);
+        LocalTime localTime = LocalTime.of(0, 0);
         LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);
 
         List<ValCurs> valCursList = valCursService.findValCursByDate(localDateTime);
